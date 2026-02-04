@@ -1,5 +1,5 @@
 .catalog-hero {
-    background: linear-gradient(135deg, var(--color-primary) 0%, #0C4A75 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, #0F3A5F 100%);
     color: var(--color-white);
     padding: var(--spacing-xxl) 0;
     text-align: center;
@@ -61,8 +61,8 @@
 }
 
 .category-filter button:hover {
-    background-color: var(--color-light);
-    color: var(--color-primary);
+    background-color: rgba(0, 125, 254, 0.08);
+    color: #007dfe;
 }
 
 .category-filter button.active {

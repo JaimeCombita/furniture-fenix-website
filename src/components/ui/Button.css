@@ -37,7 +37,7 @@
 }
 
 .btn-primary:hover {
-    background-color: #D35400;
+    background-color: #007dfe;
 }
 
 .btn-secondary {
@@ -46,7 +46,7 @@
 }
 
 .btn-secondary:hover {
-    background-color: #0C4A75;
+    background-color: #007dfe;
     color: #FFFFFF;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .btn-accent:hover {
-    background-color: #B38B5E;
+    background-color: #007dfe;
 }
 
 .btn-outline {
@@ -67,8 +67,9 @@
 }
 
 .btn-outline:hover {
-    background-color: var(--color-primary);
+    background-color: #007dfe;
     color: var(--color-white);
+    border-color: #007dfe;
 }
 
 .btn-sm {

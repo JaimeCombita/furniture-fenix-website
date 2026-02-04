@@ -66,17 +66,27 @@ export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
                 </button>
                 {expandedMenu === link.path && (
                   <ul className="nav-submenu">
-                    {link.children.map((child: { path: string; label: string }) => (
-                      <li key={child.path}>
-                        <Link
-                          to={child.path}
-                          className="nav-sublink"
-                          onClick={onClose}
-                        >
-                          {child.label}
-                        </Link>
-                      </li>
-                    ))}
+                    {link.children.map((child: any) => {
+                      const isActive = child.active !== false;
+                      return (
+                        <li key={child.path} className={!isActive ? 'disabled' : ''}>
+                          {isActive ? (
+                            <Link
+                              to={child.path}
+                              className="nav-sublink"
+                              onClick={onClose}
+                            >
+                              {child.label}
+                            </Link>
+                          ) : (
+                            <span className="nav-sublink disabled">
+                              {child.label}
+                              <span className="coming-soon-badge">Proximamente</span>
+                            </span>
+                          )}
+                        </li>
+                      );
+                    })}
                   </ul>
                 )}
               </>

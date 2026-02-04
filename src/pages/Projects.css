@@ -3,7 +3,7 @@
 }
 
 .projects-hero {
-  background: linear-gradient(135deg, var(--color-primary, #e74c3c) 0%, var(--color-secondary, #c0392b) 100%);
+  background: linear-gradient(135deg, var(--color-primary, #154578) 0%, var(--color-secondary, #0F3A5F) 100%);
   color: white;
   padding: 4rem 0 3rem;
   text-align: center;
@@ -43,13 +43,13 @@
 
 .stat-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(231, 76, 60, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 125, 254, 0.15);
 }
 
 .stat-number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--color-primary, #e74c3c);
+  color: var(--color-primary, #154578);
   margin-bottom: 0.5rem;
 }
 
@@ -73,9 +73,9 @@
 
 .filter-btn {
   padding: 0.75rem 1.5rem;
-  border: 2px solid var(--color-primary, #e74c3c);
+  border: 2px solid var(--color-primary, #154578);
   background: white;
-  color: var(--color-primary, #e74c3c);
+  color: var(--color-primary, #154578);
   border-radius: 25px;
   font-weight: 600;
   cursor: pointer;
@@ -84,11 +84,11 @@
 }
 
 .filter-btn:hover {
-  background-color: rgba(231, 76, 60, 0.1);
+  background-color: rgba(0, 125, 254, 0.1);
 }
 
 .filter-btn.active {
-  background: linear-gradient(135deg, var(--color-primary, #e74c3c) 0%, var(--color-secondary, #c0392b) 100%);
+  background: linear-gradient(135deg, var(--color-primary, #154578) 0%, var(--color-secondary, #0F3A5F) 100%);
   color: white;
 }
 
@@ -109,7 +109,7 @@
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(231, 76, 60, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 125, 254, 0.15);
 }
 
 .project-image {
@@ -133,7 +133,7 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: linear-gradient(135deg, var(--color-primary, #e74c3c) 0%, var(--color-secondary, #c0392b) 100%);
+  background: linear-gradient(135deg, var(--color-primary, #154578) 0%, var(--color-secondary, #0F3A5F) 100%);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
@@ -161,7 +161,7 @@
 }
 
 .project-meta i {
-  color: var(--color-primary, #e74c3c);
+  color: var(--color-primary, #154578);
 }
 
 .project-content h3 {
@@ -205,7 +205,7 @@
 }
 
 .project-items i {
-  color: var(--color-primary, #e74c3c);
+  color: var(--color-primary, #154578);
   margin-top: 0.2rem;
   font-size: 0.85rem;
 }
@@ -246,7 +246,7 @@
 
 .testimonial-icon {
   font-size: 2rem;
-  color: var(--color-primary, #e74c3c);
+  color: var(--color-primary, #154578);
   opacity: 0.3;
   margin-bottom: 1rem;
 }
@@ -276,7 +276,7 @@
 }
 
 .cta-section {
-  background: linear-gradient(135deg, rgba(231, 76, 60, 0.05) 0%, rgba(192, 57, 43, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(0, 125, 254, 0.05) 0%, rgba(15, 58, 95, 0.05) 100%);
 }
 
 .cta-content {

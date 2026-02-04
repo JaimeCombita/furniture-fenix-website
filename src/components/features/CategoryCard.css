@@ -3,6 +3,10 @@
     color: inherit;
 }
 
+.category-card-link.disabled {
+    cursor: not-allowed;
+}
+
 .category-card {
     text-align: center;
     padding: var(--spacing-xl);
@@ -19,8 +23,19 @@
 
 .category-card:hover {
     border-color: var(--color-accent);
-    box-shadow: 0 8px 24px rgba(231, 76, 60, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 125, 254, 0.15);
     transform: translateY(-5px);
+}
+
+.category-card.disabled {
+    opacity: 0.6;
+    background-color: #F5F5F5;
+}
+
+.category-card.disabled:hover {
+    border-color: var(--color-neutral);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transform: none;
 }
 
 .category-icon {
@@ -30,17 +45,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(231, 76, 60, 0.1);
+    background-color: rgba(21, 69, 120, 0.1);
     border-radius: 50%;
-    color: var(--color-accent);
+    color: #154578;
     font-size: 2.5rem;
     transition: var(--transition-base);
 }
 
 .category-card:hover .category-icon {
-    background: linear-gradient(135deg, var(--color-primary, #e74c3c) 0%, var(--color-secondary, #c0392b) 100%);
+    background: #007dfe;
     color: var(--color-white);
     transform: scale(1.1);
+}
+
+.category-card.disabled .category-icon {
+    background-color: rgba(0, 0, 0, 0.08);
+    color: #999999;
+}
+
+.category-card.disabled:hover .category-icon {
+    background-color: rgba(0, 0, 0, 0.08);
+    color: #999999;
+    transform: none;
 }
 
 .category-name {
@@ -50,29 +76,22 @@
     font-weight: 600;
 }
 
+.category-card.disabled .category-name {
+    color: #999999;
+}
+
 .category-description {
     color: #666666;
     margin: 0;
 }
 
-@media (max-width: 768px) {
-    .category-card {
-        padding: var(--spacing-lg);
-    }
-    
-    .category-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 2rem;
-    }
-    
-    .category-name {
-        font-size: 1.25rem;
-    }
+.category-card.disabled .category-description {
+    color: #AAAAAA;
 }
 
-@media (max-width: 480px) {
-    .category-card {
-        padding: var(--spacing-md);
-    }
+.coming-soon {
+    font-size: 0.85rem;
+    color: #999999;
+    margin-top: var(--spacing-xs);
+    font-style: italic;
 }

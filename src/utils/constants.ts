@@ -20,40 +20,46 @@ export const COMPANY_INFO = {
 
 export const CATEGORIES: CategoryInfo[] = [
   {
-    id: 'mesas',
-    name: 'Mesas',
-    description: 'Para oficina, conferencias y trabajo',
-    icon: 'table'
-  },
-  {
     id: 'sillas',
     name: 'Sillas',
     description: 'Ergonómicas y duraderas',
-    icon: 'chair'
+    icon: 'chair',
+    active: true
+  },
+  {
+    id: 'mesas',
+    name: 'Mesas',
+    description: 'Para oficina, conferencias y trabajo',
+    icon: 'table',
+    active: true
   },
   {
     id: 'archivadores',
     name: 'Archivadores',
     description: 'Almacenamiento eficiente',
-    icon: 'archive'
+    icon: 'archive',
+    active: false
   },
   {
     id: 'mobiliario-escolar',
     name: 'Mobiliario Escolar',
     description: 'Para instituciones educativas',
-    icon: 'graduation-cap'
+    icon: 'graduation-cap',
+    active: false
   },
   {
     id: 'mobiliario-oficina',
     name: 'Mobiliario Oficina',
     description: 'Espacios de trabajo modernos',
-    icon: 'desktop'
+    icon: 'desktop',
+    active: false
   },
   {
     id: 'accesorios',
     name: 'Accesorios Institucionales',
     description: 'Complementos institucionales',
-    icon: 'puzzle-piece'
+    icon: 'puzzle-piece',
+    active: false
   }
 ];
 
@@ -66,7 +72,8 @@ export const NAV_LINKS = [
     icon: 'th',
     children: CATEGORIES.map(cat => ({
       path: `/catalogo#${cat.id}`,
-      label: cat.name
+      label: cat.name,
+      active: cat.active
     }))
   },
   { path: '/servicios', label: 'Servicios', icon: 'tools' },

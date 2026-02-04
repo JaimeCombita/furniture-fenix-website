@@ -9,15 +9,24 @@ interface CategoryCardProps {
 }
 
 export const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
+  const cardContent = (
+    <Card hover className={`category-card ${!category.active ? 'disabled' : ''}`}>
+      <div className="category-icon">
+        <i className={`fas fa-${category.icon}`}></i>
+      </div>
+      <h3 className="category-name">{category.name}</h3>
+      <p className="category-description">{category.description}</p>
+      {!category.active && <p className="coming-soon">Próximamente</p>}
+    </Card>
+  );
+
+  if (!category.active) {
+    return <div className="category-card-link disabled">{cardContent}</div>;
+  }
+
   return (
     <Link to={`/catalogo#${category.id}`} className="category-card-link">
-      <Card hover className="category-card">
-        <div className="category-icon">
-          <i className={`fas fa-${category.icon}`}></i>
-        </div>
-        <h3 className="category-name">{category.name}</h3>
-        <p className="category-description">{category.description}</p>
-      </Card>
+      {cardContent}
     </Link>
   );
 };

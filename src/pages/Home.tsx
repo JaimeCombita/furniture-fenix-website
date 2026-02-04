@@ -10,9 +10,12 @@ export const HomePage: React.FC = () => {
     <div className="home-page">
       <Hero
         title="Soluciones de Mobiliario para el Sector Público"
-        subtitle="Calidad, diseño y cumplimiento para tus proyectos de licitación"
+        subtitle="Calidad, diseño y cumplimiento para tus proyectos"
         ctaText="Solicitar Cotización"
         ctaLink="/contacto"
+        promoBadge="Promoción vigente"
+        promoTitle="Evento de Proyectos 2026"
+        promoText="Aprovecha beneficios exclusivos en mobiliario institucional y recibe asesoría prioritaria."
       />
 
       <section className="section categories-section">
@@ -79,7 +82,7 @@ export const HomePage: React.FC = () => {
           <h2 className="section-title">Nuestros Servicios</h2>
           <p className="section-subtitle">Soluciones integrales para tu proyecto</p>
           
-          <div className="services-grid">
+          <div className="services-grid-cards">
             {SERVICES.slice(0, 3).map((service) => (
               <Card key={service.id} hover className="service-card">
                 <div className="service-icon">

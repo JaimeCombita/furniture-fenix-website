@@ -78,7 +78,7 @@
 }
 
 .footer-links a:hover {
-    color: var(--color-accent);
+    color: #007dfe;
     padding-left: 5px;
 }
 

@@ -3,7 +3,7 @@
 }
 
 .contact-hero {
-  background: linear-gradient(135deg, var(--color-primary, #e74c3c) 0%, var(--color-secondary, #c0392b) 100%);
+  background: linear-gradient(135deg, var(--color-primary, #154578) 0%, var(--color-secondary, #0F3A5F) 100%);
   color: white;
   padding: 4rem 0 3rem;
   text-align: center;
@@ -80,7 +80,7 @@
 
 .info-item i {
   font-size: 1.5rem;
-  color: var(--color-primary, #e74c3c);
+  color: var(--color-primary, #154578);
   margin-top: 0.2rem;
   width: 30px;
   text-align: center;
@@ -102,7 +102,7 @@
 .whatsapp-link {
   display: inline-block;
   margin-top: 0.5rem;
-  color: var(--color-primary, #e74c3c);
+  color: var(--color-primary, #154578);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
@@ -110,7 +110,7 @@
 }
 
 .whatsapp-link:hover {
-  color: var(--color-secondary, #c0392b);
+  color: var(--color-accent, #007dfe);
   text-decoration: underline;
 }
 
@@ -137,7 +137,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: var(--color-primary, #e74c3c);
+  background-color: var(--color-primary, #154578);
   color: white;
   font-size: 1.5rem;
   transition: all 0.3s ease;
@@ -145,9 +145,9 @@
 }
 
 .social-icons a:hover {
-  background-color: var(--color-secondary, #c0392b);
+  background-color: var(--color-accent, #007dfe);
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 125, 254, 0.3);
 }
 
 @media (max-width: 992px) {

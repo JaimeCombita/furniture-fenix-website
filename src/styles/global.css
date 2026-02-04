@@ -145,7 +145,7 @@ button {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-secondary);
+    background: #007dfe;
 }
 
 *:focus-visible {

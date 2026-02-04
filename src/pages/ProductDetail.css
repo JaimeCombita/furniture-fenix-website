@@ -19,8 +19,8 @@
 }
 
 .back-button:hover {
-  border-color: var(--color-primary, #e74c3c);
-  color: var(--color-primary, #e74c3c);
+  border-color: #007dfe;
+  color: #007dfe;
   transform: translateX(-3px);
 }
 
@@ -76,7 +76,7 @@
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: var(--color-primary, #e74c3c);
+  color: var(--color-primary, #154578);
   font-size: 1.2rem;
   z-index: 10;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -118,7 +118,7 @@
 }
 
 .carousel-indicators .indicator:hover {
-  background: rgba(255, 255, 255, 0.8);
+  background: #007dfe;
   transform: scale(1.2);
 }
 
@@ -154,13 +154,13 @@
 }
 
 .thumbnail:hover {
-  border-color: var(--color-primary, #e74c3c);
+  border-color: #007dfe;
   transform: scale(1.05);
 }
 
 .thumbnail.active {
-  border-color: var(--color-primary, #e74c3c);
-  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+  border-color: var(--color-primary, #154578);
+  box-shadow: 0 0 0 3px rgba(0, 125, 254, 0.2);
 }
 
 .image-placeholder {
@@ -202,7 +202,7 @@
 .product-price {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--color-primary, #e74c3c);
+  color: var(--color-primary, #154578);
 }
 
 .stock-badge {
@@ -256,7 +256,7 @@
 }
 
 .product-features i {
-  color: var(--color-primary, #e74c3c);
+  color: var(--color-primary, #154578);
   margin-top: 0.25rem;
 }
 
@@ -310,7 +310,7 @@
 }
 
 .additional-info-section {
-  background: linear-gradient(135deg, rgba(231, 76, 60, 0.05) 0%, rgba(192, 57, 43, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(0, 125, 254, 0.05) 0%, rgba(15, 58, 95, 0.05) 100%);
   padding: 3rem;
   border-radius: 12px;
 }
@@ -327,7 +327,7 @@
 }
 
 .info-card i {
-  color: var(--color-primary, #e74c3c);
+  color: var(--color-primary, #154578);
   margin-bottom: 1rem;
 }
 

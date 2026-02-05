@@ -14,9 +14,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Push to oficial repo
-        env:
-          TARGET_REPO: https://${{ secrets.GH_PAT }}@github.com/JaimeCombita/fenix-website-oficial.git
+      - name: Configure Git
         run: |
-          git remote add oficial $TARGET_REPO
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+
+      - name: Push to oficial repo
+        run: |
+          git remote add oficial https://x-access-token:${{ secrets.GH_PAT }}@github.com/JaimeCombita/fenix-website-oficial.git
           git push oficial main:main --force

@@ -68,9 +68,7 @@
         "Colores disponibles: Gris Tornado o Negro"
       ],
       "images": [
-        "/images/products/mesas/escritorio-l-70x150x150/main.jpg",
-        "/images/products/mesas/escritorio-l-70x150x150/side.jpg",
-        "/images/products/mesas/escritorio-l-70x150x150/detail.jpg"
+        "/images/products/mesas/escritorio-l-70x150x150/main.jpg"
       ],
       "featured": true,
       "quantity": 3
@@ -94,30 +92,34 @@
         "Diseño moderno y funcional"
       ],
       "images": [
-        "/images/products/mesas/puesto-trabajo-recto-120/main.jpg",
-        "/images/products/mesas/puesto-trabajo-recto-120/front.jpg",
-        "/images/products/mesas/puesto-trabajo-recto-120/detail.jpg"
+        "/images/products/mesas/puesto-trabajo-recto-120/main.jpg"
       ],
       "featured": true,
       "quantity": 5
     },
     {
-      "id": "silla-ejecutiva-lampi",
+      "id": "silla-ejecutiva-lumpi",
       "category": "sillas",
       "subcategory": "ejecutivas",
-      "name": "Silla Ejecutiva Lampi",
-      "description": "Silla ejecutiva con diseño ergonómico y acabados de alta calidad. Perfecta para largas jornadas de trabajo.",
+      "name": "Silla Ejecutiva Lumpi",
+      "description": "La Silla Lumpi económica es la solución ideal para quienes buscan comodidad y diseño a buen precio. Perfecta para oficina y home office, cuenta con respaldo en malla transpirable, asiento acolchado y soporte lumbar que favorece la postura. Su estructura resistente y estilo moderno la convierten en una opción práctica, accesible y con garantía Siilla. Envíos rápidos a toda Colombia.",
       "shortDescription": "Silla ejecutiva ergonómica con respaldo alto",
       "features": [
-        "Respaldo ergonómico alto",
-        "Base de nylon reforzado",
-        "Brazos ajustables",
-        "Mecanismo sincronizado",
-        "Tapizado en tela de alta resistencia",
-        "Rodachinas para piso duro"
+        "Cabecero ajustable en altura y angulo",
+        "Espaldar tipo malla",
+        "Mecanismo basculante 1 bloqueo a 90°",
+        "Apoyo lumbar en polipropileno, ajustable en altura",
+        "Brazos ajustables en altura",
+        "Rodachines nylon (50mm)"
       ],
       "images": [
-        "/images/products/sillas/ejecutivas/silla-ejecutiva-lampi/main.jpg"
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-lumpi/main.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-lumpi/atras.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-lumpi/cabecero.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-lumpi/costado.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-lumpi/mecanismo.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-lumpi/uso.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-lumpi/especificaciones.webp"
       ],
       "featured": true
     },
@@ -126,18 +128,27 @@
       "category": "sillas",
       "subcategory": "ejecutivas",
       "name": "Silla Ejecutiva Kao",
-      "description": "Silla ejecutiva con soporte lumbar y diseño contemporáneo. Combina comodidad y estilo profesional.",
+      "description": "Confort, lujo y elegancia para tu espacio ejecutivo La Silla Presidente Kao está diseñada para aquellos que buscan una silla de oficina que combine máxima comodidad, funcionalidad y un toque de lujo. Su diseño moderno y elegante, junto con un soporte ergonómico superior, la convierte en la opción ideal para espacios ejecutivos donde el confort y el estilo son esenciales para un alto rendimiento durante largas jornadas de trabajo.",
       "shortDescription": "Silla ejecutiva con soporte lumbar",
       "features": [
-        "Soporte lumbar integrado",
-        "Respaldo de malla transpirable",
-        "Asiento acolchado",
-        "Brazos fijos",
-        "Base cromada",
-        "Ajuste de altura neumático"
+        "Cabecero ajustable en altura y angulo",
+        "Espaldar tipo malla",
+        "Mecanismo basculante 1 bloqueo a 90°",
+        "Apoyo lumbar N/A",
+        "Asiento espuma inyectada",
+        "Brazos ajustables en altura",
+        "Rodachines con banda de goma (50mm)"
       ],
       "images": [
-        "/images/products/sillas/ejecutivas/silla-ejecutiva-kao/main.jpg"
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-kao/main.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-kao/atras.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-kao/costado.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-kao/dimensiones.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-kao/diseño.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-kao/frente.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-kao/mecanismo.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-kao/uso.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-kao/especificaciones.webp"
       ],
       "featured": false
     },

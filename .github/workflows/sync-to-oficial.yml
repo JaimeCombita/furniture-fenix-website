@@ -1,0 +1,22 @@
+name: Sync to fenix-website-oficial
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Push to oficial repo
+        env:
+          TARGET_REPO: https://${{ secrets.GH_PAT }}@github.com/JaimeCombita/fenix-website-oficial.git
+        run: |
+          git remote add oficial $TARGET_REPO
+          git push oficial main:main --force

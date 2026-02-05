@@ -1,14 +1,20 @@
+export interface Subcategory {
+  id: string;
+  name: string;
+  description: string;
+}
+
 export interface Product {
   id: string;
   name: string;
   description: string;
+  shortDescription?: string;
   category: ProductCategory;
-  price: number;
+  subcategory?: string | null;
   images: string[];
-  technicalDetails?: Record<string, string>;
-  datasheet?: string;
-  stock?: number;
+  features?: string[];
   featured?: boolean;
+  quantity?: number;
 }
 
 export type ProductCategory = 
@@ -25,6 +31,7 @@ export interface CategoryInfo {
   description: string;
   icon: string;
   active?: boolean;
+  subcategories?: Subcategory[];
 }
 
 export interface Project {

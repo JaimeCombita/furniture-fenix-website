@@ -154,6 +154,65 @@
     opacity: 0.65;
 }
 
+.nav-dropdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.9rem;
+    color: #17355a;
+    border-radius: var(--border-radius);
+    transition: var(--transition-base);
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+}
+
+.nav-dropdown-item:hover {
+    background-color: rgba(0, 125, 254, 0.12);
+    color: #007dfe;
+}
+
+.nav-dropdown-item.expanded {
+    background-color: rgba(0, 125, 254, 0.12);
+    color: #007dfe;
+}
+
+.nav-dropdown-item i {
+    font-size: 0.75rem;
+    margin-left: auto;
+}
+
+.nav-subsubmenu {
+    margin-top: 4px;
+    margin-left: var(--spacing-md);
+    padding-left: var(--spacing-sm);
+    border-left: 2px solid rgba(0, 125, 254, 0.3);
+    list-style: none;
+}
+
+.nav-subsubmenu li {
+    margin-bottom: 4px;
+}
+
+.nav-subsublink {
+    display: block;
+    padding: 6px var(--spacing-sm);
+    font-size: 0.85rem;
+    color: #555555;
+    border-radius: var(--border-radius);
+    transition: var(--transition-base);
+    text-decoration: none;
+}
+
+.nav-subsublink:hover {
+    background-color: rgba(0, 125, 254, 0.12);
+    color: #007dfe;
+}
+
 .coming-soon-badge {
     display: inline-block;
     font-size: 0.75rem;
@@ -180,8 +239,8 @@
 }
 
 .social-links a {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -190,6 +249,7 @@
     color: #154578;
     transition: var(--transition-base);
     text-decoration: none;
+    font-size: 1.5rem;
 }
 
 .social-links a:hover {

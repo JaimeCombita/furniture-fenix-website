@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { NAV_LINKS, COMPANY_INFO } from '../../utils/constants';
+import { COMPANY_INFO } from '../../utils/constants';
+import productsData from '../../data/products.json';
 import './Navigation.css';
 
 interface NavigationProps {
@@ -11,10 +12,12 @@ interface NavigationProps {
 export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
   const [expandedMenu, setExpandedMenu] = useState<string | null>(null);
+  const [expandedSubmenu, setExpandedSubmenu] = useState<string | null>(null);
 
   React.useEffect(() => {
     onClose();
     setExpandedMenu(null);
+    setExpandedSubmenu(null);
   }, [location.pathname]);
 
   React.useEffect(() => {
@@ -30,6 +33,11 @@ export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
 
   const toggleSubmenu = (path: string) => {
     setExpandedMenu(expandedMenu === path ? null : path);
+    setExpandedSubmenu(null);
+  };
+
+  const toggleSubSubmenu = (path: string) => {
+    setExpandedSubmenu(expandedSubmenu === path ? null : path);
   };
 
   const isActive = (path: string) => {
@@ -52,56 +60,108 @@ export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
         </div>
 
       <ul className="nav-list">
-        {NAV_LINKS.map((link) => (
-          <li key={link.path}>
-            {'children' in link && link.children ? (
-              <>
-                <button
-                  className={`nav-link nav-dropdown ${isActive(link.path) ? 'active' : ''}`}
-                  onClick={() => toggleSubmenu(link.path)}
-                >
-                  <i className={`fas fa-${link.icon}`}></i>
-                  <span>{link.label}</span>
-                  <i className={`fas fa-chevron-${expandedMenu === link.path ? 'up' : 'down'} submenu-icon`}></i>
-                </button>
-                {expandedMenu === link.path && (
-                  <ul className="nav-submenu">
-                    {link.children.map((child: any) => {
-                      const isActive = child.active !== false;
-                      return (
-                        <li key={child.path} className={!isActive ? 'disabled' : ''}>
-                          {isActive ? (
-                            <Link
-                              to={child.path}
-                              className="nav-sublink"
-                              onClick={onClose}
-                            >
-                              {child.label}
-                            </Link>
-                          ) : (
-                            <span className="nav-sublink disabled">
-                              {child.label}
-                              <span className="coming-soon-badge">Proximamente</span>
-                            </span>
-                          )}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                )}
-              </>
-            ) : (
-              <Link
-                to={link.path}
-                className={`nav-link ${isActive(link.path) ? 'active' : ''}`}
-                onClick={onClose}
-              >
-                <i className={`fas fa-${link.icon}`}></i>
-                <span>{link.label}</span>
-              </Link>
-            )}
-          </li>
-        ))}
+        <li>
+          <Link
+            to="/"
+            className={`nav-link ${isActive('/') ? 'active' : ''}`}
+            onClick={onClose}
+          >
+            <i className="fas fa-home"></i>
+            <span>Inicio</span>
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/sobre-empresa"
+            className={`nav-link ${isActive('/sobre-empresa') ? 'active' : ''}`}
+            onClick={onClose}
+          >
+            <i className="fas fa-building"></i>
+            <span>Sobre la Empresa</span>
+          </Link>
+        </li>
+        <li>
+          <button
+            className={`nav-link nav-dropdown ${isActive('/catalogo') ? 'active' : ''}`}
+            onClick={() => toggleSubmenu('/catalogo')}
+          >
+            <i className="fas fa-th"></i>
+            <span>Catálogo</span>
+            <i className={`fas fa-chevron-${expandedMenu === '/catalogo' ? 'up' : 'down'} submenu-icon`}></i>
+          </button>
+          {expandedMenu === '/catalogo' && (
+            <ul className="nav-submenu">
+              {productsData.categories.filter(cat => cat.active).map((category) => (
+                <li key={category.id}>
+                  {category.subcategories && category.subcategories.length > 0 ? (
+                    <>
+                      <button
+                        className={`nav-sublink nav-dropdown-item ${expandedSubmenu === category.id ? 'expanded' : ''}`}
+                        onClick={() => toggleSubSubmenu(category.id)}
+                      >
+                        <span>{category.name}</span>
+                        <i className={`fas fa-chevron-${expandedSubmenu === category.id ? 'up' : 'down'}`}></i>
+                      </button>
+                      {expandedSubmenu === category.id && (
+                        <ul className="nav-subsubmenu">
+                          {category.subcategories.map((subcat) => (
+                            <li key={subcat.id}>
+                              <Link
+                                to={`/catalogo?categoria=${category.id}&subcategoria=${subcat.id}`}
+                                className="nav-subsublink"
+                                onClick={onClose}
+                              >
+                                {subcat.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      to={`/catalogo?categoria=${category.id}`}
+                      className="nav-sublink"
+                      onClick={onClose}
+                    >
+                      {category.name}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+        <li>
+          <Link
+            to="/servicios"
+            className={`nav-link ${isActive('/servicios') ? 'active' : ''}`}
+            onClick={onClose}
+          >
+            <i className="fas fa-tools"></i>
+            <span>Servicios</span>
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/proyectos"
+            className={`nav-link ${isActive('/proyectos') ? 'active' : ''}`}
+            onClick={onClose}
+          >
+            <i className="fas fa-briefcase"></i>
+            <span>Proyectos</span>
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/contacto"
+            className={`nav-link ${isActive('/contacto') ? 'active' : ''}`}
+            onClick={onClose}
+          >
+            <i className="fas fa-envelope"></i>
+            <span>Contáctenos</span>
+          </Link>
+        </li>
       </ul>
 
       <div className="nav-footer">

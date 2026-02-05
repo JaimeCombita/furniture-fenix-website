@@ -1,48 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import { ProductCard } from '../components/features';
-import { CATEGORIES } from '../utils/constants';
 import type { Product, ProductCategory } from '../types';
+import productsData from '../data/products.json';
 import './Catalog.css';
 
 export const CatalogPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<ProductCategory | 'all'>('all');
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
-    const mockProducts: Product[] = [
-      {
-        id: '1',
-        name: 'Mesa Ejecutiva Premium',
-        description: 'Mesa ejecutiva de alta calidad con acabado en madera',
-        category: 'mesas',
-        price: 1500000,
-        images: [],
-        featured: true
-      },
-      {
-        id: '2',
-        name: 'Silla Ergonómica Deluxe',
-        description: 'Silla con soporte lumbar y ajustes múltiples',
-        category: 'sillas',
-        price: 850000,
-        images: []
-      },
-      {
-        id: '3',
-        name: 'Archivador Metálico',
-        description: 'Archivador de 4 gavetas con sistema de seguridad',
-        category: 'archivadores',
-        price: 680000,
-        images: []
-      }
-    ];
-
-    const filtered = selectedCategory === 'all' 
-      ? mockProducts 
-      : mockProducts.filter(p => p.category === selectedCategory);
+    const filtered = (selectedCategory === 'all' 
+      ? productsData.products
+      : productsData.products.filter(p => {
+          if (p.category !== selectedCategory) return false;
+          if (selectedSubcategory && p.subcategory !== selectedSubcategory) return false;
+          return true;
+        })) as Product[];
     
     setProducts(filtered);
-  }, [selectedCategory]);
+  }, [selectedCategory, selectedSubcategory]);
+
+  const handleCategoryChange = (category: ProductCategory | 'all') => {
+    setSelectedCategory(category);
+    setSelectedSubcategory(null);
+  };
+
+  const currentCategoryData = selectedCategory !== 'all' 
+    ? productsData.categories.find(c => c.id === selectedCategory)
+    : null;
 
   return (
     <div className="catalog-page">
@@ -61,20 +47,34 @@ export const CatalogPage: React.FC = () => {
               <li>
                 <button
                   className={selectedCategory === 'all' ? 'active' : ''}
-                  onClick={() => setSelectedCategory('all')}
+                  onClick={() => handleCategoryChange('all')}
                 >
                   Todos los productos
                 </button>
               </li>
-              {CATEGORIES.map((cat) => (
+              {productsData.categories.filter(cat => cat.active).map((cat) => (
                 <li key={cat.id}>
                   <button
                     className={selectedCategory === cat.id ? 'active' : ''}
-                    onClick={() => setSelectedCategory(cat.id)}
+                    onClick={() => handleCategoryChange(cat.id as ProductCategory)}
                   >
                     <i className={`fas fa-${cat.icon}`}></i>
                     {cat.name}
                   </button>
+                  {selectedCategory === cat.id && cat.subcategories && cat.subcategories.length > 0 && (
+                    <ul className="subcategory-filter">
+                      {cat.subcategories.map((subcat) => (
+                        <li key={subcat.id}>
+                          <button
+                            className={selectedSubcategory === subcat.id ? 'active' : ''}
+                            onClick={() => setSelectedSubcategory(subcat.id)}
+                          >
+                            {subcat.name}
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
             </ul>
@@ -85,7 +85,10 @@ export const CatalogPage: React.FC = () => {
               <h2>
                 {selectedCategory === 'all' 
                   ? 'Todos los productos' 
-                  : CATEGORIES.find(c => c.id === selectedCategory)?.name}
+                  : currentCategoryData?.name}
+                {selectedSubcategory && currentCategoryData?.subcategories && (
+                  <> - {currentCategoryData.subcategories.find(s => s.id === selectedSubcategory)?.name}</>
+                )}
               </h2>
               <p className="products-count">{products.length} producto(s)</p>
             </div>

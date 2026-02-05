@@ -9,14 +9,6 @@ interface ProductCardProps {
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('es-CO', {
-      style: 'currency',
-      currency: 'COP',
-      minimumFractionDigits: 0
-    }).format(price);
-  };
-
   return (
     <Card hover className="product-card">
       <Link to={`/producto/${product.id}`} className="product-image-link">
@@ -39,9 +31,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <p className="product-description">{product.description}</p>
         
         <div className="product-footer">
-          <span className="product-price">{formatPrice(product.price)}</span>
           <Link to={`/producto/${product.id}`}>
-            <Button variant="primary" size="sm">
+            <Button variant="outline" size="sm">
               Ver Detalles
             </Button>
           </Link>

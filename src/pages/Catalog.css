@@ -74,6 +74,44 @@
     width: 20px;
 }
 
+.subcategory-filter {
+    list-style: none;
+    margin: 0;
+    margin-top: var(--spacing-xs);
+    padding: 0 0 0 var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-left: 2px solid var(--color-neutral);
+}
+
+.subcategory-filter button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 6px var(--spacing-sm);
+    background: none;
+    border: none;
+    border-radius: var(--border-radius);
+    color: #666666;
+    font-size: 0.95rem;
+    text-align: left;
+    transition: var(--transition-base);
+    cursor: pointer;
+}
+
+.subcategory-filter button:hover {
+    background-color: rgba(0, 125, 254, 0.08);
+    color: #007dfe;
+}
+
+.subcategory-filter button.active {
+    background-color: rgba(0, 125, 254, 0.15);
+    color: #007dfe;
+    font-weight: 600;
+}
+
 .catalog-main {
     min-height: 400px;
 }

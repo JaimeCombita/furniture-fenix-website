@@ -1,0 +1,365 @@
+{
+  "categories": [
+    {
+      "id": "sillas",
+      "name": "Sillas",
+      "icon": "Chair",
+      "description": "Sillas ergonómicas y de oficina",
+      "active": true,
+      "subcategories": [
+        {
+          "id": "gerenciales",
+          "name": "Sillas Gerenciales",
+          "description": "Sillas de alta gama para gerencia"
+        },
+        {
+          "id": "ejecutivas",
+          "name": "Sillas Ejecutivas",
+          "description": "Sillas ejecutivas para oficina"
+        },
+        {
+          "id": "gamer",
+          "name": "Sillas Gamer",
+          "description": "Sillas gamer de alto rendimiento"
+        }
+      ]
+    },
+    {
+      "id": "mesas",
+      "name": "Mesas",
+      "icon": "Layers",
+      "description": "Escritorios y mesas de trabajo",
+      "active": true
+    },
+    {
+      "id": "archivadores",
+      "name": "Archivadores",
+      "icon": "Archive",
+      "description": "Soluciones de almacenamiento",
+      "active": false
+    },
+    {
+      "id": "recepciones",
+      "name": "Recepciones",
+      "icon": "Users",
+      "description": "Muebles para recepción",
+      "active": false
+    }
+  ],
+  "products": [
+    {
+      "id": "escritorio-l-70x150x150",
+      "category": "mesas",
+      "subcategory": null,
+      "name": "Escritorio en L 70x150x150",
+      "description": "Escritorio en forma de L con estructura metálica y superficies enchapadas en fórmica. Ideal para espacios de trabajo amplios que requieren doble superficie.",
+      "shortDescription": "Escritorio en L con doble superficie, cajonera y estructura metálica",
+      "features": [
+        "Altura: 0,70m",
+        "Ancho: 1,50m",
+        "Contorno: 1,50m",
+        "Fondo: 0,60m",
+        "2 superficies en tablex de 25mm enchapadas en fórmica",
+        "1 cajonera con 2 gavetas tipo 1/3",
+        "2 costados cuadrados en tubería",
+        "1 faldero frontal perforado",
+        "1 platina de amarres",
+        "Estructura terminada en pintura electrostática en polvo",
+        "Colores disponibles: Gris Tornado o Negro"
+      ],
+      "images": [
+        "/images/products/mesas/escritorio-l-70x150x150/main.jpg",
+        "/images/products/mesas/escritorio-l-70x150x150/side.jpg",
+        "/images/products/mesas/escritorio-l-70x150x150/detail.jpg"
+      ],
+      "featured": true,
+      "quantity": 3
+    },
+    {
+      "id": "puesto-trabajo-recto-120",
+      "category": "mesas",
+      "subcategory": null,
+      "name": "Puesto de Trabajo Recto 1.2m",
+      "description": "Puesto de trabajo modelo recto con superficie en MDF color madera y estructura metálica. Incluye cajonera de 3 niveles con llave para mayor seguridad.",
+      "shortDescription": "Puesto de trabajo recto con cajonera de 3 niveles",
+      "features": [
+        "Altura: 70cm aprox",
+        "Largo: 1.2m aprox",
+        "Profundidad: 60cm aprox",
+        "Material superficie: MDF",
+        "Estructura: Metálica",
+        "Cajonera: 3 niveles con llave",
+        "Color superficie: Madera",
+        "Color estructura: Gris",
+        "Diseño moderno y funcional"
+      ],
+      "images": [
+        "/images/products/mesas/puesto-trabajo-recto-120/main.jpg",
+        "/images/products/mesas/puesto-trabajo-recto-120/front.jpg",
+        "/images/products/mesas/puesto-trabajo-recto-120/detail.jpg"
+      ],
+      "featured": true,
+      "quantity": 5
+    },
+    {
+      "id": "silla-ejecutiva-lampi",
+      "category": "sillas",
+      "subcategory": "ejecutivas",
+      "name": "Silla Ejecutiva Lampi",
+      "description": "Silla ejecutiva con diseño ergonómico y acabados de alta calidad. Perfecta para largas jornadas de trabajo.",
+      "shortDescription": "Silla ejecutiva ergonómica con respaldo alto",
+      "features": [
+        "Respaldo ergonómico alto",
+        "Base de nylon reforzado",
+        "Brazos ajustables",
+        "Mecanismo sincronizado",
+        "Tapizado en tela de alta resistencia",
+        "Rodachinas para piso duro"
+      ],
+      "images": [
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-lampi/main.jpg"
+      ],
+      "featured": true
+    },
+    {
+      "id": "silla-ejecutiva-kao",
+      "category": "sillas",
+      "subcategory": "ejecutivas",
+      "name": "Silla Ejecutiva Kao",
+      "description": "Silla ejecutiva con soporte lumbar y diseño contemporáneo. Combina comodidad y estilo profesional.",
+      "shortDescription": "Silla ejecutiva con soporte lumbar",
+      "features": [
+        "Soporte lumbar integrado",
+        "Respaldo de malla transpirable",
+        "Asiento acolchado",
+        "Brazos fijos",
+        "Base cromada",
+        "Ajuste de altura neumático"
+      ],
+      "images": [
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-kao/main.jpg"
+      ],
+      "featured": false
+    },
+    {
+      "id": "silla-ejecutiva-venezia",
+      "category": "sillas",
+      "subcategory": "ejecutivas",
+      "name": "Silla Ejecutiva Venezia",
+      "description": "Silla ejecutiva de línea clásica con acabados elegantes. Ideal para oficinas ejecutivas.",
+      "shortDescription": "Silla ejecutiva clásica y elegante",
+      "features": [
+        "Diseño clásico",
+        "Tapizado en cuero sintético",
+        "Respaldo alto",
+        "Brazos acolchados",
+        "Base de aluminio pulido",
+        "Mecanismo reclinable"
+      ],
+      "images": [
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-venezia/main.jpg"
+      ],
+      "featured": false
+    },
+    {
+      "id": "silla-ejecutiva-bahia",
+      "category": "sillas",
+      "subcategory": "ejecutivas",
+      "name": "Silla Ejecutiva Bahia",
+      "description": "Silla ejecutiva con diseño moderno y funcional. Ofrece confort durante toda la jornada laboral.",
+      "shortDescription": "Silla ejecutiva moderna y funcional",
+      "features": [
+        "Diseño contemporáneo",
+        "Respaldo medio",
+        "Asiento ergonómico",
+        "Brazos 3D ajustables",
+        "Base de nylon",
+        "Sistema de ajuste multiposición"
+      ],
+      "images": [
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-bahia/main.jpg"
+      ],
+      "featured": false
+    },
+    {
+      "id": "silla-ejecutiva-nova",
+      "category": "sillas",
+      "subcategory": "ejecutivas",
+      "name": "Silla Ejecutiva Nova",
+      "description": "Silla ejecutiva de línea minimalista con máximo confort. Perfecta para espacios modernos.",
+      "shortDescription": "Silla ejecutiva minimalista",
+      "features": [
+        "Línea minimalista",
+        "Respaldo de malla",
+        "Asiento de espuma de alta densidad",
+        "Brazos regulables",
+        "Base cromada de 5 puntas",
+        "Certificación ergonómica"
+      ],
+      "images": [
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-nova/main.jpg"
+      ],
+      "featured": true
+    },
+    {
+      "id": "silla-ejecutiva-garden",
+      "category": "sillas",
+      "subcategory": "ejecutivas",
+      "name": "Silla Ejecutiva Garden",
+      "description": "Silla ejecutiva con respaldo alto y máximo soporte. Diseñada para ejecutivos que buscan comodidad premium.",
+      "shortDescription": "Silla ejecutiva con respaldo alto premium",
+      "features": [
+        "Respaldo extra alto",
+        "Reposacabezas ajustable",
+        "Tapizado premium",
+        "Brazos 4D",
+        "Base de aluminio",
+        "Sistema de inclinación sincronizada"
+      ],
+      "images": [
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-garden/main.jpg"
+      ],
+      "featured": false
+    },
+    {
+      "id": "silla-ejecutiva-ergoplus",
+      "category": "sillas",
+      "subcategory": "ejecutivas",
+      "name": "Silla Ejecutiva ErgoPlus",
+      "description": "Silla ejecutiva con tecnología ergonómica avanzada. Diseñada por especialistas en salud postural.",
+      "shortDescription": "Silla ejecutiva con ergonomía avanzada",
+      "features": [
+        "Tecnología ergonómica certificada",
+        "Soporte lumbar ajustable",
+        "Respaldo de malla 3D",
+        "Asiento con sistema anti-fatiga",
+        "Brazos multidireccionales",
+        "Garantía extendida"
+      ],
+      "images": [
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-ergoplus/main.jpg"
+      ],
+      "featured": true
+    },
+    {
+      "id": "silla-ejecutiva-delphi-2",
+      "category": "sillas",
+      "subcategory": "ejecutivas",
+      "name": "Silla Ejecutiva Delphi 2",
+      "description": "Silla ejecutiva versión 2 con mejoras en confort y durabilidad. Modelo actualizado de la línea Delphi.",
+      "shortDescription": "Silla ejecutiva Delphi versión mejorada",
+      "features": [
+        "Diseño actualizado",
+        "Respaldo ajustable",
+        "Asiento de doble densidad",
+        "Brazos regulables",
+        "Base reforzada",
+        "Mecanismo de última generación"
+      ],
+      "images": [
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-2/main.jpg"
+      ],
+      "featured": false
+    },
+    {
+      "id": "silla-ejecutiva-niza",
+      "category": "sillas",
+      "subcategory": "ejecutivas",
+      "name": "Silla Ejecutiva Niza",
+      "description": "Silla ejecutiva con estilo europeo y acabados refinados. Elegancia y funcionalidad en un solo diseño.",
+      "shortDescription": "Silla ejecutiva estilo europeo",
+      "features": [
+        "Diseño europeo",
+        "Tapizado en tela importada",
+        "Respaldo contorneado",
+        "Asiento anatómico",
+        "Brazos tapizados",
+        "Base cromada premium"
+      ],
+      "images": [
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-niza/main.jpg"
+      ],
+      "featured": false
+    },
+    {
+      "id": "silla-ejecutiva-praga",
+      "category": "sillas",
+      "subcategory": "ejecutivas",
+      "name": "Silla Ejecutiva Praga",
+      "description": "Silla ejecutiva con diseño robusto y confiable. Ideal para uso intensivo en oficinas corporativas.",
+      "shortDescription": "Silla ejecutiva robusta y confiable",
+      "features": [
+        "Construcción robusta",
+        "Respaldo reforzado",
+        "Asiento extra acolchado",
+        "Brazos fijos resistentes",
+        "Base de acero",
+        "Garantía comercial"
+      ],
+      "images": [
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-praga/main.jpg"
+      ],
+      "featured": false
+    },
+    {
+      "id": "silla-ejecutiva-delphi-1",
+      "category": "sillas",
+      "subcategory": "ejecutivas",
+      "name": "Silla Ejecutiva Delphi 1",
+      "description": "Silla ejecutiva versión clásica de la línea Delphi. Diseño probado y confiable.",
+      "shortDescription": "Silla ejecutiva Delphi versión clásica",
+      "features": [
+        "Modelo clásico",
+        "Respaldo medio",
+        "Tapizado resistente",
+        "Brazos estándar",
+        "Base de nylon",
+        "Mecanismo básico ajustable"
+      ],
+      "images": [
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-1/main.jpg"
+      ],
+      "featured": false
+    },
+    {
+      "id": "silla-ejecutiva-praga-premium",
+      "category": "sillas",
+      "subcategory": "ejecutivas",
+      "name": "Silla Ejecutiva Praga Premium",
+      "description": "Versión premium de la línea Praga con acabados superiores y características mejoradas.",
+      "shortDescription": "Silla ejecutiva Praga edición premium",
+      "features": [
+        "Edición premium",
+        "Materiales de alta gama",
+        "Respaldo ergonómico alto",
+        "Asiento de gel memory foam",
+        "Brazos 4D premium",
+        "Base de aluminio pulido"
+      ],
+      "images": [
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-praga-premium/main.jpg"
+      ],
+      "featured": true
+    },
+    {
+      "id": "silla-ejecutiva-nairobi",
+      "category": "sillas",
+      "subcategory": "ejecutivas",
+      "name": "Silla Ejecutiva Nairobi",
+      "description": "Silla ejecutiva con diseño innovador y tecnología de punta. La elección de ejecutivos modernos.",
+      "shortDescription": "Silla ejecutiva innovadora",
+      "features": [
+        "Diseño innovador",
+        "Tecnología de ventilación",
+        "Respaldo de malla 3D",
+        "Asiento con control de temperatura",
+        "Brazos inteligentes ajustables",
+        "Sistema de inclinación premium"
+      ],
+      "images": [
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-nairobi/main.jpg"
+      ],
+      "featured": false
+    }
+  ]
+}

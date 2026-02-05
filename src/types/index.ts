@@ -24,6 +24,7 @@ export interface CategoryInfo {
   name: string;
   description: string;
   icon: string;
+  active?: boolean;
 }
 
 export interface Project {

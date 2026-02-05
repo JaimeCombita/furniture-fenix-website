@@ -185,7 +185,7 @@ export const ProjectsPage: React.FC = () => {
             <div className="cta-buttons">
               <Link to="/contacto">
                 <Button variant="primary" size="lg">
-                  Iniciar Proyecto
+                  Contáctanos
                 </Button>
               </Link>
               <Link to="/catalogo">

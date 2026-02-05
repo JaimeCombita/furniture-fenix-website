@@ -9,9 +9,7 @@ interface HeroProps {
   subtitle: string;
   ctaText?: string;
   ctaLink?: string;
-  backgroundImage?: string;
   promoImage?: string;
-  promoBadge?: string;
   promoTitle?: string;
   promoText?: string;
 }
@@ -19,21 +17,16 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({
   title,
   subtitle,
-  ctaText = 'Solicitar Cotización',
+  ctaText = 'Contáctanos',
   ctaLink = '/contacto',
-  backgroundImage,
   promoImage,
-  promoBadge = 'Evento destacado',
   promoTitle = 'Semana de Proyectos 2026',
   promoText = 'Atención preferente y precios especiales en mobiliario institucional por tiempo limitado.'
 }) => {
   const resolvedPromoImage = promoImage || promoImageDefault;
 
   return (
-    <section 
-      className="hero" 
-      style={backgroundImage ? { backgroundImage: `url(${backgroundImage})` } : undefined}
-    >
+    <section className="hero">
       <div className="hero-overlay"></div>
       <div className="container hero-content">
         <div className="hero-grid">

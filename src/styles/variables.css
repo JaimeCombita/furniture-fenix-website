@@ -1,21 +1,13 @@
 :root {
-    --color-primary: #154578;        /* Azul oscuro */
-    --color-secondary: #2F3542;      /* Gris grafito */
-    --color-light: #F1F2F6;          /* Gris humo */
-    --color-neutral: #CED6E0;        /* Gris acero */
-    --color-accent: #007dfe;         /* Azul cielo */
-    --color-accent-alt: #007dfe;     /* Azul cielo alternativo */
+    --color-primary: #154578;
+    --color-secondary: #2F3542;
+    --color-light: #F1F2F6;
+    --color-neutral: #CED6E0;
+    --color-accent: #007dfe;
     --color-white: #FFFFFF;
-    --color-black: #1A1A1A;
     --color-success: #27AE60;
-    --color-error: #E74C3C;
-    --color-warning: #F39C12;
-    --color-info: #3498DB;
-    
     --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --font-secondary: 'Arial', sans-serif;
     --font-size-base: 16px;
-    --font-size-sm: 0.875rem;
     --font-size-lg: 1.125rem;
     --font-size-xl: 1.5rem;
     --font-size-2xl: 2rem;
@@ -39,22 +31,15 @@
     --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
     --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.18);
     
-    --transition-fast: 0.15s ease;
     --transition-base: 0.3s ease;
-    --transition-slow: 0.5s ease;
     
-    --z-dropdown: 1000;
     --z-sticky: 1020;
-    --z-fixed: 1030;
     --z-modal-backdrop: 1040;
     --z-modal: 1050;
-    --z-popover: 1060;
-    --z-tooltip: 1070;
     
     --container-max-width: 1200px;
     --container-padding: var(--spacing-md);
     
-    --grid-gap: var(--spacing-lg);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -62,6 +47,5 @@
         --color-light: #2F3542;
         --color-secondary: #F1F2F6;
         --color-white: #1A1A1A;
-        --color-black: #FFFFFF;
     }
 }

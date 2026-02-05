@@ -38,6 +38,7 @@
 
 .btn-primary:hover {
     background-color: #007dfe;
+    color: var(--color-white);
 }
 
 .btn-secondary {
@@ -48,15 +49,6 @@
 .btn-secondary:hover {
     background-color: #007dfe;
     color: #FFFFFF;
-}
-
-.btn-accent {
-    background-color: var(--color-accent-alt);
-    color: var(--color-white);
-}
-
-.btn-accent:hover {
-    background-color: #007dfe;
 }
 
 .btn-outline {
@@ -87,6 +79,3 @@
     font-size: 1.125rem;
 }
 
-.btn-full-width {
-    width: 100%;
-}

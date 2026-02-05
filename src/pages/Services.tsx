@@ -239,12 +239,12 @@ export const ServicesPage: React.FC = () => {
             <div className="cta-buttons">
               <Link to="/contacto">
                 <Button variant="primary" size="lg">
-                  Solicitar Asesoría
+                  Contáctanos
                 </Button>
               </Link>
               <Link to="/catalogo">
                 <Button variant="outline" size="lg">
-                  Ver Productos
+                  Ver Catálogo
                 </Button>
               </Link>
             </div>

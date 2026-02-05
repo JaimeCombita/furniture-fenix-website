@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { COMPANY_INFO } from '../../utils/constants';
 import './Footer.css';
 
@@ -28,25 +27,6 @@ export const Footer: React.FC = () => {
                 <i className="fab fa-whatsapp"></i>
               </a>
             </div>
-          </div>
-
-          <div className="footer-col">
-            <h4>Enlaces Rápidos</h4>
-            <ul className="footer-links">
-              <li><Link to="/sobre-empresa">Sobre Nosotros</Link></li>
-              <li><Link to="/catalogo">Catálogo</Link></li>
-              <li><Link to="/servicios">Servicios</Link></li>
-              <li><Link to="/proyectos">Proyectos</Link></li>
-            </ul>
-          </div>
-
-          <div className="footer-col">
-            <h4>Soporte</h4>
-            <ul className="footer-links">
-              <li><Link to="/politicas#garantias">Garantías</Link></li>
-              <li><Link to="/politicas#terminos">Términos y Condiciones</Link></li>
-              <li><Link to="/politicas#privacidad">Privacidad</Link></li>
-            </ul>
           </div>
 
           <div className="footer-col">

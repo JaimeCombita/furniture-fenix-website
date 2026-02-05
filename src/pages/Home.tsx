@@ -11,9 +11,8 @@ export const HomePage: React.FC = () => {
       <Hero
         title="Soluciones de Mobiliario para el Sector Público"
         subtitle="Calidad, diseño y cumplimiento para tus proyectos"
-        ctaText="Solicitar Cotización"
+        ctaText="Contáctanos"
         ctaLink="/contacto"
-        promoBadge="Promoción vigente"
         promoTitle="Evento de Proyectos 2026"
         promoText="Aprovecha beneficios exclusivos en mobiliario institucional y recibe asesoría prioritaria."
       />

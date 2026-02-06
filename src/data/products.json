@@ -92,10 +92,60 @@
         "Diseño moderno y funcional"
       ],
       "images": [
-        "/images/products/mesas/puesto-trabajo-recto-120/main.jpg"
+        "/images/products/mesas/puesto-trabajo-recto-120/main.png"
       ],
       "featured": true,
       "quantity": 5
+    },
+    {
+      "id": "silla-gerencial-duty-2d",
+      "category": "sillas",
+      "subcategory": "gerenciales",
+      "name": "Silla Gerencial Duty 2D",
+      "description": "Silla gerencial con estructura en polipropileno, espaldar tapizado en malla lineal y cabecero ajustable en altura. Incluye soporte lumbar regulable en profundidad y asiento tapizado en tela tipo paño.",
+      "shortDescription": "Silla gerencial con cabecero ajustable y soporte lumbar regulable",
+      "features": [
+        "Estructura en polipropileno",
+        "Espaldar en malla lineal",
+        "Cabecero ajustable en altura",
+        "Asiento tapizado en tela tipo paño",
+        "Brazos 3D",
+        "Soporte lumbar regulable en profundidad",
+        "Base de 5 aspas en polipropileno",
+        "Ruedas en silicona",
+        "Cilindro y ruedas con certificación BIFMA"
+      ],
+      "images": [
+        "/images/products/sillas/gerenciales/silla-gerencial-duty-2d/main.png",
+        "/images/products/sillas/gerenciales/silla-gerencial-duty-2d/atras.png",
+        "/images/products/sillas/gerenciales/silla-gerencial-duty-2d/lumbar.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "silla-gerencial-horizonte-2d",
+      "category": "sillas",
+      "subcategory": "gerenciales",
+      "name": "Silla Gerencial Horizonte 2D",
+      "description": "Silla gerencial con estructura en polipropileno, espaldar tapizado en malla lineal y cabecero ajustable en altura. Cuenta con soporte lumbar regulable en profundidad y asiento tapizado en tela tipo paño.",
+      "shortDescription": "Silla gerencial con soporte lumbar regulable y brazos 2D",
+      "features": [
+        "Estructura en polipropileno",
+        "Espaldar en malla lineal",
+        "Cabecero ajustable en altura",
+        "Asiento tapizado en tela tipo paño",
+        "Brazos 2D",
+        "Soporte lumbar regulable en profundidad",
+        "Base de 5 aspas en polipropileno",
+        "Ruedas en silicona",
+        "Cilindro y ruedas con certificación BIFMA"
+      ],
+      "images": [
+        "/images/products/sillas/gerenciales/silla-gerencial-horizonte-2d/main.png",
+        "/images/products/sillas/gerenciales/silla-gerencial-horizonte-2d/frente.png",
+        "/images/products/sillas/gerenciales/silla-gerencial-horizonte-2d/lumbar.png"
+      ],
+      "featured": true
     },
     {
       "id": "silla-ejecutiva-lumpi",
@@ -157,18 +207,25 @@
       "category": "sillas",
       "subcategory": "ejecutivas",
       "name": "Silla Ejecutiva Venezia",
-      "description": "Silla ejecutiva de línea clásica con acabados elegantes. Ideal para oficinas ejecutivas.",
+      "description": "Descubre la silla Venezia en tono gris, una fusión perfecta entre estilo moderno y ergonomía funcional. Su diseño minimalista se adapta con facilidad a oficinas, salas de reuniones o escritorios en casa, aportando distinción y sobriedad a cualquier ambiente.",
       "shortDescription": "Silla ejecutiva clásica y elegante",
       "features": [
-        "Diseño clásico",
-        "Tapizado en cuero sintético",
-        "Respaldo alto",
-        "Brazos acolchados",
-        "Base de aluminio pulido",
-        "Mecanismo reclinable"
+        "Cabecero ajustable en altura y angulo",
+        "Espaldar tipo malla",
+        "Mecanismo basculante 1 bloqueo a 90°",
+        "Apoyo lumbar N/A",
+        "Asiento espuma inyectada tapizado en tela importada color gris",
+        "Brazos 3D con pad en PU",
+        "Rodachines gris con blanco. Con banda de goma (47 mm)"
       ],
       "images": [
-        "/images/products/sillas/ejecutivas/silla-ejecutiva-venezia/main.jpg"
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-venezia/main.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-venezia/atras.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-venezia/costado.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-venezia/frente.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-venezia/mecanismo.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-venezia/uso.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-venezia/especificaciones.webp"
       ],
       "featured": false
     },
@@ -177,18 +234,25 @@
       "category": "sillas",
       "subcategory": "ejecutivas",
       "name": "Silla Ejecutiva Bahia",
-      "description": "Silla ejecutiva con diseño moderno y funcional. Ofrece confort durante toda la jornada laboral.",
+      "description": "Diseño Ejecutivo y Sofisticado: Esta silla presidente está diseñada para combinar estilo y funcionalidad, ideal para oficinas modernas y espacios de trabajo profesionales. Esta silla presidente con sistema Syncro combina diseño, ergonomía y tecnología avanzada, siendo una elección perfecta para quienes buscan máxima comodidad y estilo en su espacio de trabajo.",
       "shortDescription": "Silla ejecutiva moderna y funcional",
       "features": [
-        "Diseño contemporáneo",
-        "Respaldo medio",
-        "Asiento ergonómico",
-        "Brazos 3D ajustables",
-        "Base de nylon",
-        "Sistema de ajuste multiposición"
+        "Cabecero 2D ajustable en altura y angulo",
+        "Espaldar tipo malla",
+        "Mecanismo Syncro 4 posiciones + Slider en el asiento",
+        "Apoyo lumbar 3D: graduable en altura, profundidad y ángulo",
+        "Asiento espuma moldeada e inyectada",
+        "Brazos 3D con pad en PU",
+        "Rodachines con banda de goma (60 mm)"
       ],
       "images": [
-        "/images/products/sillas/ejecutivas/silla-ejecutiva-bahia/main.jpg"
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-bahia/main.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-bahia/atras.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-bahia/costado.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-bahia/frente.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-bahia/mecanismo.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-bahia/uso.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-bahia/especificaciones.webp"
       ],
       "featured": false
     },
@@ -197,18 +261,25 @@
       "category": "sillas",
       "subcategory": "ejecutivas",
       "name": "Silla Ejecutiva Nova",
-      "description": "Silla ejecutiva de línea minimalista con máximo confort. Perfecta para espacios modernos.",
+      "description": "La silla Nova en malla gris es la aliada ideal para quienes pasan largas horas frente al escritorio y buscan comodidad con ventilación inteligente. Su diseño ergonómico y contemporáneo la convierte en una opción perfecta para oficinas modernas y espacios de trabajo en casa.",
       "shortDescription": "Silla ejecutiva minimalista",
       "features": [
-        "Línea minimalista",
-        "Respaldo de malla",
-        "Asiento de espuma de alta densidad",
-        "Brazos regulables",
-        "Base cromada de 5 puntas",
-        "Certificación ergonómica"
+        "Cabecero ajustable en altura y angulo",
+        "Espaldar en malla plastica de alta resistencia",
+        "Mecanismo Syncro 4 posiciones + Slider en el asiento",
+        "Apoyo lumbar 2D. Regulable en altura  y profundidad.",
+        "Asiento malla plastica alta resistencia",
+        "Brazos 3D Ajustables en angulo profundidad y altura.",
+        "Rodachines con banda de goma (60 mm)"
       ],
       "images": [
-        "/images/products/sillas/ejecutivas/silla-ejecutiva-nova/main.jpg"
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-nova/main.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-nova/atras.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-nova/costado.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-nova/frente.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-nova/mecanismo.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-nova/uso.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-nova/especificaciones.webp"
       ],
       "featured": true
     },
@@ -217,18 +288,24 @@
       "category": "sillas",
       "subcategory": "ejecutivas",
       "name": "Silla Ejecutiva Garden",
-      "description": "Silla ejecutiva con respaldo alto y máximo soporte. Diseñada para ejecutivos que buscan comodidad premium.",
+      "description": "Esta silla presidente combina ergonomía, funcionalidad y estilo, convirtiéndola en una excelente opción para quienes buscan comodidad y profesionalismo en su espacio de trabajo. Diseño Ejecutivo y Elegante, Esta silla ergonómica tipo presidente está diseñada para ofrecer el máximo confort y un estilo sofisticado, ideal para oficinas profesionales y espacios de trabajo modernos.",
       "shortDescription": "Silla ejecutiva con respaldo alto premium",
       "features": [
-        "Respaldo extra alto",
-        "Reposacabezas ajustable",
-        "Tapizado premium",
-        "Brazos 4D",
-        "Base de aluminio",
-        "Sistema de inclinación sincronizada"
+        "Cabecero 3D: ajustable altura, ángulo y profundidad",
+        "Espaldar Tipo malla + Altura graduable del espaldar",
+        "Mecanismo Syncro 3 posiciones",
+        "Apoyo lumbar 3D: graduable en altura, profundidad y ángulo",
+        "Asiento malla plastica alta resistencia",
+        "Brazos 3D con pad en PU",
+        "Rodachines con banda de goma (60 mm)"
       ],
       "images": [
-        "/images/products/sillas/ejecutivas/silla-ejecutiva-garden/main.jpg"
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-garden/main.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-garden/costado.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-garden/frente.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-garden/atras.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-garden/mecanismo.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-garden/especificaciones.webp"
       ],
       "featured": false
     },
@@ -237,18 +314,25 @@
       "category": "sillas",
       "subcategory": "ejecutivas",
       "name": "Silla Ejecutiva ErgoPlus",
-      "description": "Silla ejecutiva con tecnología ergonómica avanzada. Diseñada por especialistas en salud postural.",
+      "description": "Esta silla presidente con  reposapiés integrado es la solución perfecta para quienes buscan ergonomía avanzada, comodidad superior y un diseño ejecutivo que destaque en cualquier espacio de trabajo. Diseño Ejecutivo y Sofisticado: Esta silla presidente combina elegancia y funcionalidad, ideal para oficinas modernas y espacios de trabajo profesionales.",
       "shortDescription": "Silla ejecutiva con ergonomía avanzada",
       "features": [
-        "Tecnología ergonómica certificada",
-        "Soporte lumbar ajustable",
-        "Respaldo de malla 3D",
-        "Asiento con sistema anti-fatiga",
-        "Brazos multidireccionales",
-        "Garantía extendida"
+        "Cabecero 3D: ajustable altura, ángulo y profundidad",
+        "Espaldar Tipo malla + Altura graduable del espaldar",
+        "Mecanismo Syncro 3 posiciones",
+        "Apoyo lumbar 3D: graduable en altura, profundidad y ángulo",
+        "Asiento malla plastica alta resistencia",
+        "Brazos 3D con pad en PU",
+        "Rodachines con banda de goma (60 mm)"
       ],
       "images": [
-        "/images/products/sillas/ejecutivas/silla-ejecutiva-ergoplus/main.jpg"
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-ergoplus/main.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-ergoplus/atras.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-ergoplus/costado.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-ergoplus/frente.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-ergoplus/mecanismo.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-ergoplus/descansapies.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-ergoplus/especificaciones.webp"
       ],
       "featured": true
     },
@@ -257,18 +341,22 @@
       "category": "sillas",
       "subcategory": "ejecutivas",
       "name": "Silla Ejecutiva Delphi 2",
-      "description": "Silla ejecutiva versión 2 con mejoras en confort y durabilidad. Modelo actualizado de la línea Delphi.",
+      "description": "Silla gerencial Delphi 2 Syncro es una excelente opción para tu espacio de trabajo u oficina. Cuenta con altura regulable, apoyo lumbar ajustable y mecanismo syncro en su respaldo, lo que te permite inclinarlo y fijarlo en diferentes ángulos de inclinación según tus necesidades. Esta diseñada para brindarte comodidad durante largas jornadas gracias a su diseño ergonómico.",
       "shortDescription": "Silla ejecutiva Delphi versión mejorada",
       "features": [
-        "Diseño actualizado",
-        "Respaldo ajustable",
-        "Asiento de doble densidad",
-        "Brazos regulables",
-        "Base reforzada",
-        "Mecanismo de última generación"
+        "Espaldar Tipo malla + Altura graduable del espaldar",
+        "Mecanismo Syncro 4 posiciones",
+        "Apoyo lumbar ajustable en altura, profundidad",
+        "Asiento malla plastica alta resistencia",
+        "Brazos ajustables en altura",
+        "Rodachines con banda de goma (50 mm)"
       ],
       "images": [
-        "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-2/main.jpg"
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-2/main.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-2/atras.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-2/costado.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-2/dimensiones.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-2/lumbar.webp"
       ],
       "featured": false
     },
@@ -277,18 +365,25 @@
       "category": "sillas",
       "subcategory": "ejecutivas",
       "name": "Silla Ejecutiva Niza",
-      "description": "Silla ejecutiva con estilo europeo y acabados refinados. Elegancia y funcionalidad en un solo diseño.",
+      "description": "Silla gerencial Niza es una excelente opción para tu espacio de trabajo u oficina. Cuenta con altura y brazos ajustables, apoyo lumbar regulable y respaldo reclinable. Esta diseñada para brindarte comodidad durante largas jornadas gracias a su diseño ergonómico.",
       "shortDescription": "Silla ejecutiva estilo europeo",
       "features": [
-        "Diseño europeo",
-        "Tapizado en tela importada",
-        "Respaldo contorneado",
-        "Asiento anatómico",
-        "Brazos tapizados",
-        "Base cromada premium"
+        "Espaldar Tipo malla + Altura graduable del espaldar",
+        "Mecanismo Syncro 4 posiciones",
+        "Apoyo lumbar ajustable en altura, profundidad",
+        "Movimiento basculante en espalda cuando no está en posición fija",
+        "Asiento tela micro perforada tipo malla",
+        "Brazos ajustables en altura",
+        "Rodachines con banda de goma (50 mm)"
       ],
       "images": [
-        "/images/products/sillas/ejecutivas/silla-ejecutiva-niza/main.jpg"
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-niza/main.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-niza/atras.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-niza/costado.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-niza/frente.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-niza/dimensiones.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-niza/uso.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-niza/lumbar.webp"
       ],
       "featured": false
     },
@@ -297,18 +392,22 @@
       "category": "sillas",
       "subcategory": "ejecutivas",
       "name": "Silla Ejecutiva Praga",
-      "description": "Silla ejecutiva con diseño robusto y confiable. Ideal para uso intensivo en oficinas corporativas.",
+      "description": "Silla gerencial Praga es una excelente opción para tu espacio de trabajo u oficina. Cuenta con altura ajustable, brazos regulables y mecanismo basculante, que permite inclinar el respaldo. Esta diseñada para brindarte comodidad durante largas jornadas gracias a su diseño ergonómico.",
       "shortDescription": "Silla ejecutiva robusta y confiable",
       "features": [
-        "Construcción robusta",
-        "Respaldo reforzado",
-        "Asiento extra acolchado",
-        "Brazos fijos resistentes",
-        "Base de acero",
-        "Garantía comercial"
+        "Espaldar Tipo malla",
+        "Mecanismo Syncro 4 posiciones",
+        "Movimiento basculante en espalda cuando no está en posición fija",
+        "Asiento espuma poliuretano",
+        "Brazos ajustables en altura",
+        "Rodachines con banda de goma (50 mm)"
       ],
       "images": [
-        "/images/products/sillas/ejecutivas/silla-ejecutiva-praga/main.jpg"
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-praga/main.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-praga/atras.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-praga/costado.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-praga/frente.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-praga/dimensiones.webp"
       ],
       "featured": false
     },
@@ -317,18 +416,24 @@
       "category": "sillas",
       "subcategory": "ejecutivas",
       "name": "Silla Ejecutiva Delphi 1",
-      "description": "Silla ejecutiva versión clásica de la línea Delphi. Diseño probado y confiable.",
+      "description": "Silla gerencial Delphi 1 Basculante es una excelente opción para tu espacio de trabajo u oficina. Cuenta con altura regulable, apoyo lumbar y movimiento basculante en su respaldo, lo que te permite adaptarla a tus necesidades. Esta diseñada para brindarte comodidad durante largas jornadas gracias a su diseño ergonómico.",
       "shortDescription": "Silla ejecutiva Delphi versión clásica",
       "features": [
-        "Modelo clásico",
-        "Respaldo medio",
-        "Tapizado resistente",
-        "Brazos estándar",
-        "Base de nylon",
-        "Mecanismo básico ajustable"
+        "Espaldar Tipo malla",
+        "Apoyo lumbar ajustable en altura y profundidad",
+        "Movimiento basculante en espalda cuando no está en posición fija",
+        "Asiento espuma poliuretano, espesor: 50 mm",
+        "Brazos ajustables en altura",
+        "Rodachines Nylon (50 mm)"
       ],
       "images": [
-        "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-1/main.jpg"
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-1/main.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-1/atras.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-1/costado.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-1/frente.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-1/dimensiones.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-1/lumbar.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-1/uso.webp"
       ],
       "featured": false
     },
@@ -337,18 +442,24 @@
       "category": "sillas",
       "subcategory": "ejecutivas",
       "name": "Silla Ejecutiva Praga Premium",
-      "description": "Versión premium de la línea Praga con acabados superiores y características mejoradas.",
+      "description": "Silla gerencial Praga Premium es una excelente opción para tu espacio de trabajo u oficina. Cuenta con altura ajustable, brazos regulables y mecanismo basculante, que permite inclinar el respaldo. Esta diseñada para brindarte comodidad durante largas jornadas gracias a su diseño ergonómico.",
       "shortDescription": "Silla ejecutiva Praga edición premium",
       "features": [
-        "Edición premium",
-        "Materiales de alta gama",
-        "Respaldo ergonómico alto",
-        "Asiento de gel memory foam",
-        "Brazos 4D premium",
-        "Base de aluminio pulido"
+        "Espaldar Tipo malla + Altura graduable del espaldar",
+        "Mecanismo Syncro 4 posiciones",
+        "Apoyo lumbar ajustable en altura, profundidad",
+        "Movimiento basculante en espalda cuando no está en posición fija",
+        "Asiento espuma poliuretano",
+        "Brazos ajustables en altura",
+        "Rodachines con banda de goma (50 mm)"
       ],
       "images": [
-        "/images/products/sillas/ejecutivas/silla-ejecutiva-praga-premium/main.jpg"
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-praga-premium/main.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-praga-premium/atras.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-praga-premium/costado.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-praga-premium/frente.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-praga-premium/dimensiones.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-praga-premium/uso.webp"
       ],
       "featured": true
     },
@@ -357,18 +468,22 @@
       "category": "sillas",
       "subcategory": "ejecutivas",
       "name": "Silla Ejecutiva Nairobi",
-      "description": "Silla ejecutiva con diseño innovador y tecnología de punta. La elección de ejecutivos modernos.",
+      "description": "Silla gerencial Nairobi es una excelente opción para tu espacio de trabajo u oficina. Cuenta con altura y brazos ajustables, apoyo lumbar regulable y mecanismo syncro en su respaldo, lo que te permite inclinar el respaldo según tus preferencias y necesidades. Esta diseñada para brindarte comodidad durante largas jornadas gracias a su diseño ergonómico.",
       "shortDescription": "Silla ejecutiva innovadora",
       "features": [
-        "Diseño innovador",
-        "Tecnología de ventilación",
-        "Respaldo de malla 3D",
-        "Asiento con control de temperatura",
-        "Brazos inteligentes ajustables",
-        "Sistema de inclinación premium"
+        "Espaldar Tipo malla + Altura graduable del espaldar",
+        "Mecanismo Syncro 4 posiciones",
+        "Apoyo lumbar ajustable en altura, profundidad",
+        "Mecanismo Syncro que permite inclinar el espaldar y fijarlo en la posición deseada ( 4 diferentes ángulos de inclinación)",
+        "Asiento espuma poliuretano, espesor: 50 mm",
+        "Posibilidad de asiento tapizado en Azul, verde, rojo, naranja o mostaza (costo adicional)",
+        "Brazos ajustables en altura, giro y profundidad",
+        "Rodachines nylon (50 mm)"
       ],
       "images": [
-        "/images/products/sillas/ejecutivas/silla-ejecutiva-nairobi/main.jpg"
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-nairobi/main.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-nairobi/costado.webp",
+        "/images/products/sillas/ejecutivas/silla-ejecutiva-nairobi/dimensiones.webp"
       ],
       "featured": false
     }

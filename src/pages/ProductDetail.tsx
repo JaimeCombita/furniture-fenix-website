@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Button } from '../components/ui';
 import productsData from '../data/products.json';
@@ -9,6 +9,7 @@ export const ProductDetailPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isCarouselPaused, setIsCarouselPaused] = useState(false);
 
   const product = (productsData.products.find(p => p.id === id) || null) as Product | null;
 
@@ -29,6 +30,25 @@ export const ProductDetailPage: React.FC = () => {
 
   const displayProduct = product || notFoundProduct;
 
+  useEffect(() => {
+    setCurrentImageIndex(0);
+  }, [displayProduct.id]);
+
+  useEffect(() => {
+    if (!displayProduct.images || displayProduct.images.length <= 1) return;
+    if (isCarouselPaused) return;
+
+    const intervalId = window.setInterval(() => {
+      setCurrentImageIndex((prev: number) =>
+        prev === displayProduct.images.length - 1 ? 0 : prev + 1
+      );
+    }, 3000);
+
+    return () => {
+      window.clearInterval(intervalId);
+    };
+  }, [displayProduct.images, displayProduct.id, isCarouselPaused]);
+
   const handlePrevImage = () => {
     if (displayProduct.images && displayProduct.images.length > 0) {
       setCurrentImageIndex((prev: number) => 
@@ -47,6 +67,7 @@ export const ProductDetailPage: React.FC = () => {
 
   const handleThumbnailClick = (index: number) => {
     setCurrentImageIndex(index);
+    setIsCarouselPaused(true);
   };
 
   return (
@@ -59,7 +80,11 @@ export const ProductDetailPage: React.FC = () => {
 
         <div className="product-detail-grid">
           <div className="product-image-section">
-            <div className="image-carousel">
+            <div
+              className="image-carousel"
+              onMouseEnter={() => setIsCarouselPaused(true)}
+              onMouseLeave={() => setIsCarouselPaused(false)}
+            >
               <div className="main-image">
                 {displayProduct.images && displayProduct.images.length > 0 ? (
                   <>

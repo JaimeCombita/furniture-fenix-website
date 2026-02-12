@@ -9,12 +9,13 @@ export const HomePage: React.FC = () => {
   return (
     <div className="home-page">
       <Hero
-        title="Soluciones de Mobiliario para el Sector Público"
-        subtitle="Calidad, diseño y cumplimiento para tus proyectos"
+        title="Equipamos los espacios donde se construye el país"
+        subtitle="Sillas de oficina impotadas y mobiliario nacional con estandares institucionales"
         ctaText="Contáctanos"
         ctaLink="/contacto"
-        promoTitle="Evento de Proyectos 2026"
-        promoText="Aprovecha beneficios exclusivos en mobiliario institucional y recibe asesoría prioritaria."
+        promoTitle="Producto destacado"
+        promoText="Descubre nuestra selección de mobiliario institucional."
+        useProductPromo
       />
 
       <section className="section categories-section">

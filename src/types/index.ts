@@ -20,6 +20,7 @@ export interface Product {
 export type ProductCategory = 
   | 'mesas'
   | 'sillas'
+  | 'lockers'
   | 'archivadores'
   | 'mobiliario-escolar'
   | 'mobiliario-oficina'

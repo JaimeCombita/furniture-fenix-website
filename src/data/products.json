@@ -32,6 +32,13 @@
       "active": true
     },
     {
+      "id": "lockers",
+      "name": "Lockers",
+      "icon": "lock",
+      "description": "Lockers metálicos para almacenamiento seguro",
+      "active": true
+    },
+    {
       "id": "archivadores",
       "name": "Archivadores",
       "icon": "Archive",
@@ -486,6 +493,110 @@
         "/images/products/sillas/ejecutivas/silla-ejecutiva-nairobi/dimensiones.webp"
       ],
       "featured": false
+    },
+    {
+      "id": "locker-metalico-1-puesto",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico 1 Puesto",
+      "description": "Locker metálico de 1 puesto ideal para empresas, gimnasios, bodegas y colegios. Con un diseño compacto y funcional, ofrece almacenamiento seguro y ordenado. Incluye porta candado para mantener las pertenencias protegidas. Una opción duradera y accesible para quien busca un casillero metálico.",
+      "shortDescription": "Locker metálico compacto con porta candado",
+      "features": [
+        "Material: Lámina Cold Rolled calibre 24",
+        "Acabados: Pintura electrostática termofijada",
+        "División zapatera",
+        "Perchero interno tipo gancho",
+        "Manija y patas en polipropileno de alto impacto",
+        "Puntos de ventilación",
+        "Cierre metálico para candados",
+        "Alto: 180 cm",
+        "Ancho: 32 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-1-puesto/main.png",
+        "/images/products/lockers/locker-metalico-1-puesto/abierto.png",
+        "/images/products/lockers/locker-metalico-1-puesto/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-2-puestos",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico 2 Puestos",
+      "description": "Locker metálico de 2 puestos con entrepaño interno para calzado, ideal para oficinas, gimnasios, bodegas y centros educativos. Su capacidad para dos usuarios lo hace perfecto para espacios reducidos. Cuenta con dos puertas y porta candado para guardar pertenencias de forma segura.",
+      "shortDescription": "Locker metálico de 2 puestos con porta candado",
+      "features": [
+        "Material: Lámina Cold Rolled calibre 24",
+        "Acabados: Pintura electrostática termofijada",
+        "División zapatera",
+        "Perchero interno tipo gancho",
+        "Manija y patas en polipropileno de alto impacto",
+        "Puntos de ventilación",
+        "Cierre metálico para candados",
+        "Alto: 180 cm",
+        "Ancho: 32 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-2-puestos/main.png",
+        "/images/products/lockers/locker-metalico-2-puestos/abierto.png",
+        "/images/products/lockers/locker-metalico-2-puestos/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-3-puestos",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico 3 Puestos",
+      "description": "Locker metálico 3 puestos multifuncional para empleados, colegios, universidades y gimnasios. Cada puerta cuenta con porta candado para mayor seguridad. Fabricado en metal con acabados en pintura de alta calidad y ventilación que mantiene la circulación del aire interior.",
+      "shortDescription": "Locker metálico de 3 puestos con ventilación",
+      "features": [
+        "Material: Lámina Cold Rolled calibre 24",
+        "Acabados: Pintura electrostática termofijada",
+        "División zapatera",
+        "Perchero interno tipo gancho",
+        "Manija en polipropileno",
+        "Puntos de ventilación",
+        "Cierre metálico para candados",
+        "Alto: 180 cm",
+        "Ancho: 32 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-3-puestos/main.png",
+        "/images/products/lockers/locker-metalico-3-puestos/abierto.png",
+        "/images/products/lockers/locker-metalico-3-puestos/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-4-puestos",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico 4 Puestos",
+      "description": "Nuestro Locker Metálico 4 Puestos ofrece almacenamiento seguro y duradero. Su diseño metálico aporta orden a cualquier espacio y se adapta a entornos industriales, construcción, escuelas, oficinas o gimnasios. Este casillero metálico de 4 puertas tiene un diseño vertical que optimiza el espacio.",
+      "shortDescription": "Locker metálico 4 puestos con diseño vertical",
+      "features": [
+        "Material: Lámina Cold Rolled calibre 24",
+        "Acabados: Pintura electrostática termofijada",
+        "División zapatera",
+        "Perchero interno tipo gancho",
+        "Manija en polipropileno",
+        "Puntos de ventilación",
+        "Cierre metálico para candados",
+        "Alto: 180 cm",
+        "Ancho: 63 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-4-puestos/main.png",
+        "/images/products/lockers/locker-metalico-4-puestos/abierto.png",
+        "/images/products/lockers/locker-metalico-4-puestos/dimensiones.png"
+      ],
+      "featured": true
     }
   ]
 }

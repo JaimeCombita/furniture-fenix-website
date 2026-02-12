@@ -34,6 +34,13 @@ export const CATEGORIES: CategoryInfo[] = [
     active: true
   },
   {
+    id: 'lockers',
+    name: 'Lockers',
+    description: 'Almacenamiento seguro y resistente',
+    icon: 'lock',
+    active: true
+  },
+  {
     id: 'archivadores',
     name: 'Archivadores',
     description: 'Almacenamiento eficiente',

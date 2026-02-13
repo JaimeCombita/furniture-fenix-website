@@ -18,8 +18,10 @@ export interface Product {
 }
 
 export type ProductCategory = 
-  | 'mesas'
+  | 'carpas'
+  | 'linea-exterior'
   | 'sillas'
+  | 'mesas'
   | 'lockers'
   | 'archivadores'
   | 'mobiliario-escolar'

@@ -19,6 +19,20 @@ export const COMPANY_INFO = {
 } as const;
 
 export const CATEGORIES: CategoryInfo[] = [
+    {
+      id: 'carpas',
+      name: 'Carpas',
+      description: 'Carpas para ferias, eventos y usos múltiples',
+      icon: 'tent',
+      active: true
+    },
+    {
+      id: 'linea-exterior',
+      name: 'Línea Exterior',
+      description: 'Productos para exteriores y espacios abiertos',
+      icon: 'tree',
+      active: false
+    },
   {
     id: 'sillas',
     name: 'Sillas',

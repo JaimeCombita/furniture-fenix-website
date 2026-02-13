@@ -51,6 +51,32 @@
       "icon": "users",
       "description": "Muebles para recepción",
       "active": false
+    },
+    {
+      "id": "carpas",
+      "name": "Carpas",
+      "icon": "tent",
+      "description": "Carpas para ferias, eventos y usos múltiples",
+      "active": true,
+      "subcategories": [
+        {
+          "id": "kioscos",
+          "name": "Kioscos",
+          "description": "Kioscos tradicionales y plegables para eventos y ferias"
+        },
+        {
+          "id": "hangares",
+          "name": "Hangares",
+          "description": "Hangares para cubrir grandes espacios, eventos y bodegas"
+        }
+      ]
+    },
+    {
+      "id": "linea-exterior",
+      "name": "Línea Exterior",
+      "icon": "tree",
+      "description": "Productos para exteriores y espacios abiertos",
+      "active": false
     }
   ],
   "products": [
@@ -1095,6 +1121,70 @@
         "/images/products/lockers/locker-metalico-neo-16-puestos/dimensiones.png"
       ],
       "featured": true
+    }
+    ,
+    {
+      "id": "kiosco-tradicional",
+      "category": "carpas",
+      "subcategory": "kioscos",
+      "name": "Kiosco Tradicional",
+      "description": "Carpa tipo kiosco piramidal tradicional y a dos aguas. Elaboradas en tubería coll rol galvanizada, aluminio, PVC. Soldadura MIC, pintura para exteriores y lonas impermeables de excelente calidad. Están diseñadas para múltiples usos: ferias, puestos de control, ventas, estands, oficinas, etc.",
+      "shortDescription": "Kiosco tradicional piramidal para ferias y eventos",
+      "features": [
+        "Carpa tipo kiosco piramidal tradicional y a dos aguas",
+        "Elaboradas en tubería coll rol galvanizada, aluminio, PVC",
+        "Soldadura MIC, pintura para exteriores",
+        "Lonas impermeables de excelente calidad",
+        "Diseñadas para múltiples usos: ferias, puestos de control, ventas, estands, oficinas, etc."
+      ],
+      "images": [
+        "/images/products/carpas/kiosco-tradicional/1.jpg",
+        "/images/products/carpas/kiosco-tradicional/2.jpg"
+      ],
+      "featured": true,
+      "quantity": 2
+    },
+    {
+      "id": "kiosco-plegable",
+      "category": "carpas",
+      "subcategory": "kioscos",
+      "name": "Kiosco Plegable",
+      "description": "Práctico kiosco plegable o retráctil. Estructura importada elaborada en tubería cuadrada de 2x1 de 1'' y pintura para exteriores. Lona 100% impermeable de excelente calidad. Esta carpa está diseñada para múltiples usos como ferias, puestos de control, ventas, stand, oficinas, entre otros. Es un diseño muy flexible de armar.",
+      "shortDescription": "Kiosco plegable retráctil para ferias y eventos",
+      "features": [
+        "Práctico kiosco plegable o retráctil",
+        "Estructura importada en tubería cuadrada de 2x1 de 1'' y pintura para exteriores",
+        "Lona 100% impermeable de excelente calidad",
+        "Diseñada para múltiples usos: ferias, puestos de control, ventas, stand, oficinas, entre otros",
+        "Diseño muy flexible de armar"
+      ],
+      "images": [
+        "/images/products/carpas/kiosco-plegable/1.jpg",
+        "/images/products/carpas/kiosco-plegable/2.jpg"
+      ],
+      "featured": true,
+      "quantity": 2
+    },
+    {
+      "id": "hangar",
+      "category": "carpas",
+      "subcategory": "hangares",
+      "name": "Hangar",
+      "description": "Carpa tipo hangar en dos presentaciones: redondo y a dos aguas, o según estilo sugerido por el cliente. Estructura elaborada con tubería y perfilería de las mejores marcas, soldadura MIC y pintura para exteriores. Lona 100% impermeable de excelente calidad. Están diseñados para cubrir grandes espacios como bodegas, eventos empresariales, reuniones sociales, conciertos, adecuación de espacios, entre otros usos que requiera.",
+      "shortDescription": "Hangar para grandes espacios y eventos",
+      "features": [
+        "Carpa tipo hangar en dos presentaciones: redondo y a dos aguas, o según estilo sugerido por el cliente",
+        "Estructura elaborada con tubería y perfilería de las mejores marcas",
+        "Soldadura MIC y pintura para exteriores",
+        "Lona 100% impermeable de excelente calidad",
+        "Diseñados para cubrir grandes espacios: bodegas, eventos empresariales, reuniones sociales, conciertos, adecuación de espacios, entre otros"
+      ],
+      "images": [
+        "/images/products/carpas/hangar/1.jpg",
+        "/images/products/carpas/hangar/2.jpg"
+      ],
+      "featured": true,
+      "quantity": 1
     }
   ]
 }

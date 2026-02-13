@@ -21,14 +21,19 @@
           "id": "gamer",
           "name": "Sillas Gamer",
           "description": "Sillas gamer de alto rendimiento"
+        },
+        {
+          "id": "otras",
+          "name": "Otras",
+          "description": "Sillas de diferentes lineas y estilos"
         }
       ]
     },
     {
       "id": "mesas",
-      "name": "Mesas",
+      "name": "Escritorios y Salas de Juntas",
       "icon": "table",
-      "description": "Escritorios y mesas de trabajo",
+      "description": "Escritorios y salas de juntas",
       "active": true
     },
     {
@@ -183,7 +188,7 @@
     {
       "id": "silla-ejecutiva-lumpi",
       "category": "sillas",
-      "subcategory": "ejecutivas",
+      "subcategory": "gerenciales",
       "name": "Silla Ejecutiva Lumpi",
       "description": "La Silla Lumpi económica es la solución ideal para quienes buscan comodidad y diseño a buen precio. Perfecta para oficina y home office, cuenta con respaldo en malla transpirable, asiento acolchado y soporte lumbar que favorece la postura. Su estructura resistente y estilo moderno la convierten en una opción práctica, accesible y con garantía Siilla. Envíos rápidos a toda Colombia.",
       "shortDescription": "Silla ejecutiva ergonómica con respaldo alto",
@@ -209,7 +214,7 @@
     {
       "id": "silla-ejecutiva-kao",
       "category": "sillas",
-      "subcategory": "ejecutivas",
+      "subcategory": "gerenciales",
       "name": "Silla Ejecutiva Kao",
       "description": "Confort, lujo y elegancia para tu espacio ejecutivo La Silla Presidente Kao está diseñada para aquellos que buscan una silla de oficina que combine máxima comodidad, funcionalidad y un toque de lujo. Su diseño moderno y elegante, junto con un soporte ergonómico superior, la convierte en la opción ideal para espacios ejecutivos donde el confort y el estilo son esenciales para un alto rendimiento durante largas jornadas de trabajo.",
       "shortDescription": "Silla ejecutiva con soporte lumbar",
@@ -238,7 +243,7 @@
     {
       "id": "silla-ejecutiva-venezia",
       "category": "sillas",
-      "subcategory": "ejecutivas",
+      "subcategory": "gerenciales",
       "name": "Silla Ejecutiva Venezia",
       "description": "Descubre la silla Venezia en tono gris, una fusión perfecta entre estilo moderno y ergonomía funcional. Su diseño minimalista se adapta con facilidad a oficinas, salas de reuniones o escritorios en casa, aportando distinción y sobriedad a cualquier ambiente.",
       "shortDescription": "Silla ejecutiva clásica y elegante",
@@ -265,7 +270,7 @@
     {
       "id": "silla-ejecutiva-bahia",
       "category": "sillas",
-      "subcategory": "ejecutivas",
+      "subcategory": "gerenciales",
       "name": "Silla Ejecutiva Bahia",
       "description": "Diseño Ejecutivo y Sofisticado: Esta silla presidente está diseñada para combinar estilo y funcionalidad, ideal para oficinas modernas y espacios de trabajo profesionales. Esta silla presidente con sistema Syncro combina diseño, ergonomía y tecnología avanzada, siendo una elección perfecta para quienes buscan máxima comodidad y estilo en su espacio de trabajo.",
       "shortDescription": "Silla ejecutiva moderna y funcional",
@@ -292,7 +297,7 @@
     {
       "id": "silla-ejecutiva-nova",
       "category": "sillas",
-      "subcategory": "ejecutivas",
+      "subcategory": "gerenciales",
       "name": "Silla Ejecutiva Nova",
       "description": "La silla Nova en malla gris es la aliada ideal para quienes pasan largas horas frente al escritorio y buscan comodidad con ventilación inteligente. Su diseño ergonómico y contemporáneo la convierte en una opción perfecta para oficinas modernas y espacios de trabajo en casa.",
       "shortDescription": "Silla ejecutiva minimalista",
@@ -319,7 +324,7 @@
     {
       "id": "silla-ejecutiva-garden",
       "category": "sillas",
-      "subcategory": "ejecutivas",
+      "subcategory": "gerenciales",
       "name": "Silla Ejecutiva Garden",
       "description": "Esta silla presidente combina ergonomía, funcionalidad y estilo, convirtiéndola en una excelente opción para quienes buscan comodidad y profesionalismo en su espacio de trabajo. Diseño Ejecutivo y Elegante, Esta silla ergonómica tipo presidente está diseñada para ofrecer el máximo confort y un estilo sofisticado, ideal para oficinas profesionales y espacios de trabajo modernos.",
       "shortDescription": "Silla ejecutiva con respaldo alto premium",
@@ -345,7 +350,7 @@
     {
       "id": "silla-ejecutiva-ergoplus",
       "category": "sillas",
-      "subcategory": "ejecutivas",
+      "subcategory": "gerenciales",
       "name": "Silla Ejecutiva ErgoPlus",
       "description": "Esta silla presidente con  reposapiés integrado es la solución perfecta para quienes buscan ergonomía avanzada, comodidad superior y un diseño ejecutivo que destaque en cualquier espacio de trabajo. Diseño Ejecutivo y Sofisticado: Esta silla presidente combina elegancia y funcionalidad, ideal para oficinas modernas y espacios de trabajo profesionales.",
       "shortDescription": "Silla ejecutiva con ergonomía avanzada",

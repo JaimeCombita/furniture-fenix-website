@@ -4,9 +4,9 @@ export const COMPANY_INFO = {
   name: 'Fénix',
   fullName: 'Fénix Mobiliario Institucional',
   tagline: 'Mobiliario Institucional',
-  nit: '900.123.456-8',
-  email: 'contacto@fenix.com.co',
-  phone: '+57 (1) 234 5678',
+  nit: '1.033.695.760-2',
+  email: 'mobiliariofenix.07@gmail.com',
+  phone: '+57 322 965 8190',
   whatsapp: '+57 322 965 8190',
   address: 'Bogotá, Colombia',
   schedule: 'Lun-Vie: 8:00 AM - 6:00 PM',
@@ -42,7 +42,7 @@ export const CATEGORIES: CategoryInfo[] = [
   },
   {
     id: 'mesas',
-    name: 'Mesas',
+    name: 'Escritorios y Salas de Juntas',
     description: 'Para oficina, conferencias y trabajo',
     icon: 'table',
     active: true

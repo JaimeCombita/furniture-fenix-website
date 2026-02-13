@@ -70,7 +70,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
             <span>Inicio</span>
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             to="/sobre-empresa"
             className={`nav-link ${isActive('/sobre-empresa') ? 'active' : ''}`}
@@ -79,7 +79,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
             <i className="fas fa-building"></i>
             <span>Sobre la Empresa</span>
           </Link>
-        </li>
+        </li> */}
         <li>
           <button
             className={`nav-link nav-dropdown ${isActive('/catalogo') ? 'active' : ''}`}
@@ -142,7 +142,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
             <span>Servicios</span>
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             to="/proyectos"
             className={`nav-link ${isActive('/proyectos') ? 'active' : ''}`}
@@ -151,7 +151,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
             <i className="fas fa-briefcase"></i>
             <span>Proyectos</span>
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
             to="/contacto"
@@ -164,7 +164,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
         </li>
       </ul>
 
-      <div className="nav-footer">
+      {/* <div className="nav-footer">
         <div className="social-links">
           <a href={COMPANY_INFO.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <i className="fab fa-facebook"></i>
@@ -179,7 +179,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
             <i className="fab fa-whatsapp"></i>
           </a>
         </div>
-      </div>
+      </div> */}
       </nav>
     </>
   );

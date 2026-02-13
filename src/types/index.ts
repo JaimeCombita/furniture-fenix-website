@@ -93,3 +93,16 @@ export interface PaginatedResponse<T> {
   pageSize: number;
   totalPages: number;
 }
+
+export interface LandingBanner {
+  id: string;
+  imagePath: string;
+  category: ProductCategory;
+  subcategory?: string | null;
+  buttonText: string;
+  description?: string;
+}
+
+export interface LandingBannersData {
+  banners: LandingBanner[];
+}

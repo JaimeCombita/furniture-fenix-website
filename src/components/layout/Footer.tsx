@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
             <p className="footer-description">
               Soluciones de calidad para el sector público y privado
             </p>
-            <div className="footer-social">
+            {/* <div className="footer-social">
               <a href={COMPANY_INFO.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <i className="fab fa-facebook"></i>
               </a>
@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
               <a href={COMPANY_INFO.social.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                 <i className="fab fa-whatsapp"></i>
               </a>
-            </div>
+            </div> */}
           </div>
 
           <div className="footer-col">

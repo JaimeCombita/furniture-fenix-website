@@ -1,0 +1,52 @@
+{
+  "banners": [
+    {
+      "id": "banner-1",
+      "imagePath": "/images/landing/img-8.jpeg",
+      "category": "sillas",
+      "subcategory": "ejecutivas",
+      "buttonText": "Sillas Ejecutivas",
+      "description": "Sillas ejecutivas para oficina con diseño ergonómico"
+    },
+    {
+      "id": "banner-2",
+      "imagePath": "/images/landing/img-2.PNG",
+      "category": "sillas",
+      "subcategory": "gerenciales",
+      "buttonText": "Sillas Gerenciales",
+      "description": "Sillas gerenciales de alta gama"
+    },
+    {
+      "id": "banner-3",
+      "imagePath": "/images/landing/img-3.PNG",
+      "category": "mesas",
+      "subcategory": null,
+      "buttonText": "Mesas",
+      "description": "Mesas para oficina y espacios de trabajo"
+    },
+    {
+      "id": "banner-4",
+      "imagePath": "/images/landing/img-5.jpeg",
+      "category": "lockers",
+      "subcategory": null,
+      "buttonText": "Lockers",
+      "description": "Lockers metálicos para almacenamiento seguro"
+    },
+    {
+      "id": "banner-5",
+      "imagePath": "/images/landing/img-6.jpeg",
+      "category": "mesas",
+      "subcategory": null,
+      "buttonText": "Salas de juntas",
+      "description": "Salas de juntas para espacios de trabajo colaborativos"
+    },
+    {
+      "id": "banner-6",
+      "imagePath": "/images/landing/img-7.PNG",
+      "category": "carpas",
+      "subcategory": null,
+      "buttonText": "Carpas",
+      "description": "Carpas tradicionales, plegables y personalizadas para eventos al aire libre"
+    }
+  ]
+}

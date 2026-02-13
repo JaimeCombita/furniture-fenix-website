@@ -26,15 +26,7 @@ export const HomePage: React.FC = () => {
 
   return (
     <div className="home-page">
-      <Hero
-        title="Equipamos los espacios donde se construye el país"
-        subtitle="Sillas de oficina impotadas y mobiliario nacional con estandares institucionales"
-        ctaText="Contáctanos"
-        ctaLink="/contacto"
-        promoTitle="Producto destacado"
-        promoText="Descubre nuestra selección de mobiliario institucional."
-        useProductPromo
-      />
+      <Hero />
 
       <section className="section categories-section">
         <div className="container">
@@ -85,9 +77,9 @@ export const HomePage: React.FC = () => {
                   <span>Garantía extendida</span>
                 </li>
               </ul>
-              <Link to="/sobre-empresa">
+              {/* <Link to="/sobre-empresa">
                 <Button variant="secondary">Conoce más</Button>
-              </Link>
+              </Link> */}
             </div>
             <div className="about-image">
               <div className="placeholder-image">

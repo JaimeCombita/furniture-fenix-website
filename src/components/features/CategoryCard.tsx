@@ -25,7 +25,7 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
   }
 
   return (
-    <Link to={`/catalogo#${category.id}`} className="category-card-link">
+    <Link to={`/catalogo?categoria=${category.id}`} className="category-card-link">
       {cardContent}
     </Link>
   );

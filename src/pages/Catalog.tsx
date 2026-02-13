@@ -2,12 +2,36 @@ import React, { useState, useEffect } from 'react';
 import { ProductCard } from '../components/features';
 import type { Product, ProductCategory } from '../types';
 import productsData from '../data/products.json';
+import { useLocation } from 'react-router-dom';
 import './Catalog.css';
 
 export const CatalogPage: React.FC = () => {
+  const location = useLocation();
   const [selectedCategory, setSelectedCategory] = useState<ProductCategory | 'all'>('all');
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
   const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const categoryParam = params.get('categoria');
+    const subcategoryParam = params.get('subcategoria');
+    const categoryMatch = categoryParam
+      ? productsData.categories.find((cat) => cat.id === categoryParam)
+      : null;
+
+    if (categoryMatch) {
+      setSelectedCategory(categoryMatch.id as ProductCategory);
+      if (subcategoryParam && categoryMatch.subcategories?.some((sub) => sub.id === subcategoryParam)) {
+        setSelectedSubcategory(subcategoryParam);
+      } else {
+        setSelectedSubcategory(null);
+      }
+      return;
+    }
+
+    setSelectedCategory('all');
+    setSelectedSubcategory(null);
+  }, [location.search]);
 
   useEffect(() => {
     const filtered = (selectedCategory === 'all' 

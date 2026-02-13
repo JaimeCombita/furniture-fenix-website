@@ -3,7 +3,7 @@
     {
       "id": "sillas",
       "name": "Sillas",
-      "icon": "Chair",
+      "icon": "chair",
       "description": "Sillas ergonómicas y de oficina",
       "active": true,
       "subcategories": [
@@ -27,7 +27,7 @@
     {
       "id": "mesas",
       "name": "Mesas",
-      "icon": "Layers",
+      "icon": "table",
       "description": "Escritorios y mesas de trabajo",
       "active": true
     },
@@ -41,14 +41,14 @@
     {
       "id": "archivadores",
       "name": "Archivadores",
-      "icon": "Archive",
+      "icon": "archive",
       "description": "Soluciones de almacenamiento",
       "active": false
     },
     {
       "id": "recepciones",
       "name": "Recepciones",
-      "icon": "Users",
+      "icon": "users",
       "description": "Muebles para recepción",
       "active": false
     }
@@ -541,7 +541,8 @@
       ],
       "images": [
         "/images/products/lockers/locker-metalico-2-puestos/main.png",
-        "/images/products/lockers/locker-metalico-2-puestos/abierto.png",
+        "/images/products/lockers/locker-metalico-2-puestos/nuevo.jpg",
+        "/images/products/lockers/locker-metalico-2-puestos/abierto.jpg",
         "/images/products/lockers/locker-metalico-2-puestos/dimensiones.png"
       ],
       "featured": true
@@ -567,7 +568,7 @@
       ],
       "images": [
         "/images/products/lockers/locker-metalico-3-puestos/main.png",
-        "/images/products/lockers/locker-metalico-3-puestos/abierto.png",
+        "/images/products/lockers/locker-metalico-3-puestos/frente.png",
         "/images/products/lockers/locker-metalico-3-puestos/dimensiones.png"
       ],
       "featured": true
@@ -594,7 +595,504 @@
       "images": [
         "/images/products/lockers/locker-metalico-4-puestos/main.png",
         "/images/products/lockers/locker-metalico-4-puestos/abierto.png",
+        "/images/products/lockers/locker-metalico-4-puestos/costado.png",
+        "/images/products/lockers/locker-metalico-4-puestos/frente-abierto.png",
         "/images/products/lockers/locker-metalico-4-puestos/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-6-puestos-vertical",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico 6 Puestos Vertical",
+      "description": "Locker Metálico 6 Puestos Vertical es adecuado para el almacenamiento seguro de ropa y otros artículos personales o profesionales en escuelas, hospitales, clubes deportivos y otros entornos profesionales o industriales. Nuestro casillero de 6 puertas está hecho en metal para mayor resistencia, cuenta con huecos de ventilación y porta candado.",
+      "shortDescription": "Locker metálico 6 puestos vertical con porta candado",
+      "features": [
+        "Material: Lámina Cold Rolled de calibre 24",
+        "Acabados: Pintura electrostática termofijada",
+        "División zapatera",
+        "Perchero interno tipo gancho",
+        "Manija en polipropileno",
+        "Puntos de ventilación",
+        "Cierre metálico para candados",
+        "Alto: 180 cm",
+        "Ancho: 63 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-6-puestos-vertical/main.png",
+        "/images/products/lockers/locker-metalico-6-puestos-vertical/frente-abierto.png",
+        "/images/products/lockers/locker-metalico-6-puestos-vertical/costado.png",
+        "/images/products/lockers/locker-metalico-6-puestos-vertical/costado-abierto.png",
+        "/images/products/lockers/locker-metalico-6-puestos-vertical/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-6-puestos-vertical-200",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico 6 Puestos Vertical 200 cm",
+      "description": "Locker metálico de 6 puestos vertical para bodegas, vestíbulos, oficinas de mediana afluencia. Elaborado en lámina cold rolled cubierta en pintura electrostática.",
+      "shortDescription": "Locker metálico 6 puestos vertical para alta resistencia",
+      "features": [
+        "Material: Lámina Cold Rolled de calibre 24",
+        "Acabados: Pintura electrostática termofijada",
+        "División zapatera",
+        "Perchero interno tipo gancho",
+        "Manija en polipropileno",
+        "Puntos de ventilación",
+        "Cierre metálico para candados",
+        "Alto: 200 cm",
+        "Ancho: 63 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-6-puestos-vertical-200/main.png",
+        "/images/products/lockers/locker-metalico-6-puestos-vertical-200/frente-abierto.png",
+        "/images/products/lockers/locker-metalico-6-puestos-vertical-200/costado.png",
+        "/images/products/lockers/locker-metalico-6-puestos-vertical-200/costado-abierto.png",
+        "/images/products/lockers/locker-metalico-6-puestos-vertical-200/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-6-puestos-horizontal",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico 6 Puestos Horizontal",
+      "description": "Locker Metálico 6 Puestos Horizontal es un mueble de almacenamiento con acabado en pintura electrostática que garantiza mayor protección contra la corrosión y rayones. Incluye ventilación y porta candado individual para mayor seguridad y privacidad. Este casillero es usado principalmente en oficinas, zonas comerciales, escuelas y gimnasios para almacenar objetos, ropa o útiles escolares.",
+      "shortDescription": "Locker metálico 6 puestos horizontal con porta candado",
+      "features": [
+        "Material: Lámina Cold Rolled de calibre 24",
+        "Acabados: Pintura electrostática termofijada",
+        "División zapatera",
+        "Perchero interno tipo gancho",
+        "Manija en polipropileno",
+        "Puntos de ventilación",
+        "Cierre metálico para candados",
+        "Alto: 180 cm",
+        "Ancho: 93 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-6-puestos-horizontal/main.png",
+        "/images/products/lockers/locker-metalico-6-puestos-horizontal/frente.png",
+        "/images/products/lockers/locker-metalico-6-puestos-horizontal/costado.png",
+        "/images/products/lockers/locker-metalico-6-puestos-horizontal/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-8-puestos-200",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico 8 Puestos 200 cm",
+      "description": "Cubierto en pintura electrostática; manijas y patas en polipropileno. Ideal para universidades, colegios, grandes bodegas y oficinas concurridas.",
+      "shortDescription": "Locker metálico 8 puestos con pintura electrostática",
+      "features": [
+        "Material: Lámina Cold Rolled de calibre 24",
+        "Acabados: Pintura electrostática termofijada",
+        "División zapatera",
+        "Perchero interno tipo gancho",
+        "Manija en polipropileno",
+        "Puntos de ventilación",
+        "Cierre metálico para candados",
+        "Alto: 200 cm",
+        "Ancho: 63 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-8-puestos-200/main.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-9-puestos-180",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico 9 Puestos 180 cm",
+      "description": "Locker Metálico 9 Puestos 180 cm es una solución de almacenamiento versátil y económica, ideal para gimnasios, escuelas, bibliotecas y oficinas. Cada compartimento cuenta con un porta candado ofreciendo seguridad y organización a los usuarios. Este casillero fabricado en metal es robusto con un acabado duradero gracias a su pintura en polvo.",
+      "shortDescription": "Locker metálico 9 puestos con porta candado",
+      "features": [
+        "Material: Lámina Cold Rolled de calibre 24",
+        "Acabados: Pintura electrostática termofijada",
+        "División zapatera",
+        "Perchero interno tipo gancho",
+        "Manija en polipropileno",
+        "Puntos de ventilación",
+        "Cierre metálico para candados",
+        "Alto: 180 cm",
+        "Ancho: 93 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-9-puestos-180/main.png",
+        "/images/products/lockers/locker-metalico-9-puestos-180/frente.png",
+        "/images/products/lockers/locker-metalico-9-puestos-180/abierto.png",
+        "/images/products/lockers/locker-metalico-9-puestos-180/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-9-puestos-200",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico 9 Puestos 200 cm",
+      "description": "Cubierto en pintura electrostática; manijas y patas en polipropileno. Ideal para universidades, colegios, grandes bodegas y oficinas concurridas.",
+      "shortDescription": "Locker metálico 9 puestos para alta afluencia",
+      "features": [
+        "Material: Lámina Cold Rolled de calibre 24",
+        "Acabados: Pintura electrostática termofijada",
+        "División zapatera",
+        "Perchero interno tipo gancho",
+        "Manija en polipropileno",
+        "Puntos de ventilación",
+        "Cierre metálico para candados",
+        "Alto: 200 cm",
+        "Ancho: 93 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-9-puestos-200/main.png",
+        "/images/products/lockers/locker-metalico-9-puestos-200/frente.png",
+        "/images/products/lockers/locker-metalico-9-puestos-200/abierto.png",
+        "/images/products/lockers/locker-metalico-9-puestos-200/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-12-puestos",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico 12 Puestos",
+      "description": "Locker metálico de 12 puestos, cubierto en pintura electrostática. Manijas y patas en polipropileno. Ideal para universidades, colegios, oficinas y gimnasios de gran afluencia.",
+      "shortDescription": "Locker metálico 12 puestos para alta afluencia",
+      "features": [
+        "Material: Lámina Cold Rolled de calibre 24",
+        "Acabados: Pintura electrostática termofijada",
+        "División zapatera",
+        "Perchero interno tipo gancho",
+        "Manija en polipropileno",
+        "Ranuras de ventilación",
+        "Cierre metálico para candados",
+        "Alto: 200 cm",
+        "Ancho: 93 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-12-puestos/main.png",
+        "/images/products/lockers/locker-metalico-12-puestos/costado.png",
+        "/images/products/lockers/locker-metalico-12-puestos/abierto.png",
+        "/images/products/lockers/locker-metalico-12-puestos/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-16-puestos",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico 16 Puestos",
+      "description": "Cubierto en pintura electrostática. Manijas y patas en polipropileno de alto impacto. Ideal para instituciones educativas, centros recreativos, gimnasios y grandes empresas.",
+      "shortDescription": "Locker metálico 16 puestos para gran capacidad",
+      "features": [
+        "Material: Lámina Cold Rolled de calibre 24",
+        "Acabados: Pintura electrostática termofijada",
+        "Manija en polipropileno",
+        "Puntos de ventilación",
+        "Cierre metálico para candados",
+        "Alto: 200 cm",
+        "Ancho: 123 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-16-puestos/main.png",
+        "/images/products/lockers/locker-metalico-16-puestos/abierto.png",
+        "/images/products/lockers/locker-metalico-16-puestos/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-celulares-20-compartimientos",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker para Celulares 20 Compartimientos",
+      "description": "Lockers para Celulares 20 Compartimientos está diseñado para brindar una solución eficiente y segura para la gestión de celulares en cualquier entorno corporativo, educativo o industrial. Este locker es la solución perfecta para quienes buscan mejorar la seguridad y organización en su entorno, asegurando que los dispositivos móviles estén siempre protegidos y a salvo.",
+      "shortDescription": "Locker para celulares con 20 compartimientos",
+      "features": [
+        "Estructura: Lámina Cold Rolled calibre 24 en pintura electrostática color gris",
+        "Cerradura independiente por puerta tipo Yale",
+        "Medida por compartimiento: 15 cm alto x 15 cm ancho x 20 cm fondo",
+        "Alto: 70 cm",
+        "Ancho: 70 cm",
+        "Fondo: 20 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-celulares-20-compartimientos/main.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-4-puestos-malla",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico 4 Puestos Puerta en Malla",
+      "description": "Locker metálico de 4 puestos con puertas en malla. Ideal para gimnasios, colegios o empresas. Seguro, ventilado y resistente. Fabricación 100% nacional.",
+      "shortDescription": "Locker 4 puestos con puertas en malla",
+      "features": [
+        "Material: Lámina Cold Rolled de calibre 24",
+        "Acabados: Pintura electrostática termofijada",
+        "Manija tipo uñero",
+        "Cierre metálico para candados",
+        "Puertas: En malla metálica",
+        "Alto: 200 cm",
+        "Ancho: 33 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-4-puestos-malla/main.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-neo-1-puesto",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico Neo 1 Puesto",
+      "description": "El Locker Metálico Neo 1 Puesto es perfecto para quienes buscan una solución segura, compacta y duradera. Su diseño renovado elimina piezas plásticas, integrando una manija en la misma lámina y puntos de ventilación más modernos. Es ideal para oficinas, hogares o espacios compartidos.",
+      "shortDescription": "Locker Neo 1 puesto con diseño moderno",
+      "features": [
+        "Material: Lámina Cold Rolled calibre 24",
+        "Acabado: Pintura electrostática termofijada",
+        "Perchero: Interno tipo gancho",
+        "Patas: Polipropileno de alto impacto",
+        "Ventilación: Diseño troquelado moderno",
+        "Cierre: Metálico compatible con candado",
+        "Alto: 180 cm",
+        "Ancho: 32 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-neo-1-puesto/main.png",
+        "/images/products/lockers/locker-metalico-neo-1-puesto/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-neo-2-puestos",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico Neo 2 Puestos",
+      "description": "El locker metálico NEO 2 puestos ofrece dos compartimentos espaciosos en un diseño más limpio, moderno y duradero. Las puertas cuentan con ventilación mejorada y manija integrada, eliminando piezas plásticas. Funciona muy bien en colegios, empresas o talleres.",
+      "shortDescription": "Locker Neo 2 puestos con ventilación mejorada",
+      "features": [
+        "Material: Lámina Cold Rolled calibre 24",
+        "Acabado: Pintura electrostática al horno",
+        "Percheros: Ganchos internos",
+        "Patas: Polipropileno resistente",
+        "Ventilación: Ranuras troqueladas en la puerta",
+        "Cierre: Metálico para candado convencional",
+        "Alto: 180 cm",
+        "Ancho: 32 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-neo-2-puestos/main.png",
+        "/images/products/lockers/locker-metalico-neo-2-puestos/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-neo-3-puestos",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico Neo 3 Puestos",
+      "description": "El locker metálico NEO 3 puestos combina funcionalidad, durabilidad y un diseño más estético. Con puertas ventiladas y manija embebida en la lámina, es una opción moderna y robusta para oficinas, gimnasios o centros educativos.",
+      "shortDescription": "Locker Neo 3 puestos con puertas ventiladas",
+      "features": [
+        "Material: Lámina Cold Rolled calibre 24",
+        "Acabado: Pintura electrostática termofijada",
+        "Percheros: Tipo gancho por compartimento",
+        "Patas: Polipropileno de alto impacto",
+        "Ventilación: Diseño troquelado moderno",
+        "Cierre: Metálico compatible con candado",
+        "Alto: 180 cm",
+        "Ancho: 32 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-neo-3-puestos/main.png",
+        "/images/products/lockers/locker-metalico-neo-3-puestos/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-neo-4-puestos",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico Neo 4 Puestos",
+      "description": "El locker metálico Neo 4 puestos ofrece seguridad, organización y un diseño actual. Las puertas incluyen ventilación troquelada y manija integrada en la lámina, mejorando su resistencia y estética. Ideal para industrias, colegios o zonas comunes.",
+      "shortDescription": "Locker Neo 4 puestos con ventilación troquelada",
+      "features": [
+        "Material: Lámina Cold Rolled calibre 24",
+        "Acabado: Pintura electrostática horneada",
+        "Percheros: Tipo gancho",
+        "Patas: En polipropileno de alto impacto",
+        "Ventilación: Ranuras modernas troqueladas",
+        "Cierre: Metálico para uso con candado",
+        "Alto: 180 cm",
+        "Ancho: 63 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-neo-4-puestos/main.png",
+        "/images/products/lockers/locker-metalico-neo-4-puestos/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-neo-6-puestos-vertical",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico Neo 6 Puestos Vertical",
+      "description": "El locker metálico NEO 6 puestos vertical es una excelente opción para optimizar el espacio sin perder capacidad. Su diseño actualizado ofrece puertas con ventilación más limpia y manija integrada, ideal para vestieres y zonas de alto tráfico.",
+      "shortDescription": "Locker Neo 6 puestos vertical para alto trafico",
+      "features": [
+        "Material: Lámina Cold Rolled calibre 24",
+        "Acabado: Pintura electrostática de alta adherencia",
+        "Percheros: Tipo gancho en cada puesto",
+        "Patas: Polipropileno de alto impacto",
+        "Ventilación: Troquelado moderno",
+        "Cierre: Metálico para candado",
+        "Alto: 180 cm",
+        "Ancho: 63 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-neo-6-puestos-vertical/main.png",
+        "/images/products/lockers/locker-metalico-neo-6-puestos-vertical/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-neo-6-puestos-horizontal",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico Neo 6 Puestos Horizontal",
+      "description": "El locker metálico NEO 6 puestos horizontal permite distribuir varios compartimentos en menor altura, ideal para lugares con espacio vertical limitado. Su nuevo diseño mejora la ventilación y la funcionalidad gracias a la manija integrada.",
+      "shortDescription": "Locker Neo 6 puestos horizontal compacto",
+      "features": [
+        "Material: Lámina Cold Rolled calibre 24",
+        "Acabado: Pintura electrostática",
+        "Percheros: Tipo gancho según el diseño",
+        "Patas: Polipropileno resistente",
+        "Ventilación: Diseño renovado",
+        "Cierre: Metálico compatible con candado",
+        "Alto: 180 cm",
+        "Ancho: 93 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-neo-6-puestos-horizontal/main.png",
+        "/images/products/lockers/locker-metalico-neo-6-puestos-horizontal/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-neo-9-puestos-180",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico Neo 9 Puestos 180",
+      "description": "Locker Metálico Neo 9 Puestos 180, fabricado en lámina Cold Rolled calibre 24 con acabado en pintura electrostática, zapatero interno y ventilación troquelada.",
+      "shortDescription": "Locker Neo 9 puestos con zapatero interno",
+      "features": [
+        "Material: Lámina Cold Rolled calibre 24",
+        "Acabado: Pintura electrostática horneada",
+        "Percheros: Tipo gancho",
+        "Patas: En polipropileno de alto impacto",
+        "Ventilación: Ranuras modernas troqueladas",
+        "Cierre: Metálico para uso con candado",
+        "Alto: 180 cm",
+        "Ancho: 93 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-neo-9-puestos-180/main.png",
+        "/images/products/lockers/locker-metalico-neo-9-puestos-180/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-neo-9-puestos-200",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico Neo 9 Puestos 200",
+      "description": "El locker metálico NEO 9 puestos es ideal para zonas comunes de alto uso como empresas, instituciones y clubes. Su diseño actualizado garantiza ventilación eficiente y una estructura sólida.",
+      "shortDescription": "Locker Neo 9 puestos para zonas comunes",
+      "features": [
+        "Material: Lámina Cold Rolled calibre 24",
+        "Acabado: Pintura electrostática termofijada",
+        "Percheros: Tipo gancho por compartimento",
+        "Patas: Polipropileno de alto impacto",
+        "Entrepaño interno zapatero",
+        "Ventilación: Diseño troquelado moderno",
+        "Cierre: Metálico compatible con candado",
+        "Alto: 200 cm",
+        "Ancho: 93 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-neo-9-puestos-200/main.png",
+        "/images/products/lockers/locker-metalico-neo-9-puestos-200/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-neo-12-puestos",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico Neo 12 Puestos",
+      "description": "El locker metálico NEO 12 puestos es una solución compacta para múltiples usuarios. Perfecto para empresas y colegios, su diseño moderno incluye manijas integradas y ventilación eficiente.",
+      "shortDescription": "Locker Neo 12 puestos con diseno compacto",
+      "features": [
+        "Material: Lámina Cold Rolled calibre 24",
+        "Acabado: Pintura electrostática al horno",
+        "Percheros: No aplica por tamaño",
+        "Patas: Polipropileno reforzado",
+        "Ventilación: Diseño moderno troquelado",
+        "Cierre: Metálico para candado",
+        "Alto: 200 cm",
+        "Ancho: 93 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-neo-12-puestos/main.png",
+        "/images/products/lockers/locker-metalico-neo-12-puestos/dimensiones.png"
+      ],
+      "featured": true
+    },
+    {
+      "id": "locker-metalico-neo-16-puestos",
+      "category": "lockers",
+      "subcategory": null,
+      "name": "Locker Metálico Neo 16 Puestos",
+      "description": "El locker metálico NEO 16 puestos está diseñado para optimizar espacio con múltiples compartimentos individuales. Ofrece seguridad, ventilación y larga vida útil. Ideal para plantas industriales o zonas de alto tráfico.",
+      "shortDescription": "Locker Neo 16 puestos para alta capacidad",
+      "features": [
+        "Material: Lámina Cold Rolled calibre 24",
+        "Acabado: Pintura electrostática",
+        "Percheros: No aplica",
+        "Patas: Polipropileno industrial",
+        "Ventilación: Diseño troquelado renovado",
+        "Cierre: Metálico para candado",
+        "Alto: 200 cm",
+        "Ancho: 123 cm",
+        "Fondo: 30 cm"
+      ],
+      "images": [
+        "/images/products/lockers/locker-metalico-neo-16-puestos/main.png",
+        "/images/products/lockers/locker-metalico-neo-16-puestos/dimensiones.png"
       ],
       "featured": true
     }

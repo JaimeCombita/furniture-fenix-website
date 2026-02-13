@@ -13,8 +13,11 @@ export const Header: React.FC<HeaderProps> = ({ onMenuToggle }) => {
       <div className="container">
         <div className="header-content">
           <Link to="/" className="logo">
-            <h1>{COMPANY_INFO.name}</h1>
-            <p className="tagline">{COMPANY_INFO.tagline}</p>
+            <img src="/logo.png" alt="Logo Fénix" className="logo-img" />
+            <div className="logo-text">
+              <h1>{COMPANY_INFO.name}</h1>
+              <p className="tagline">{COMPANY_INFO.tagline}</p>
+            </div>
           </Link>
           <button 
             className="menu-toggle" 

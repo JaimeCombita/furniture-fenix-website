@@ -8,6 +8,7 @@ export const Footer: React.FC = () => {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-col">
+            <img src="/logo.png" alt="Logo Fénix" className="footer-logo-img" />
             <h3>{COMPANY_INFO.name}</h3>
             <p className="footer-tagline">{COMPANY_INFO.tagline}</p>
             <p className="footer-description">

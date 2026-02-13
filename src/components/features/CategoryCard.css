@@ -89,6 +89,17 @@
     color: #AAAAAA;
 }
 
+.product-count {
+    font-size: 0.9rem;
+    color: var(--color-accent);
+    margin-top: var(--spacing-sm);
+    font-weight: 600;
+    padding: 4px 12px;
+    background-color: rgba(0, 125, 254, 0.1);
+    border-radius: 16px;
+    display: inline-block;
+}
+
 .coming-soon {
     font-size: 0.85rem;
     color: #999999;

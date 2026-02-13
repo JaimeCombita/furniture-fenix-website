@@ -6,9 +6,10 @@ import './CategoryCard.css';
 
 interface CategoryCardProps {
   category: CategoryInfo;
+  productCount?: number;
 }
 
-export const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
+export const CategoryCard: React.FC<CategoryCardProps> = ({ category, productCount = 0 }) => {
   const cardContent = (
     <Card hover className={`category-card ${!category.active ? 'disabled' : ''}`}>
       <div className="category-icon">
@@ -16,6 +17,9 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
       </div>
       <h3 className="category-name">{category.name}</h3>
       <p className="category-description">{category.description}</p>
+      {category.active && productCount > 0 && (
+        <p className="product-count">{productCount} {productCount === 1 ? 'producto' : 'productos'}</p>
+      )}
       {!category.active && <p className="coming-soon">Próximamente</p>}
     </Card>
   );

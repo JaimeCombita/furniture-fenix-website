@@ -8,11 +8,12 @@
 .catalog-hero h1 {
     font-size: 2.5rem;
     margin-bottom: var(--spacing-sm);
-    color: var(--color-white);
+    color: #FFFFFF !important;
 }
 
 .catalog-hero p {
     font-size: 1.125rem;
+    color: #FFFFFF;
     opacity: 0.95;
 }
 
@@ -166,18 +167,61 @@
     
     .catalog-sidebar {
         position: static;
+        background-color: #F8F9FA;
+        padding: var(--spacing-md);
+        border-radius: var(--border-radius);
+    }
+
+    .catalog-sidebar h3 {
+        margin-bottom: var(--spacing-sm);
+        font-size: 1.1rem;
     }
     
     .category-filter {
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
         gap: var(--spacing-xs);
     }
     
     .category-filter button {
-        width: auto;
-        padding: var(--spacing-xs) var(--spacing-md);
-        font-size: 0.9375rem;
+        width: 100%;
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.95rem;
+        justify-content: flex-start;
+        border: 1px solid #E5E7EB;
+        background-color: #FFFFFF;
+    }
+
+    .category-filter button:hover {
+        background-color: rgba(0, 125, 254, 0.08);
+    }
+
+    .category-filter button.active {
+        background-color: var(--color-accent);
+        color: var(--color-white);
+        border-color: var(--color-accent);
+    }
+
+    .subcategory-filter {
+        margin-top: var(--spacing-xs);
+        padding-left: var(--spacing-lg);
+        border-left: 3px solid var(--color-accent);
+        background-color: rgba(0, 125, 254, 0.05);
+        padding-top: var(--spacing-xs);
+        padding-bottom: var(--spacing-xs);
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    }
+
+    .subcategory-filter button {
+        font-size: 0.9rem;
+        padding: 8px var(--spacing-sm);
+        background-color: transparent;
+        border: none;
+    }
+
+    .subcategory-filter button.active {
+        background-color: rgba(0, 125, 254, 0.2);
+        color: #007dfe;
+        font-weight: 600;
     }
     
     .products-grid {
@@ -198,6 +242,10 @@
     .catalog-hero p {
         font-size: 1rem;
     }
+
+    .catalog-sidebar {
+        padding: var(--spacing-sm);
+    }
     
     .catalog-header {
         flex-direction: column;
@@ -214,8 +262,13 @@
     }
     
     .category-filter button {
-        font-size: 0.875rem;
-        padding: 6px var(--spacing-sm);
+        font-size: 0.9rem;
+        padding: 10px var(--spacing-sm);
+    }
+
+    .subcategory-filter button {
+        font-size: 0.85rem;
+        padding: 8px var(--spacing-sm);
     }
 }
 

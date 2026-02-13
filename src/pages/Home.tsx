@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Hero, CategoryCard } from '../components/features';
 import { Button, Card } from '../components/ui';
 import { CATEGORIES, SERVICES } from '../utils/constants';
+import productsData from '../data/products.json';
 import './Home.css';
 
 export const HomePage: React.FC = () => {
+  // Contar productos por categoría
+  const productCountByCategory = useMemo(() => {
+    const counts: Record<string, number> = {};
+    productsData.products.forEach((product) => {
+      counts[product.category] = (counts[product.category] || 0) + 1;
+    });
+    return counts;
+  }, []);
+
+  // Ordenar categorías: activas primero, luego inactivas
+  const sortedCategories = useMemo(() => {
+    return [...CATEGORIES].sort((a, b) => {
+      if (a.active === b.active) return 0;
+      return a.active ? -1 : 1;
+    });
+  }, []);
+
   return (
     <div className="home-page">
       <Hero
@@ -24,8 +42,12 @@ export const HomePage: React.FC = () => {
           <p className="section-subtitle">Soluciones completas de mobiliario institucional</p>
           
           <div className="categories-grid">
-            {CATEGORIES.map((category) => (
-              <CategoryCard key={category.id} category={category} />
+            {sortedCategories.map((category) => (
+              <CategoryCard 
+                key={category.id} 
+                category={category} 
+                productCount={productCountByCategory[category.id] || 0}
+              />
             ))}
           </div>
         </div>

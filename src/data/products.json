@@ -1138,8 +1138,9 @@
         "Diseñadas para múltiples usos: ferias, puestos de control, ventas, estands, oficinas, etc."
       ],
       "images": [
-        "/images/products/carpas/kiosco-tradicional/1.jpg",
-        "/images/products/carpas/kiosco-tradicional/2.jpg"
+        "/images/products/carpas/kiosco-tradicional/tradicional-1.webp",
+        "/images/products/carpas/kiosco-tradicional/tradicional-2.webp",
+        "/images/products/carpas/kiosco-tradicional/tradicional-3.webp"
       ],
       "featured": true,
       "quantity": 2
@@ -1159,8 +1160,8 @@
         "Diseño muy flexible de armar"
       ],
       "images": [
-        "/images/products/carpas/kiosco-plegable/1.jpg",
-        "/images/products/carpas/kiosco-plegable/2.jpg"
+        "/images/products/carpas/kiosco-plegable/plegable-1.webp",
+        "/images/products/carpas/kiosco-plegable/plegable-2.webp"
       ],
       "featured": true,
       "quantity": 2
@@ -1180,8 +1181,9 @@
         "Diseñados para cubrir grandes espacios: bodegas, eventos empresariales, reuniones sociales, conciertos, adecuación de espacios, entre otros"
       ],
       "images": [
-        "/images/products/carpas/hangar/1.jpg",
-        "/images/products/carpas/hangar/2.jpg"
+        "/images/products/carpas/hangar/hangares-1.webp",
+        "/images/products/carpas/hangar/hangares-2.webp",
+        "/images/products/carpas/hangar/hangares-3.webp"
       ],
       "featured": true,
       "quantity": 1

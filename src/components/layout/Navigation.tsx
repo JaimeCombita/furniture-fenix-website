@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { COMPANY_INFO } from '../../utils/constants';
 import productsData from '../../data/products.json';
 import './Navigation.css';
 

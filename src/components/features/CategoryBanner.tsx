@@ -18,8 +18,8 @@ export const CategoryBanner: React.FC<CategoryBannerProps> = ({
   description
 }) => {
   const catalogUrl = subcategory 
-    ? `/catalogo?category=${category}&subcategory=${subcategory}`
-    : `/catalogo?category=${category}`;
+    ? `/catalogo?categoria=${category}&subcategoria=${subcategory}`
+    : `/catalogo?categoria=${category}`;
 
   return (
     <Link to={catalogUrl} className="category-banner" title={description}>

@@ -21,8 +21,6 @@ export type ProductCategory =
   | 'carpas'
   | 'linea-exterior'
   | 'sillas'
-  | 'mesas'
-  | 'lockers'
   | 'archivadores'
   | 'mobiliario-escolar'
   | 'mobiliario-oficina'
@@ -35,16 +33,6 @@ export interface CategoryInfo {
   icon: string;
   active?: boolean;
   subcategories?: Subcategory[];
-}
-
-export interface Project {
-  id: string;
-  title: string;
-  description: string;
-  images: string[];
-  client?: string;
-  date: string;
-  category: string;
 }
 
 export interface Service {

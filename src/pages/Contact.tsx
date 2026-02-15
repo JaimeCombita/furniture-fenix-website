@@ -85,24 +85,6 @@ export const ContactPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="social-links">
-                <h3>Síguenos en redes sociales</h3>
-                <div className="social-icons">
-                  <a href={COMPANY_INFO.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                    <i className="fab fa-facebook"></i>
-                  </a>
-                  <a href={COMPANY_INFO.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <i className="fab fa-instagram"></i>
-                  </a>
-                  <a href={COMPANY_INFO.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <i className="fab fa-linkedin"></i>
-                  </a>
-                  <a href={COMPANY_INFO.social.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                    <i className="fab fa-whatsapp"></i>
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </div>

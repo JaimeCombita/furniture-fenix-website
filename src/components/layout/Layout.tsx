@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { Header } from './Header';
 import { Navigation } from './Navigation';
@@ -14,13 +14,13 @@ export const Layout: React.FC = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }, [location.pathname]);
 
-  const handleToggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const handleToggleMenu = useCallback(() => {
+    setMenuOpen((prev) => !prev);
+  }, []);
 
-  const handleCloseMenu = () => {
+  const handleCloseMenu = useCallback(() => {
     setMenuOpen(false);
-  };
+  }, []);
 
   return (
     <div className="app-layout">

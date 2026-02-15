@@ -51,7 +51,6 @@
 .hero-text {
     text-align: center;
     color: var(--color-white);
-    margin-bottom: var(--spacing-xl);
 }
 
 .hero-image-container {
@@ -229,6 +228,18 @@
 }
 
 @media (max-width: 768px) {
+    .hero-text {
+        order: 1;
+    }
+
+    .hero-image-container {
+        order: 2;
+    }
+
+    .hero-banners-grid {
+        order: 3;
+    }
+
     .hero {
         min-height: 500px;
     }

@@ -48,7 +48,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ productId }) => {
         message: '',
         productId: productId || ''
       });
-    } catch (error) {
+    } catch {
       setSubmitMessage('Hubo un error al enviar el formulario. Por favor intenta de nuevo.');
     } finally {
       setIsSubmitting(false);

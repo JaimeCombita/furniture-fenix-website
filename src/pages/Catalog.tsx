@@ -1,17 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useMemo } from 'react';
 import { ProductCard } from '../components/features';
 import type { Product, ProductCategory } from '../types';
 import productsData from '../data/products.json';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './Catalog.css';
 
 export const CatalogPage: React.FC = () => {
   const location = useLocation();
-  const [selectedCategory, setSelectedCategory] = useState<ProductCategory | 'all'>('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
-  const [products, setProducts] = useState<Product[]>([]);
+  const navigate = useNavigate();
 
-  useEffect(() => {
+  const { selectedCategory, selectedSubcategory } = useMemo(() => {
     const params = new URLSearchParams(location.search);
     const categoryParam = params.get('categoria');
     const subcategoryParam = params.get('subcategoria');
@@ -20,34 +18,49 @@ export const CatalogPage: React.FC = () => {
       : null;
 
     if (categoryMatch) {
-      setSelectedCategory(categoryMatch.id as ProductCategory);
-      if (subcategoryParam && categoryMatch.subcategories?.some((sub) => sub.id === subcategoryParam)) {
-        setSelectedSubcategory(subcategoryParam);
-      } else {
-        setSelectedSubcategory(null);
-      }
-      return;
+      const hasSubcategory = subcategoryParam && categoryMatch.subcategories?.some((sub) => sub.id === subcategoryParam);
+      return {
+        selectedCategory: categoryMatch.id as ProductCategory,
+        selectedSubcategory: hasSubcategory ? subcategoryParam : null
+      };
     }
 
-    setSelectedCategory('all');
-    setSelectedSubcategory(null);
+    return {
+      selectedCategory: 'all' as const,
+      selectedSubcategory: null
+    };
   }, [location.search]);
 
-  useEffect(() => {
-    const filtered = (selectedCategory === 'all' 
+  const products = useMemo(() => {
+    return (selectedCategory === 'all'
       ? productsData.products
-      : productsData.products.filter(p => {
-          if (p.category !== selectedCategory) return false;
-          if (selectedSubcategory && p.subcategory !== selectedSubcategory) return false;
+      : productsData.products.filter((product) => {
+          if (product.category !== selectedCategory) return false;
+          if (selectedSubcategory && product.subcategory !== selectedSubcategory) return false;
           return true;
         })) as Product[];
-    
-    setProducts(filtered);
   }, [selectedCategory, selectedSubcategory]);
 
+  const updateCatalogSearch = (category: ProductCategory | 'all', subcategory: string | null = null) => {
+    const params = new URLSearchParams();
+
+    if (category !== 'all') {
+      params.set('categoria', category);
+      if (subcategory) {
+        params.set('subcategoria', subcategory);
+      }
+    }
+
+    const search = params.toString();
+    navigate({ pathname: '/catalogo', search: search ? `?${search}` : '' });
+  };
+
   const handleCategoryChange = (category: ProductCategory | 'all') => {
-    setSelectedCategory(category);
-    setSelectedSubcategory(null);
+    updateCatalogSearch(category, null);
+  };
+
+  const handleSubcategoryChange = (category: ProductCategory, subcategory: string) => {
+    updateCatalogSearch(category, subcategory);
   };
 
   const currentCategoryData = selectedCategory !== 'all' 
@@ -91,7 +104,7 @@ export const CatalogPage: React.FC = () => {
                         <li key={subcat.id}>
                           <button
                             className={selectedSubcategory === subcat.id ? 'active' : ''}
-                            onClick={() => setSelectedSubcategory(subcat.id)}
+                            onClick={() => handleSubcategoryChange(cat.id as ProductCategory, subcat.id)}
                           >
                             {subcat.name}
                           </button>

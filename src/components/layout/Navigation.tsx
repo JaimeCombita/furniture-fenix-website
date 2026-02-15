@@ -17,7 +17,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
     onClose();
     setExpandedMenu(null);
     setExpandedSubmenu(null);
-  }, [location.pathname]);
+  }, [location.pathname, onClose]);
 
   React.useEffect(() => {
     if (isOpen) {
@@ -69,16 +69,6 @@ export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
             <span>Inicio</span>
           </Link>
         </li>
-        {/* <li>
-          <Link
-            to="/sobre-empresa"
-            className={`nav-link ${isActive('/sobre-empresa') ? 'active' : ''}`}
-            onClick={onClose}
-          >
-            <i className="fas fa-building"></i>
-            <span>Sobre la Empresa</span>
-          </Link>
-        </li> */}
         <li>
           <button
             className={`nav-link nav-dropdown ${isActive('/catalogo') ? 'active' : ''}`}
@@ -141,16 +131,6 @@ export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
             <span>Servicios</span>
           </Link>
         </li>
-        {/* <li>
-          <Link
-            to="/proyectos"
-            className={`nav-link ${isActive('/proyectos') ? 'active' : ''}`}
-            onClick={onClose}
-          >
-            <i className="fas fa-briefcase"></i>
-            <span>Proyectos</span>
-          </Link>
-        </li> */}
         <li>
           <Link
             to="/contacto"
@@ -162,23 +142,6 @@ export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
           </Link>
         </li>
       </ul>
-
-      {/* <div className="nav-footer">
-        <div className="social-links">
-          <a href={COMPANY_INFO.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <i className="fab fa-facebook"></i>
-          </a>
-          <a href={COMPANY_INFO.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href={COMPANY_INFO.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <i className="fab fa-linkedin"></i>
-          </a>
-          <a href={COMPANY_INFO.social.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-            <i className="fab fa-whatsapp"></i>
-          </a>
-        </div>
-      </div> */}
       </nav>
     </>
   );

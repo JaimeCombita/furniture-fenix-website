@@ -7,6 +7,17 @@ import productsData from '../data/products.json';
 import './Home.css';
 
 export const HomePage: React.FC = () => {
+  const aboutChecklistItems = [
+    'Somos punto de fábrica',
+    'Asesoria y visita personalizada',
+    'Envios a nivel Nacional',
+    'Clientes satisfechos',
+    'Entregas ágiles y oportunas',
+    'Soporte y garantía',
+    'Personal profesional certificado',
+    'Confiabilidad y respaldo'
+  ];
+
   // Contar productos por categoría
   const productCountByCategory = useMemo(() => {
     const counts: Record<string, number> = {};
@@ -18,10 +29,18 @@ export const HomePage: React.FC = () => {
 
   // Ordenar categorías: activas primero, luego inactivas
   const sortedCategories = useMemo(() => {
-    return [...CATEGORIES].sort((a, b) => {
-      if (a.active === b.active) return 0;
-      return a.active ? -1 : 1;
-    });
+    const hiddenCategoryIds = new Set([
+      'mobiliario-escolar',
+      'mobiliario-oficina',
+      'accesorios'
+    ]);
+
+    return CATEGORIES
+      .filter((category) => !hiddenCategoryIds.has(category.id))
+      .sort((a, b) => {
+        if (a.active === b.active) return 0;
+        return a.active ? -1 : 1;
+      });
   }, []);
 
   return (
@@ -51,35 +70,18 @@ export const HomePage: React.FC = () => {
             <div className="about-text">
               <h2 className="section-title">¿Por qué elegirnos?</h2>
               <p>
-                Con más de 15 años de experiencia en el mercado, Fénix se ha consolidado 
+                Con más de 12 años de experiencia en el mercado, Fénix se ha consolidado 
                 como un proveedor confiable de mobiliario institucional para el sector 
                 público y privado.
               </p>
               <ul className="check-list">
-                <li>
-                  <i className="fas fa-check-circle"></i>
-                  <span>Experiencia en licitaciones públicas</span>
-                </li>
-                <li>
-                  <i className="fas fa-check-circle"></i>
-                  <span>Fabricación nacional de calidad</span>
-                </li>
-                <li>
-                  <i className="fas fa-check-circle"></i>
-                  <span>Personalización según necesidades</span>
-                </li>
-                <li>
-                  <i className="fas fa-check-circle"></i>
-                  <span>Cumplimiento de normativas</span>
-                </li>
-                <li>
-                  <i className="fas fa-check-circle"></i>
-                  <span>Garantía extendida</span>
-                </li>
+                {aboutChecklistItems.map((item) => (
+                  <li key={item}>
+                    <i className="fas fa-check-circle"></i>
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
-              {/* <Link to="/sobre-empresa">
-                <Button variant="secondary">Conoce más</Button>
-              </Link> */}
             </div>
             <div className="about-image">
               <div className="placeholder-image">

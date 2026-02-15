@@ -5,11 +5,123 @@ import productsData from '../data/products.json';
 import type { Product } from '../types';
 import './ProductDetail.css';
 
+interface ProductImageCarouselProps {
+  images: string[];
+  name: string;
+}
+
+const ProductImageCarousel: React.FC<ProductImageCarouselProps> = ({ images, name }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isCarouselPaused, setIsCarouselPaused] = useState(false);
+
+  useEffect(() => {
+    if (!images || images.length <= 1) return;
+    if (isCarouselPaused) return;
+
+    const intervalId = window.setInterval(() => {
+      setCurrentImageIndex((prev: number) =>
+        prev === images.length - 1 ? 0 : prev + 1
+      );
+    }, 3000);
+
+    return () => {
+      window.clearInterval(intervalId);
+    };
+  }, [images, isCarouselPaused]);
+
+  const handlePrevImage = () => {
+    if (images.length > 0) {
+      setCurrentImageIndex((prev: number) =>
+        prev === 0 ? images.length - 1 : prev - 1
+      );
+    }
+  };
+
+  const handleNextImage = () => {
+    if (images.length > 0) {
+      setCurrentImageIndex((prev: number) =>
+        prev === images.length - 1 ? 0 : prev + 1
+      );
+    }
+  };
+
+  const handleThumbnailClick = (index: number) => {
+    setCurrentImageIndex(index);
+    setIsCarouselPaused(true);
+  };
+
+  return (
+    <div
+      className="image-carousel"
+      onMouseEnter={() => setIsCarouselPaused(true)}
+      onMouseLeave={() => setIsCarouselPaused(false)}
+    >
+      <div className="main-image">
+        {images.length > 0 ? (
+          <>
+            <img
+              src={images[currentImageIndex]}
+              alt={`${name} - Imagen ${currentImageIndex + 1}`}
+            />
+
+            {images.length > 1 && (
+              <>
+                <button
+                  className="carousel-btn prev-btn"
+                  onClick={handlePrevImage}
+                  aria-label="Imagen anterior"
+                >
+                  <i className="fas fa-chevron-left"></i>
+                </button>
+                <button
+                  className="carousel-btn next-btn"
+                  onClick={handleNextImage}
+                  aria-label="Imagen siguiente"
+                >
+                  <i className="fas fa-chevron-right"></i>
+                </button>
+
+                <div className="carousel-indicators">
+                  {images.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`indicator ${index === currentImageIndex ? 'active' : ''}`}
+                      onClick={() => handleThumbnailClick(index)}
+                      aria-label={`Ir a imagen ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+          </>
+        ) : (
+          <div className="image-placeholder">
+            <i className="fas fa-image fa-5x"></i>
+            <p>Imagen no disponible</p>
+          </div>
+        )}
+      </div>
+
+      {images.length > 1 && (
+        <div className="thumbnails-container">
+          {images.map((image, index) => (
+            <button
+              key={index}
+              className={`thumbnail ${index === currentImageIndex ? 'active' : ''}`}
+              onClick={() => handleThumbnailClick(index)}
+            >
+              <img src={image} alt={`Miniatura ${index + 1}`} />
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 export const ProductDetailPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isCarouselPaused, setIsCarouselPaused] = useState(false);
 
   const product = (productsData.products.find(p => p.id === id) || null) as Product | null;
 
@@ -30,46 +142,6 @@ export const ProductDetailPage: React.FC = () => {
 
   const displayProduct = product || notFoundProduct;
 
-  useEffect(() => {
-    setCurrentImageIndex(0);
-  }, [displayProduct.id]);
-
-  useEffect(() => {
-    if (!displayProduct.images || displayProduct.images.length <= 1) return;
-    if (isCarouselPaused) return;
-
-    const intervalId = window.setInterval(() => {
-      setCurrentImageIndex((prev: number) =>
-        prev === displayProduct.images.length - 1 ? 0 : prev + 1
-      );
-    }, 3000);
-
-    return () => {
-      window.clearInterval(intervalId);
-    };
-  }, [displayProduct.images, displayProduct.id, isCarouselPaused]);
-
-  const handlePrevImage = () => {
-    if (displayProduct.images && displayProduct.images.length > 0) {
-      setCurrentImageIndex((prev: number) => 
-        prev === 0 ? displayProduct.images.length - 1 : prev - 1
-      );
-    }
-  };
-
-  const handleNextImage = () => {
-    if (displayProduct.images && displayProduct.images.length > 0) {
-      setCurrentImageIndex((prev: number) => 
-        prev === displayProduct.images.length - 1 ? 0 : prev + 1
-      );
-    }
-  };
-
-  const handleThumbnailClick = (index: number) => {
-    setCurrentImageIndex(index);
-    setIsCarouselPaused(true);
-  };
-
   return (
     <div className="product-detail-page">
       <div className="container">
@@ -80,71 +152,11 @@ export const ProductDetailPage: React.FC = () => {
 
         <div className="product-detail-grid">
           <div className="product-image-section">
-            <div
-              className="image-carousel"
-              onMouseEnter={() => setIsCarouselPaused(true)}
-              onMouseLeave={() => setIsCarouselPaused(false)}
-            >
-              <div className="main-image">
-                {displayProduct.images && displayProduct.images.length > 0 ? (
-                  <>
-                    <img 
-                      src={displayProduct.images[currentImageIndex]} 
-                      alt={`${displayProduct.name} - Imagen ${currentImageIndex + 1}`}
-                    />
-                    
-                    {displayProduct.images.length > 1 && (
-                      <>
-                        <button 
-                          className="carousel-btn prev-btn" 
-                          onClick={handlePrevImage}
-                          aria-label="Imagen anterior"
-                        >
-                          <i className="fas fa-chevron-left"></i>
-                        </button>
-                        <button 
-                          className="carousel-btn next-btn" 
-                          onClick={handleNextImage}
-                          aria-label="Imagen siguiente"
-                        >
-                          <i className="fas fa-chevron-right"></i>
-                        </button>
-                        
-                        <div className="carousel-indicators">
-                          {displayProduct.images.map((_, index) => (
-                            <button
-                              key={index}
-                              className={`indicator ${index === currentImageIndex ? 'active' : ''}`}
-                              onClick={() => handleThumbnailClick(index)}
-                              aria-label={`Ir a imagen ${index + 1}`}
-                            />
-                          ))}
-                        </div>
-                      </>
-                    )}
-                  </>
-                ) : (
-                  <div className="image-placeholder">
-                    <i className="fas fa-image fa-5x"></i>
-                    <p>Imagen no disponible</p>
-                  </div>
-                )}
-              </div>
-
-              {displayProduct.images && displayProduct.images.length > 1 && (
-                <div className="thumbnails-container">
-                  {displayProduct.images.map((image, index) => (
-                    <button
-                      key={index}
-                      className={`thumbnail ${index === currentImageIndex ? 'active' : ''}`}
-                      onClick={() => handleThumbnailClick(index)}
-                    >
-                      <img src={image} alt={`Miniatura ${index + 1}`} />
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
+            <ProductImageCarousel
+              key={displayProduct.id}
+              images={displayProduct.images || []}
+              name={displayProduct.name}
+            />
           </div>
 
           <div className="product-info-section">

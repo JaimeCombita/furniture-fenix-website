@@ -153,95 +153,11 @@ export const SERVICES = [
   }
 ] as const;
 
-export const PROJECTS = [
-  {
-    id: 'proyecto-1',
-    title: 'Dotación Colegio San Francisco',
-    description: 'Suministro e instalación de mobiliario escolar para 40 aulas de clase, biblioteca y laboratorios. Proyecto que benefició a más de 1,200 estudiantes.',
-    images: [],
-    client: 'Secretaría de Educación - Bogotá',
-    date: '2025-09',
-    category: 'Educación',
-    items: ['180 pupitres bipersonales', '40 escritorios para profesores', 'Mobiliario de biblioteca', 'Mesas de laboratorio']
-  },
-  {
-    id: 'proyecto-2',
-    title: 'Modernización Alcaldía Municipal',
-    description: 'Renovación completa del mobiliario de oficinas administrativas, incluyendo escritorios ejecutivos, sillas ergonómicas y sistemas de archivo.',
-    images: [],
-    client: 'Alcaldía de Soacha',
-    date: '2025-07',
-    category: 'Gobierno',
-    items: ['85 estaciones de trabajo', '120 sillas ejecutivas', '45 archivadores', 'Sala de juntas para 20 personas']
-  },
-  {
-    id: 'proyecto-3',
-    title: 'Centro de Salud Villa Nueva',
-    description: 'Amoblamiento integral del centro de salud con mobiliario clínico y administrativo que cumple con todas las normativas sanitarias.',
-    images: [],
-    client: 'Hospital Local Villa Nueva',
-    date: '2025-05',
-    category: 'Salud',
-    items: ['30 consultorios médicos', 'Sala de espera para 100 personas', 'Mobiliario administrativo', 'Área de enfermería']
-  },
-  {
-    id: 'proyecto-4',
-    title: 'Universidad Técnica Regional',
-    description: 'Dotación de 20 aulas universitarias con sillas universitarias, escritorios y sistemas audiovisuales integrados.',
-    images: [],
-    client: 'Universidad Técnica del Pacífico',
-    date: '2025-03',
-    category: 'Educación',
-    items: ['600 sillas universitarias', '20 escritorios para docentes', 'Sistemas de cableado', 'Tarimas y podios']
-  },
-  {
-    id: 'proyecto-5',
-    title: 'Corporación Financiera del Norte',
-    description: 'Proyecto de amoblamiento de oficinas corporativas en 3 pisos, con diseño moderno y espacios colaborativos.',
-    images: [],
-    client: 'Corporación Financiera del Norte',
-    date: '2024-12',
-    category: 'Empresas',
-    items: ['150 estaciones de trabajo', 'Salas de reuniones', 'Zonas colaborativas', 'Recepción corporativa']
-  },
-  {
-    id: 'proyecto-6',
-    title: 'Juzgado Civil del Circuito',
-    description: 'Mobiliario especializado para salas de audiencia y oficinas judiciales, cumpliendo con especificaciones técnicas del Consejo Superior.',
-    images: [],
-    client: 'Consejo Superior de la Judicatura',
-    date: '2024-10',
-    category: 'Judicial',
-    items: ['8 salas de audiencia', '30 oficinas de despacho', 'Archivo judicial', 'Sala de conciliación']
-  },
-  {
-    id: 'proyecto-7',
-    title: 'Instituto Tecnológico Andino',
-    description: 'Equipamiento de talleres, laboratorios y aulas especializadas para formación técnica y tecnológica.',
-    images: [],
-    client: 'Instituto Tecnológico Andino',
-    date: '2024-08',
-    category: 'Educación',
-    items: ['15 talleres especializados', '10 laboratorios de cómputo', 'Biblioteca técnica', 'Auditorio para 200 personas']
-  },
-  {
-    id: 'proyecto-8',
-    title: 'Hospital General San Rafael',
-    description: 'Amoblamiento de áreas administrativas y de atención al público del hospital, optimizando flujos de trabajo.',
-    images: [],
-    client: 'Hospital General San Rafael',
-    date: '2024-06',
-    category: 'Salud',
-    items: ['Admisiones y facturación', '50 consultorios externos', 'Áreas administrativas', 'Sala de espera principal']
-  }
-] as const;
-
 export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
 
 export const API_ENDPOINTS = {
   products: '/products',
   categories: '/categories',
-  projects: '/projects',
   services: '/services',
   contact: '/contact',
   quote: '/quote',

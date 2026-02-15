@@ -81,7 +81,7 @@
       "name": "Línea Exterior",
       "icon": "tree",
       "description": "Productos para exteriores y espacios abiertos",
-      "active": false
+      "active": true
     }
   ],
   "products": [
@@ -1189,6 +1189,220 @@
         "/images/products/carpas/hangar/hangares-1.webp",
         "/images/products/carpas/hangar/hangares-2.webp",
         "/images/products/carpas/hangar/hangares-3.webp"
+      ],
+      "featured": true,
+      "quantity": 1
+    },
+    {
+      "id": "sombrilla-su2005-25mts",
+      "category": "linea-exterior",
+      "subcategory": null,
+      "name": "Sombrilla SU2005 - 2.5 MTS",
+      "description": "Sombrilla de 2.5 metros de diámetro con estructura en aluminio escualizable y cubierta en lona plástica de alta resistencia. Ideal para terrazas, jardines, restaurantes y espacios exteriores. Altura de 234 cm que proporciona amplia cobertura y protección solar.",
+      "shortDescription": "Sombrilla 2.5m con estructura de aluminio y cubierta en lona plástica",
+      "features": [
+        "Modelo: SU2005",
+        "Diámetro: 2.50 metros",
+        "Altura: 234 cm",
+        "Estructura en aluminio escualizable",
+        "Cubierta en lona plástica resistente",
+        "Colores disponibles: Beige, Azul, Rojo",
+        "Diseño elegante y funcional",
+        "Ideal para espacios exteriores"
+      ],
+      "images": [
+        "/images/products/linea-exterior/sombrilla-su2005/su2005-1.JPG",
+        "/images/products/linea-exterior/sombrilla-su2005/su2005-2.JPG"
+      ],
+      "featured": true,
+      "quantity": 1
+    },
+    {
+      "id": "sombrilla-su1003-mini-roma",
+      "category": "linea-exterior",
+      "subcategory": null,
+      "name": "Sombrilla SU1003 - Mini Roma con Base",
+      "description": "Sombrilla tipo cantilever Mini Roma de 3 metros de diámetro con brazo lateral giratorio 360 grados. Estructura en aluminio escualizable con cubierta en lona plástica de alta resistencia. Incluye base para máxima estabilidad. Perfecta para terrazas, jardines, piscinas y espacios comerciales. Altura de 253 cm con área de cobertura de 3.70 m².",
+      "shortDescription": "Sombrilla cantilever 3m con brazo lateral 360° y base incluida",
+      "features": [
+        "Modelo: SU1003",
+        "Diámetro: 3 metros",
+        "Altura: 253 cm",
+        "Área de cobertura: 3.70 m²",
+        "Estructura en aluminio",
+        "Brazo lateral 360 grados escualizable",
+        "Cubierta en lona plástica resistente",
+        "Incluye base de soporte",
+        "Colores disponibles: Beige, Azul",
+        "Sistema cantilever de brazo lateral",
+        "Ideal para espacios exteriores amplios"
+      ],
+      "images": [
+        "/images/products/linea-exterior/sombrilla-su1003/su1003-1.jpeg",
+        "/images/products/linea-exterior/sombrilla-su1003/su1003-2.jpeg"
+      ],
+      "featured": true,
+      "quantity": 1
+    },
+    {
+      "id": "sombrilla-su2005-3mts",
+      "category": "linea-exterior",
+      "subcategory": null,
+      "name": "Sombrilla SU2005 - 3 MTS",
+      "description": "Sombrilla de 3 metros de diámetro con estructura en aluminio escualizable y cubierta en lona plástica de alta resistencia. Diseño clásico y elegante ideal para terrazas, jardines, restaurantes y espacios exteriores amplios. Altura de 234 cm que proporciona excelente cobertura y protección solar.",
+      "shortDescription": "Sombrilla 3m con estructura de aluminio y cubierta en lona plástica",
+      "features": [
+        "Modelo: SU2005",
+        "Diámetro: 3 metros",
+        "Diámetro superior: 2.50 metros",
+        "Altura: 234 cm",
+        "Estructura en aluminio escualizable",
+        "Cubierta en lona plástica resistente",
+        "Colores disponibles: Beige, Azul, Rojo, Gris",
+        "Diseño elegante y funcional",
+        "Mayor área de cobertura",
+        "Ideal para espacios exteriores amplios"
+      ],
+      "images": [
+        "/images/products/linea-exterior/sombrilla-su2005-3mts/su20053-1.jpeg",
+        "/images/products/linea-exterior/sombrilla-su2005-3mts/su20053-2.jpeg"
+      ],
+      "featured": true,
+      "quantity": 1
+    },
+    {
+      "id": "mesa-plegable-wx-f180",
+      "category": "linea-exterior",
+      "subcategory": null,
+      "name": "Mesa Plegable WX-F180 - Económico Tubo Redondo 1",
+      "description": "Mesa plegable económica de 180 cm con superficie en polipropileno resistente y estructura metálica plegable de tubo redondo. Incluye tapones antideslizantes para mayor estabilidad. Ideal para eventos, reuniones, comedores institucionales y espacios multiusos. Fácil de transportar y almacenar gracias a su sistema plegable.",
+      "shortDescription": "Mesa plegable 180cm con superficie de polipropileno y estructura metálica",
+      "features": [
+        "Modelo: WX-F180",
+        "Largo: 180 cm",
+        "Fondo: 74 cm",
+        "Alto: 74 cm",
+        "Superficie en polipropileno resistente",
+        "Estructura plegable metálica con tapones antideslizantes",
+        "Tubo redondo económico tipo 1",
+        "Color: Superficie gris claro, Estructura gris",
+        "Fácil de plegar y almacenar",
+        "Sistema antideslizante",
+        "Ideal para eventos y usos institucionales"
+      ],
+      "images": [
+        "/images/products/linea-exterior/mesa-plegable-wx-f180/wx-f180-1.jpeg",
+        "/images/products/linea-exterior/mesa-plegable-wx-f180/wx-f180-2.jpeg"
+      ],
+      "featured": true,
+      "quantity": 1
+    },
+    {
+      "id": "silla-cf-304",
+      "category": "sillas",
+      "subcategory": "otras",
+      "name": "Silla Interlocutora CF-304 Tapizada",
+      "description": "Silla interlocutora tapizada modelo CF-304 con espaldar y asiento en paño de alta calidad. Estructura metálica resistente con tapones antideslizantes para mayor estabilidad. Diseño ergonómico y cómodo, ideal para comedores, salas de espera, auditorios y espacios institucionales o comerciales. Disponible en múltiples colores.",
+      "shortDescription": "Silla interlocutora tapizada con espaldar y asiento en paño, estructura metálica",
+      "features": [
+        "Modelo: CF-304",
+        "Alto asiento: 43 cm",
+        "Alto espaldar: 76 cm",
+        "Frente: 53 cm",
+        "Fondo: 54 cm",
+        "Espaldar y asiento tapizados en paño",
+        "Estructura metálica con tapones antideslizantes",
+        "Colores disponibles: Azul, Negro",
+        "Diseño ergonómico",
+        "Ideal para uso institucional y comercial"
+      ],
+      "images": [
+        "/images/products/sillas/otras/silla-cf-304/cf-304-1.jpeg",
+        "/images/products/sillas/otras/silla-cf-304/cf-304-2.jpeg"
+      ],
+      "featured": true,
+      "quantity": 1
+    },
+    {
+      "id": "silla-tandem-gy-f02",
+      "category": "sillas",
+      "subcategory": "otras",
+      "name": "Silla Tándem GY-F02 - 2 Puestos",
+      "description": "Silla tándem de 2 puestos modelo GY-F02 con asiento y espaldar en lámina punzonada de alta resistencia. Estructura metálica tipo viga de unión con brazos y patas cromadas que incluyen niveladores antideslizantes. Diseño ergonómico ideal para salas de espera, aeropuertos, clínicas, bancos y espacios de alto tráfico. Disponible en múltiples colores.",
+      "shortDescription": "Silla tándem 2 puestos con lámina punzonada y estructura cromada",
+      "features": [
+        "Modelo: GY-F02",
+        "Capacidad: 2 puestos",
+        "Alto asiento: 40 cm",
+        "Alto espaldar: 74 cm",
+        "Frente: 122 cm",
+        "Fondo: 60 cm",
+        "Asiento y espaldar en lámina punzonada",
+        "Viga de unión metálica",
+        "Brazos y patas cromadas con niveladores antideslizantes",
+        "Colores disponibles: Negro, Azul, Gris",
+        "Diseño ergonómico",
+        "Ideal para salas de espera y espacios públicos"
+      ],
+      "images": [
+        "/images/products/sillas/otras/silla-tandem-gy-f02/tandemx2-1.jpeg",
+        "/images/products/sillas/otras/silla-tandem-gy-f02/tandemx2-2.jpeg"
+      ],
+      "featured": true,
+      "quantity": 1
+    },
+    {
+      "id": "silla-tandem-gy-f03",
+      "category": "sillas",
+      "subcategory": "otras",
+      "name": "Silla Tándem GY-F03 - 3 Puestos",
+      "description": "Silla tándem de 3 puestos modelo GY-F03 con asiento y espaldar en lámina punzonada de alta resistencia. Estructura metálica tipo viga de unión con brazos y patas cromadas que incluyen niveladores antideslizantes. Diseño ergonómico ideal para salas de espera, aeropuertos, clínicas, bancos y espacios de alto tráfico. Disponible en múltiples colores.",
+      "shortDescription": "Silla tándem 3 puestos con lámina punzonada y estructura cromada",
+      "features": [
+        "Modelo: GY-F03",
+        "Capacidad: 3 puestos",
+        "Alto asiento: 40 cm",
+        "Alto espaldar: 74 cm",
+        "Frente: 172 cm",
+        "Fondo: 60 cm",
+        "Asiento y espaldar en lámina punzonada",
+        "Viga de unión metálica",
+        "Brazos y patas cromadas con niveladores antideslizantes",
+        "Colores disponibles: Negro, Azul, Gris",
+        "Diseño ergonómico",
+        "Ideal para salas de espera y espacios públicos"
+      ],
+      "images": [
+        "/images/products/sillas/otras/silla-tandem-gy-f03/tandemx3-1.jpeg",
+        "/images/products/sillas/otras/silla-tandem-gy-f03/tandemx3-2.jpeg"
+      ],
+      "featured": true,
+      "quantity": 1
+    },
+    {
+      "id": "silla-tandem-gy-f04",
+      "category": "sillas",
+      "subcategory": "otras",
+      "name": "Silla Tándem GY-F04 - 4 Puestos",
+      "description": "Silla tándem de 4 puestos modelo GY-F04 con asiento y espaldar en lámina punzonada de alta resistencia. Estructura metálica tipo viga de unión con brazos y patas cromadas que incluyen niveladores antideslizantes. Diseño ergonómico ideal para salas de espera, aeropuertos, clínicas, bancos y espacios de alto tráfico. Disponible en múltiples colores.",
+      "shortDescription": "Silla tándem 4 puestos con lámina punzonada y estructura cromada",
+      "features": [
+        "Modelo: GY-F04",
+        "Capacidad: 4 puestos",
+        "Alto asiento: 40 cm",
+        "Alto espaldar: 74 cm",
+        "Frente: 231 cm",
+        "Fondo: 60 cm",
+        "Asiento y espaldar en lámina punzonada",
+        "Viga de unión metálica",
+        "Brazos y patas cromadas con niveladores antideslizantes",
+        "Colores disponibles: Negro, Azul, Gris",
+        "Diseño ergonómico",
+        "Ideal para salas de espera y espacios públicos"
+      ],
+      "images": [
+        "/images/products/sillas/otras/silla-tandem-gy-f04/tandemx4-1.jpeg",
+        "/images/products/sillas/otras/silla-tandem-gy-f04/tandemx4-2.jpeg"
       ],
       "featured": true,
       "quantity": 1

@@ -21,6 +21,8 @@ export type ProductCategory =
   | 'carpas'
   | 'linea-exterior'
   | 'sillas'
+  | 'mesas'
+  | 'lockers'
   | 'archivadores'
   | 'mobiliario-escolar'
   | 'mobiliario-oficina'

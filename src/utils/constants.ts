@@ -31,7 +31,7 @@ export const CATEGORIES: CategoryInfo[] = [
       name: 'Línea Exterior',
       description: 'Productos para exteriores y espacios abiertos',
       icon: 'tree',
-      active: false
+      active: true
     },
   {
     id: 'sillas',

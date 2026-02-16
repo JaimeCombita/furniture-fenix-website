@@ -1406,6 +1406,168 @@
       ],
       "featured": true,
       "quantity": 1
+    },
+    {
+      "id": "silla-plastica-eterna-wengue-rimax",
+      "category": "sillas",
+      "subcategory": "otras",
+      "name": "Silla Plástica Sin Brazos Eterna Wengue Rimax",
+      "description": "Silla sin brazos apariencia Rattan, muy resistente, con filtro UV ideal para tus espacios de exterior e interior, de fácil limpieza. Fabricada con plástico de alta calidad, perfecta para terrazas, patios, jardines y espacios interiores. Diseño moderno y ligero que se adapta a cualquier estilo decorativo.",
+      "shortDescription": "Silla plástica sin brazos con apariencia Rattan, resistente a UV, fácil limpieza",
+      "features": [
+        "Tipo: Sillas de plástico",
+        "Color: Wengué",
+        "Ancho: 49.0 cm",
+        "Alto: 86.5 cm",
+        "Profundidad: 57.5 cm",
+        "Peso máximo soportado: 100 kg",
+        "Cuenta con apoyabrazos: No",
+        "Plegable: No",
+        "Apilable: Sí",
+        "Apariencia Rattan",
+        "Resistente",
+        "Filtro UV",
+        "Fácil de limpiar"
+      ],
+      "images": [
+        "/images/products/sillas/otras/silla-plastica-eterna-wengue-rimax/eterna-wengue-1.webp"
+      ],
+      "featured": false,
+      "quantity": 1
+    },
+    {
+      "id": "silla-sin-brazos-samba-blanco-rimax",
+      "category": "sillas",
+      "subcategory": "otras",
+      "name": "Silla Sin Brazos Samba Blanco Eco Rimax",
+      "description": "Silla sin brazos modelo Samba fabricada en plástico de alta calidad, perfecta para espacios interiores y exteriores. Diseño moderno y versátil que se adapta a cualquier ambiente. Ergonómica, ligera y muy resistente.",
+      "shortDescription": "Silla plástica sin brazos Samba, color blanco, apilable y resistente",
+      "features": [
+        "Tipo: Sillas de plástico",
+        "Color: Blanco",
+        "Ancho: 46.5 cm",
+        "Alto: 87.5 cm",
+        "Profundidad: 52.5 cm",
+        "Peso máximo soportado: 100 kg",
+        "Cuenta con apoyabrazos: No",
+        "Plegable: No",
+        "Apilable: Sí",
+        "Diseño ergonómico",
+        "Material de alta calidad",
+        "Fácil de limpiar"
+      ],
+      "images": [
+        "/images/products/sillas/otras/silla-sin-brazos-samba-blanco-rimax/samba-blanco-1.webp",
+        "/images/products/sillas/otras/silla-sin-brazos-samba-blanco-rimax/samba-blanco-2.webp",
+        "/images/products/sillas/otras/silla-sin-brazos-samba-blanco-rimax/samba-blanco-3.webp",
+        "/images/products/sillas/otras/silla-sin-brazos-samba-blanco-rimax/samba-blanco-4.webp"
+      ],
+      "featured": false,
+      "quantity": 1
+    },
+    {
+      "id": "pupitre-escolar-azul-40x40x80",
+      "category": "sillas",
+      "subcategory": "otras",
+      "name": "Pupitre Escolar con Porta Libros 40X40X80 Azul",
+      "description": "Pupitre escolar con porta libros de diseño innovador y de fácil ensamble. Silla auxiliar versátil ideal para uso educativo. Fabricada en polipropileno de alta calidad. Cumple con la norma técnica NTC Icontec 4641. Perfecta para aulas, salas de estudio y espacios educativos.",
+      "shortDescription": "Pupitre escolar con porta libros, polipropileno, color azul, fácil ensamble",
+      "features": [
+        "Tipo: Sillas auxiliares",
+        "Tipo sillón/sofá: Banqueta",
+        "Color: Azul",
+        "Ancho: 40 cm",
+        "Alto: 80 cm",
+        "Largo: 40 cm",
+        "Dimensiones: 40 x 40 x 80 cm",
+        "Peso máximo soportado: 90 kg",
+        "Número de personas: 1",
+        "Material del tapiz: Polipropileno",
+        "Material de la estructura: Polipropileno",
+        "Con porta libros",
+        "Fácil ensamble",
+        "Cumple norma NTC Icontec 4641"
+      ],
+      "images": [
+        "/images/products/sillas/otras/pupitre-escolar-azul-40x40x80/pupitre-azul-1.webp",
+        "/images/products/sillas/otras/pupitre-escolar-azul-40x40x80/pupitre-azul-2.webp",
+        "/images/products/sillas/otras/pupitre-escolar-azul-40x40x80/pupitre-azul-3.webp",
+        "/images/products/sillas/otras/pupitre-escolar-azul-40x40x80/pupitre-azul-4.webp"
+      ],
+      "featured": false,
+      "quantity": 1
+    },
+    {
+      "id": "pupitre-infantil-azul-electrico-60x40x61",
+      "category": "sillas",
+      "subcategory": "otras",
+      "name": "Pupitre Infantil Unipersonal + Silla 40X60X61 Azul Eléctrico",
+      "description": "Pupitre infantil unipersonal con silla integrada, de diseño moderno y ergonómico. Ideal para espacios educativos infantiles. Fabricado en polipropileno de alta calidad, color azul eléctrico vibrante. Perfecto para aulas, centros educativos y espacios de aprendizaje infantil.",
+      "shortDescription": "Pupitre infantil con silla integrada, polipropileno, azul eléctrico",
+      "features": [
+        "Tipo: Sillas auxiliares",
+        "Tipo sillón/sofá: Silla/Sillón ejecutivo",
+        "Color: Azul Eléctrico",
+        "Ancho: 60 cm",
+        "Alto: 61 cm",
+        "Largo: 40 cm",
+        "Dimensiones: 60 x 40 x 61 cm",
+        "Peso máximo soportado: 90 kg",
+        "Material de la estructura: Polipropileno",
+        "Número de personas: 1",
+        "Pupitre + Silla integrada",
+        "Diseño ergonómico"
+      ],
+      "images": [
+        "/images/products/sillas/otras/pupitre-infantil-azul-electrico-60x40x61/pupitre-infantil-1.webp",
+        "/images/products/sillas/otras/pupitre-infantil-azul-electrico-60x40x61/pupitre-infantil-2.webp",
+        "/images/products/sillas/otras/pupitre-infantil-azul-electrico-60x40x61/pupitre-infantil-3.webp"
+      ],
+      "featured": false,
+      "quantity": 1
+    },
+    {
+      "id": "combo-mesa-sillas-eterna-wengue-rimax",
+      "category": "linea-exterior",
+      "subcategory": null,
+      "name": "Combo Mesa Plástica Cuadrada 80x80 cm Eterna Wengue + 4 Sillas Plásticas Con Brazos Eterna Wengue Rimax",
+      "description": "Combo completo para espacios exteriores e interiores con mesa cuadrada y 4 sillas resistentes. Mesa y sillas fabricadas en polipropileno con apariencia Rattan y filtro UV. Conjunto ideal para terrazas, patios, jardines y espacios de descanso. Producto muy resistente, ligero, fácil de limpiar y mantener.",
+      "shortDescription": "Combo mesa 80x80 + 4 sillas con brazos, apariencia Rattan, color wengué",
+      "features": [
+        "Material: Polipropileno",
+        "Color: Wengué",
+        "Apariencia Rattan con Filtro UV",
+        "MESA CUADRADA 80x80 cm:",
+        "  - Dimensiones: 80.5 x 80.5 x 72.5 cm (Ancho x Largo x Alto)",
+        "  - Tipo: Mesa de plástico",
+        "  - Forma: Cuadrada (Diámetro: 80.5 cm)",
+        "  - Capacidad: 4 personas",
+        "  - Requiere armado: Sí",
+        "  - Plegable: No",
+        "  - Cuenta con ruedas: No",
+        "  - Cuenta con extensión: No",
+        "SILLAS CON BRAZOS (4 unidades):",
+        "  - Modelo: Eterna",
+        "  - Dimensiones: 57.0 x 80.6 x 42 cm (Ancho x Alto x Profundidad)",
+        "  - Tipo: Sillas de plástico",
+        "  - Cuenta con apoyabrazos: Sí",
+        "  - Plegable: No",
+        "  - Apilable: Sí",
+        "  - Requiere armado: No",
+        "  - Peso máximo soportado por silla: 100 kg",
+        "CARACTERÍSTICAS GENERALES:",
+        "  - Liviana y transportable",
+        "  - Fácil armado y limpieza",
+        "  - Acabado mate",
+        "  - Limpieza: Paño húmedo (no usar elementos abrasivos)",
+        "  - Garantía: 6 meses"
+      ],
+      "images": [
+        "/images/products/linea-exterior/combo-mesa-sillas-eterna-wengue/combo-eterna-1.webp",
+        "/images/products/linea-exterior/combo-mesa-sillas-eterna-wengue/combo-eterna-2.webp"
+      ],
+      "featured": false,
+      "quantity": 1
     }
   ]
 }

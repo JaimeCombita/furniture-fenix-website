@@ -4,9 +4,20 @@ import { Hero, CategoryCard } from '../components/features';
 import { Alert, Button, Card, Spinner } from '../components/ui';
 import { CATEGORIES, SERVICES } from '../utils/constants';
 import { useProductsQuery } from '../hooks';
+import { useMetaTags } from '../hooks/useMetaTags';
 import './Home.css';
 
 export const HomePage: React.FC = () => {
+  // Meta tags para SEO
+  useMetaTags({
+    title: 'Inicio',
+    description: 'Fénix - Mobiliario institucional de calidad para licitaciones gubernamentales. Mesas, sillas, lockers, carpas y sombrillas de excelente calidad.',
+    image: 'https://furniture-fenix-website.vercel.app/images/landing/hero-image.jpg',
+    url: 'https://furniture-fenix-website.vercel.app/',
+    type: 'website',
+    keywords: 'mobiliario institucional, mesas, sillas, lockers, carpas, sombrillas, licitaciones'
+  });
+
   const {
     data: productsData,
     isLoading,

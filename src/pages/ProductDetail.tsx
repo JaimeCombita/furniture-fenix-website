@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Alert, Button, Spinner } from '../components/ui';
 import { useProductsQuery } from '../hooks';
+import { useMetaTags } from '../hooks/useMetaTags';
 import type { Product } from '../types';
 import { resolveProductImage } from '../utils/resolveProductImage';
 import './ProductDetail.css';
@@ -142,13 +143,25 @@ const ProductDetailPage: React.FC = () => {
 
   const [alertDismissed, setAlertDismissed] = useState(false);
 
+  const product = (productsData?.products.find((p: Product) => p.id === id) || null) as Product | null;
+
+  // Meta tags dinámicos para SEO
+  useMetaTags({
+    title: product?.name || 'Producto',
+    description: product?.description || 'Descubre este producto de Fénix - Mobiliario institucional de calidad.',
+    image: product?.images?.[0] 
+      ? `https://furniture-fenix-website.vercel.app${resolveProductImage(product.images[0])}`
+      : 'https://furniture-fenix-website.vercel.app/logo.png',
+    url: `https://furniture-fenix-website.vercel.app/producto/${id}`,
+    type: 'product',
+    keywords: product ? `${product.name}, ${product.category}, mobiliario` : 'mobiliario'
+  });
+
   useEffect(() => {
     if (isError) {
       setAlertDismissed(false);
     }
   }, [isError]);
-
-  const product = (productsData?.products.find((p: Product) => p.id === id) || null) as Product | null;
 
   const notFoundProduct: Product = {
     id: id || 'unknown',

@@ -1,0 +1,39 @@
+.spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #2F3542;
+}
+
+.spinner-circle {
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(0, 125, 254, 0.2);
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  animation: spinner-rotate 0.8s linear infinite;
+}
+
+.spinner-sm .spinner-circle {
+  width: 24px;
+  height: 24px;
+  border-width: 2px;
+}
+
+.spinner-lg .spinner-circle {
+  width: 48px;
+  height: 48px;
+  border-width: 4px;
+}
+
+.spinner-label {
+  font-size: 0.95rem;
+  color: #666666;
+}
+
+@keyframes spinner-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

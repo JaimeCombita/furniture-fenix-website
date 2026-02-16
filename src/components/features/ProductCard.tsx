@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Button } from '../ui';
 import type { Product } from '../../types';
+import { resolveProductImage } from '../../utils/resolveProductImage';
 import './ProductCard.css';
 
 interface ProductCardProps {
@@ -14,7 +15,17 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <Link to={`/producto/${product.id}`} className="product-image-link">
         <div className="product-image">
           {product.images && product.images.length > 0 ? (
-            <img src={product.images[0]} alt={product.name} />
+            (() => {
+              const imageSrc = resolveProductImage(product.images[0]);
+              return (
+            <img
+              src={imageSrc}
+              alt={product.name}
+              loading="lazy"
+              decoding="async"
+            />
+              );
+            })()
           ) : (
             <div className="product-placeholder">
               <i className="fas fa-image"></i>

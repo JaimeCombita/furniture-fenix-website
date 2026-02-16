@@ -1,24 +1,38 @@
+import { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/layout';
-import { HomePage } from './pages/Home';
-import { CatalogPage } from './pages/Catalog';
-import { ContactPage } from './pages/Contact';
-import { ServicesPage } from './pages/Services';
-import { ProductDetailPage } from './pages/ProductDetail';
+import { QueryClientProvider } from '@tanstack/react-query';
+import { queryClient } from './config/queryClient';
+
+// Lazy load pages for code splitting
+const HomePage = lazy(() => import('./pages/Home'));
+const CatalogPage = lazy(() => import('./pages/Catalog'));
+const ContactPage = lazy(() => import('./pages/Contact'));
+const ServicesPage = lazy(() => import('./pages/Services'));
+const ProductDetailPage = lazy(() => import('./pages/ProductDetail'));
+
+// Loading component
+const PageLoader = () => (
+  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '300px' }}>
+    <div>Cargando...</div>
+  </div>
+);
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path="catalogo" element={<CatalogPage />} />
-          <Route path="servicios" element={<ServicesPage />} />
-          <Route path="producto/:id" element={<ProductDetailPage />} />
-          <Route path="contacto" element={<ContactPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Suspense fallback={<PageLoader />}><HomePage /></Suspense>} />
+            <Route path="catalogo" element={<Suspense fallback={<PageLoader />}><CatalogPage /></Suspense>} />
+            <Route path="servicios" element={<Suspense fallback={<PageLoader />}><ServicesPage /></Suspense>} />
+            <Route path="producto/:id" element={<Suspense fallback={<PageLoader />}><ProductDetailPage /></Suspense>} />
+            <Route path="contacto" element={<Suspense fallback={<PageLoader />}><ContactPage /></Suspense>} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </QueryClientProvider>
   );
 }
 

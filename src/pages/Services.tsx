@@ -4,7 +4,7 @@ import { Button } from '../components/ui';
 import { SERVICES } from '../utils/constants';
 import './Services.css';
 
-export const ServicesPage: React.FC = () => {
+const ServicesPage: React.FC = () => {
   return (
     <div className="services-page">
       <section className="services-hero">
@@ -254,3 +254,5 @@ export const ServicesPage: React.FC = () => {
     </div>
   );
 };
+
+export default ServicesPage;

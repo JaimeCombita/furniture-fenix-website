@@ -159,6 +159,40 @@
     font-size: 1.125rem;
 }
 
+.load-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-xl);
+}
+
+.load-more button {
+    padding: 10px 16px;
+    border: 1px solid var(--color-accent);
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition-base);
+    font-weight: 600;
+}
+
+.load-more button:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+}
+
+.load-more button:active {
+    transform: translateY(0);
+}
+
+.load-more-count {
+    color: #666666;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
 @media (max-width: 968px) {
     .catalog-content {
         grid-template-columns: 1fr;

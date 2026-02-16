@@ -1,0 +1,87 @@
+{
+  "categories": [
+    {
+      "id": "sillas",
+      "name": "Sillas",
+      "icon": "chair",
+      "description": "Sillas ergonómicas y de oficina",
+      "active": true,
+      "subcategories": [
+        {
+          "id": "gerenciales",
+          "name": "Sillas Gerenciales",
+          "description": "Sillas de alta gama para gerencia"
+        },
+        {
+          "id": "ejecutivas",
+          "name": "Sillas Ejecutivas",
+          "description": "Sillas ejecutivas para oficina"
+        },
+        {
+          "id": "gamer",
+          "name": "Sillas Gamer",
+          "description": "Sillas gamer de alto rendimiento"
+        },
+        {
+          "id": "otras",
+          "name": "Otras",
+          "description": "Sillas de diferentes lineas y estilos"
+        }
+      ]
+    },
+    {
+      "id": "mesas",
+      "name": "Escritorios y Salas de Juntas",
+      "icon": "table",
+      "description": "Escritorios y salas de juntas",
+      "active": true
+    },
+    {
+      "id": "lockers",
+      "name": "Lockers",
+      "icon": "lock",
+      "description": "Lockers metálicos para almacenamiento seguro",
+      "active": true
+    },
+    {
+      "id": "archivadores",
+      "name": "Archivadores",
+      "icon": "archive",
+      "description": "Soluciones de almacenamiento",
+      "active": false
+    },
+    {
+      "id": "recepciones",
+      "name": "Recepciones",
+      "icon": "users",
+      "description": "Muebles para recepción",
+      "active": false
+    },
+    {
+      "id": "carpas",
+      "name": "Carpas",
+      "icon": "tent",
+      "description": "Carpas para ferias, eventos y usos múltiples",
+      "active": true,
+      "subcategories": [
+        {
+          "id": "kioscos",
+          "name": "Kioscos",
+          "description": "Kioscos tradicionales y plegables para eventos y ferias"
+        },
+        {
+          "id": "hangares",
+          "name": "Hangares",
+          "description": "Hangares para cubrir grandes espacios, eventos y bodegas"
+        }
+      ]
+    },
+    {
+      "id": "linea-exterior",
+      "name": "Línea Exterior",
+      "icon": "tree",
+      "description": "Productos para exteriores y espacios abiertos",
+      "active": true
+    }
+  ]
+}

@@ -4,7 +4,7 @@ import { ContactForm } from '../components/features';
 import { COMPANY_INFO } from '../utils/constants';
 import './Contact.css';
 
-export const ContactPage: React.FC = () => {
+const ContactPage: React.FC = () => {
   const [searchParams] = useSearchParams();
   const productId = searchParams.get('producto');
 
@@ -92,3 +92,5 @@ export const ContactPage: React.FC = () => {
     </div>
   );
 };
+
+export default ContactPage;

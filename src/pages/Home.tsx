@@ -1,12 +1,27 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Hero, CategoryCard } from '../components/features';
-import { Button, Card } from '../components/ui';
+import { Alert, Button, Card, Spinner } from '../components/ui';
 import { CATEGORIES, SERVICES } from '../utils/constants';
-import productsData from '../data/products.json';
+import { useProductsQuery } from '../hooks';
 import './Home.css';
 
 export const HomePage: React.FC = () => {
+  const {
+    data: productsData,
+    isLoading,
+    isError,
+    refetch,
+  } = useProductsQuery();
+
+  const [alertDismissed, setAlertDismissed] = useState(false);
+
+  useEffect(() => {
+    if (isError) {
+      setAlertDismissed(false);
+    }
+  }, [isError]);
+
   const aboutChecklistItems = [
     'Somos punto de fábrica',
     'Asesoria y visita personalizada',
@@ -20,12 +35,13 @@ export const HomePage: React.FC = () => {
 
   // Contar productos por categoría
   const productCountByCategory = useMemo(() => {
+    if (!productsData) return {};
     const counts: Record<string, number> = {};
-    productsData.products.forEach((product) => {
+    productsData.products.forEach((product: any) => {
       counts[product.category] = (counts[product.category] || 0) + 1;
     });
     return counts;
-  }, []);
+  }, [productsData]);
 
   // Ordenar categorías: activas primero, luego inactivas
   const sortedCategories = useMemo(() => {
@@ -52,15 +68,29 @@ export const HomePage: React.FC = () => {
           <h2 className="section-title">Nuestros Productos</h2>
           <p className="section-subtitle">Soluciones completas de mobiliario institucional</p>
           
-          <div className="categories-grid">
-            {sortedCategories.map((category) => (
-              <CategoryCard 
-                key={category.id} 
-                category={category} 
-                productCount={productCountByCategory[category.id] || 0}
-              />
-            ))}
-          </div>
+          {isLoading ? (
+            <div className="categories-grid">
+              <Spinner label="Cargando productos..." />
+            </div>
+          ) : isError && !alertDismissed ? (
+            <Alert
+              title="No pudimos cargar los productos"
+              message="Verifica tu conexion y vuelve a intentar."
+              actionLabel="Reintentar"
+              onAction={() => refetch()}
+              onClose={() => setAlertDismissed(true)}
+            />
+          ) : (
+            <div className="categories-grid">
+              {sortedCategories.map((category) => (
+                <CategoryCard
+                  key={category.id}
+                  category={category}
+                  productCount={productCountByCategory[category.id] || 0}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -130,3 +160,5 @@ export const HomePage: React.FC = () => {
     </div>
   );
 };
+
+export default HomePage;

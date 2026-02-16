@@ -14,10 +14,13 @@ export const Hero: React.FC = () => {
             <p className="hero-subtitle">Sillas de oficina importadas y mobiliario nacional con estándares institucionales y comerciales</p>
           </div>
           <div className="hero-image-container">
-            <img
+                <img
               className="hero-main-image"
               src="/images/landing/img-4.PNG"
               alt="Mobiliario Fénix"
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
             />
           </div>
           <div className="hero-banners-grid">

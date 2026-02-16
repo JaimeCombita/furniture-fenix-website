@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import productsData from '../../data/products.json';
+import { useProductsQuery } from '../../hooks';
 import './Navigation.css';
 
 interface NavigationProps {
@@ -12,6 +12,11 @@ export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
   const [expandedMenu, setExpandedMenu] = useState<string | null>(null);
   const [expandedSubmenu, setExpandedSubmenu] = useState<string | null>(null);
+  const {
+    data: productsData,
+    isLoading,
+    isError,
+  } = useProductsQuery();
 
   React.useEffect(() => {
     onClose();
@@ -42,6 +47,10 @@ export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
   const isActive = (path: string) => {
     return location.pathname === path;
   };
+
+  if (isLoading || isError || !productsData) {
+    return <></>;
+  }
 
   return (
     <>
@@ -80,7 +89,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
           </button>
           {expandedMenu === '/catalogo' && (
             <ul className="nav-submenu">
-              {productsData.categories.filter(cat => cat.active).map((category) => (
+              {productsData.categories.filter((cat: any) => cat.active).map((category: any) => (
                 <li key={category.id}>
                   {category.subcategories && category.subcategories.length > 0 ? (
                     <>
@@ -93,7 +102,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
                       </button>
                       {expandedSubmenu === category.id && (
                         <ul className="nav-subsubmenu">
-                          {category.subcategories.map((subcat) => (
+                          {category.subcategories.map((subcat: any) => (
                             <li key={subcat.id}>
                               <Link
                                 to={`/catalogo?categoria=${category.id}&subcategoria=${subcat.id}`}

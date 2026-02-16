@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { Button } from '../components/ui';
-import productsData from '../data/products.json';
+import { Alert, Button, Spinner } from '../components/ui';
+import { useProductsQuery } from '../hooks';
 import type { Product } from '../types';
+import { resolveProductImage } from '../utils/resolveProductImage';
 import './ProductDetail.css';
 
 interface ProductImageCarouselProps {
@@ -13,34 +14,38 @@ interface ProductImageCarouselProps {
 const ProductImageCarousel: React.FC<ProductImageCarouselProps> = ({ images, name }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isCarouselPaused, setIsCarouselPaused] = useState(false);
+  const resolvedImages = useMemo(
+    () => images.map((image) => resolveProductImage(image)),
+    [images]
+  );
 
   useEffect(() => {
-    if (!images || images.length <= 1) return;
+    if (!resolvedImages || resolvedImages.length <= 1) return;
     if (isCarouselPaused) return;
 
     const intervalId = window.setInterval(() => {
       setCurrentImageIndex((prev: number) =>
-        prev === images.length - 1 ? 0 : prev + 1
+        prev === resolvedImages.length - 1 ? 0 : prev + 1
       );
     }, 3000);
 
     return () => {
       window.clearInterval(intervalId);
     };
-  }, [images, isCarouselPaused]);
+  }, [resolvedImages, isCarouselPaused]);
 
   const handlePrevImage = () => {
-    if (images.length > 0) {
+    if (resolvedImages.length > 0) {
       setCurrentImageIndex((prev: number) =>
-        prev === 0 ? images.length - 1 : prev - 1
+        prev === 0 ? resolvedImages.length - 1 : prev - 1
       );
     }
   };
 
   const handleNextImage = () => {
-    if (images.length > 0) {
+    if (resolvedImages.length > 0) {
       setCurrentImageIndex((prev: number) =>
-        prev === images.length - 1 ? 0 : prev + 1
+        prev === resolvedImages.length - 1 ? 0 : prev + 1
       );
     }
   };
@@ -57,14 +62,16 @@ const ProductImageCarousel: React.FC<ProductImageCarouselProps> = ({ images, nam
       onMouseLeave={() => setIsCarouselPaused(false)}
     >
       <div className="main-image">
-        {images.length > 0 ? (
+        {resolvedImages.length > 0 ? (
           <>
             <img
-              src={images[currentImageIndex]}
+              src={resolvedImages[currentImageIndex]}
               alt={`${name} - Imagen ${currentImageIndex + 1}`}
+              loading="eager"
+              decoding="async"
             />
 
-            {images.length > 1 && (
+            {resolvedImages.length > 1 && (
               <>
                 <button
                   className="carousel-btn prev-btn"
@@ -80,9 +87,8 @@ const ProductImageCarousel: React.FC<ProductImageCarouselProps> = ({ images, nam
                 >
                   <i className="fas fa-chevron-right"></i>
                 </button>
-
                 <div className="carousel-indicators">
-                  {images.map((_, index) => (
+                  {resolvedImages.map((_, index) => (
                     <button
                       key={index}
                       className={`indicator ${index === currentImageIndex ? 'active' : ''}`}
@@ -102,15 +108,20 @@ const ProductImageCarousel: React.FC<ProductImageCarouselProps> = ({ images, nam
         )}
       </div>
 
-      {images.length > 1 && (
+      {resolvedImages.length > 1 && (
         <div className="thumbnails-container">
-          {images.map((image, index) => (
+          {resolvedImages.map((image, index) => (
             <button
               key={index}
               className={`thumbnail ${index === currentImageIndex ? 'active' : ''}`}
               onClick={() => handleThumbnailClick(index)}
             >
-              <img src={image} alt={`Miniatura ${index + 1}`} />
+              <img
+                src={image}
+                alt={`Miniatura ${index + 1}`}
+                loading="lazy"
+                decoding="async"
+              />
             </button>
           ))}
         </div>
@@ -119,11 +130,25 @@ const ProductImageCarousel: React.FC<ProductImageCarouselProps> = ({ images, nam
   );
 };
 
-export const ProductDetailPage: React.FC = () => {
+const ProductDetailPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const {
+    data: productsData,
+    isLoading,
+    isError,
+    refetch,
+  } = useProductsQuery();
 
-  const product = (productsData.products.find(p => p.id === id) || null) as Product | null;
+  const [alertDismissed, setAlertDismissed] = useState(false);
+
+  useEffect(() => {
+    if (isError) {
+      setAlertDismissed(false);
+    }
+  }, [isError]);
+
+  const product = (productsData?.products.find((p: Product) => p.id === id) || null) as Product | null;
 
   const notFoundProduct: Product = {
     id: id || 'unknown',
@@ -141,6 +166,28 @@ export const ProductDetailPage: React.FC = () => {
   };
 
   const displayProduct = product || notFoundProduct;
+
+  if (isLoading || isError || !productsData) {
+    return (
+      <div className="product-detail-page">
+        <div className="container">
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '400px' }}>
+            {isLoading ? (
+              <Spinner label="Cargando producto..." />
+            ) : !alertDismissed ? (
+              <Alert
+                title="No pudimos cargar el producto"
+                message="Verifica tu conexion y vuelve a intentar."
+                actionLabel="Reintentar"
+                onAction={() => refetch()}
+                onClose={() => setAlertDismissed(true)}
+              />
+            ) : null}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="product-detail-page">
@@ -222,3 +269,5 @@ export const ProductDetailPage: React.FC = () => {
     </div>
   );
 };
+
+export default ProductDetailPage;

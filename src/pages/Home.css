@@ -148,14 +148,14 @@
 .cta-section h2 {
     font-size: 2.5rem;
     margin-bottom: var(--spacing-md);
-    color: var(--color-primary);
+    color: #FFFFFF !important;
 }
 
 .cta-section p {
     font-size: 1.25rem;
     margin-bottom: var(--spacing-xl);
     opacity: 0.95;
-    color: var(--color-primary);
+    color: #FFFFFF !important;
 }
 
 @media (max-width: 1200px) {

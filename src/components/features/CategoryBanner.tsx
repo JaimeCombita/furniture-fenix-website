@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { resolveLandingImage } from '../../utils/resolveLandingImage';
 import './CategoryBanner.css';
 
 interface CategoryBannerProps {
@@ -23,7 +24,7 @@ export const CategoryBanner: React.FC<CategoryBannerProps> = ({
 
   return (
     <Link to={catalogUrl} className="category-banner" title={description}>
-      <div className="category-banner-image" style={{ backgroundImage: `url(${imageSrc})` }}>
+      <div className="category-banner-image" style={{ backgroundImage: `url(${resolveLandingImage(imageSrc)})` }}>
         <div className="category-banner-overlay">
           <button className="category-banner-button">
             {buttonText}

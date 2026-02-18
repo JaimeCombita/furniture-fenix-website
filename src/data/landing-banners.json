@@ -2,7 +2,7 @@
   "banners": [
     {
       "id": "banner-1",
-      "imagePath": "/images/landing/img-8.jpeg",
+      "imagePath": "img-8.jpeg",
       "category": "sillas",
       "subcategory": "ejecutivas",
       "buttonText": "Sillas Ejecutivas",
@@ -10,7 +10,7 @@
     },
     {
       "id": "banner-2",
-      "imagePath": "/images/landing/img-2.PNG",
+      "imagePath": "img-2.PNG",
       "category": "sillas",
       "subcategory": "gerenciales",
       "buttonText": "Sillas Gerenciales",
@@ -18,7 +18,7 @@
     },
     {
       "id": "banner-3",
-      "imagePath": "/images/landing/img-3.PNG",
+      "imagePath": "img-3.PNG",
       "category": "mesas",
       "subcategory": null,
       "buttonText": "Mesas",
@@ -26,7 +26,7 @@
     },
     {
       "id": "banner-4",
-      "imagePath": "/images/landing/img-5.jpeg",
+      "imagePath": "img-5.jpeg",
       "category": "lockers",
       "subcategory": null,
       "buttonText": "Lockers",
@@ -34,7 +34,7 @@
     },
     {
       "id": "banner-5",
-      "imagePath": "/images/landing/img-6.jpeg",
+      "imagePath": "img-6.jpeg",
       "category": "mesas",
       "subcategory": null,
       "buttonText": "Salas de juntas",
@@ -42,7 +42,7 @@
     },
     {
       "id": "banner-6",
-      "imagePath": "/images/landing/img-7.PNG",
+      "imagePath": "img-7.PNG",
       "category": "carpas",
       "subcategory": null,
       "buttonText": "Carpas",

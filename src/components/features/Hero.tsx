@@ -1,6 +1,7 @@
 import React from 'react';
 import { CategoryBanner } from './CategoryBanner';
 import landingBannersData from '../../data/landing-banners.json';
+import { resolveLandingImage } from '../../utils/resolveLandingImage';
 import './Hero.css';
 
 export const Hero: React.FC = () => {
@@ -16,7 +17,7 @@ export const Hero: React.FC = () => {
           <div className="hero-image-container">
                 <img
               className="hero-main-image"
-              src="/images/landing/img-4.PNG"
+              src={resolveLandingImage('img-4.PNG')}
               alt="Mobiliario Fénix"
                   loading="eager"
                   decoding="async"

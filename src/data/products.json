@@ -48,7 +48,7 @@
       "name": "Archivadores",
       "icon": "archive",
       "description": "Soluciones de almacenamiento",
-      "active": false
+      "active": true
     },
     {
       "id": "recepciones",
@@ -1527,6 +1527,120 @@
       "quantity": 1
     },
     {
+      "id": "archivador-69x37x50-negro",
+      "category": "archivadores",
+      "subcategory": null,
+      "name": "Archivador 69x37x50 cm Negro",
+      "description": "Los muebles tipo Archivador son muebles para oficina y estudio con amplio espacio interior. Funcionan con cajones que permiten almacenar documentos y elementos de escritorio. Se adaptan muy bien a otros muebles como bibliotecas y escritorios. Compra On-line en Homecenter los mejores productos, siempre precios bajos. Recibe a domicilio o retira en tienda y ahórrate el costo del envío.",
+      "shortDescription": "Archivador metálico vertical negro con 3 cajones y diseño compacto",
+      "features": [
+        "Tipo: Archivadores",
+        "Material: Metal",
+        "Color: Negro",
+        "Cantidad de cajones: 3",
+        "Tipo de archivador: Verticales",
+        "Número de niveles: 3",
+        "Cuenta con ruedas: No",
+        "Modo de fijación: Sobreponer",
+        "Diseño compacto",
+        "Útiles cajones",
+        "Complemento de escritorios",
+        "Ideal para espacios pequeños",
+        "Dimensiones: 37 cm x 69 cm x 50 cm",
+        "Ancho: 37 cm",
+        "Alto: 69 cm",
+        "Profundidad: 50 cm"
+      ],
+      "images": [
+        "/images/products/archivadores/archivador-69x37x50-cm-negro/main.webp",
+        "/images/products/archivadores/archivador-69x37x50-cm-negro/costado.webp",
+        "/images/products/archivadores/archivador-69x37x50-cm-negro/frente.webp",
+        "/images/products/archivadores/archivador-69x37x50-cm-negro/uso.webp",
+        "/images/products/archivadores/archivador-69x37x50-cm-negro/dimensiones.webp"
+      ],
+      "featured": false,
+      "quantity": 1
+    },
+    {
+      "id": "archivador-metalico-4-gavetas",
+      "category": "archivadores",
+      "subcategory": null,
+      "name": "Archivador Metálico 4 Gavetas",
+      "description": "Archivador Metálico 4 Gavetas: el archivero vertical perfecto para tu oficina. Este archivador de oficina destaca por sus cuatro gavetas espaciosas con deslizamiento suave, ideal para organizar documentos. Como archivero de documentos, incluye cerradura centralizada para mayor seguridad, combina diseño compacto y durabilidad. Este modelo pertenece a nuestra línea de archivadores modernos para oficina.",
+      "shortDescription": "Archivador metálico de oficina con 4 gavetas y cerradura centralizada",
+      "features": [
+        "Material: Lámina Cold Rolled de calibre 24",
+        "Acabados: Pintura electrostática",
+        "Correderas Full Extension",
+        "Sistema de seguridad tipo trampa",
+        "Sistema anti-vuelco",
+        "Chapa de acción con llave",
+        "Alto: 136 cm",
+        "Ancho: 47 cm",
+        "Fondo: 60 cm"
+      ],
+      "images": [
+        "/images/products/archivadores/archivador-metalico-4-gavetas/main.png",
+        "/images/products/archivadores/archivador-metalico-4-gavetas/costado.png",
+        "/images/products/archivadores/archivador-metalico-4-gavetas/cajones.png",
+        "/images/products/archivadores/archivador-metalico-4-gavetas/dimensiones.png"
+      ],
+      "featured": false,
+      "quantity": 1
+    },
+    {
+      "id": "archivador-metalico-2-gavetas",
+      "category": "archivadores",
+      "subcategory": null,
+      "name": "Archivador Metálico 2 Gavetas",
+      "description": "Archivador Metálico 2 Gavetas: la solución ideal para organizar documentos en tu oficina o espacio de trabajo. Nuestros archiveros de oficina son fabricados en metal de alta resistencia y acabado en pintura electrostática. Equipado con dos gavetas espaciosas con sistema de deslizamiento suave, este archivador de carpetas permite almacenar documentos tamaño carta y oficio de manera eficiente. La seguridad de tus archivos está garantizada gracias a su cerradura con dos llaves incluidas.",
+      "shortDescription": "Archivador metálico con 2 gavetas y sistema de seguridad con llave",
+      "features": [
+        "Material: Lámina Cold Rolled de calibre 24",
+        "Acabados: Pintura electrostática",
+        "Correderas Full Extension",
+        "Sistema de seguridad tipo trampa",
+        "Chapa de acción con llave",
+        "Incluye 2 llaves",
+        "Alto: 73 cm",
+        "Ancho: 47 cm",
+        "Fondo: 60 cm"
+      ],
+      "images": [
+        "/images/products/archivadores/archivador-metalico-2-gavetas/main.png",
+        "/images/products/archivadores/archivador-metalico-2-gavetas/frente.png",
+        "/images/products/archivadores/archivador-metalico-2-gavetas/costado.png",
+        "/images/products/archivadores/archivador-metalico-2-gavetas/dimensiones.png"
+      ],
+      "featured": false,
+      "quantity": 1
+    },
+    {
+      "id": "archivador-aereo-metalico",
+      "category": "archivadores",
+      "subcategory": null,
+      "name": "Archivador Aéreo Metálico",
+      "description": "El archivador de pared es la solución perfecta para oficinas con limitaciones de espacio. Este archivero se instala directamente en la pared, liberando valioso espacio en el suelo mientras mantiene sus documentos organizados y accesibles. Es fabricado en metal con una chapa para mayor seguridad. Nuestros archivadores de oficina son una solución inteligente en sistemas de organización documental.",
+      "shortDescription": "Archivador aéreo metálico de pared con chapa de seguridad",
+      "features": [
+        "Material: Lámina Cold Rolled de calibre 24",
+        "Acabados: Pintura electrostática termofijada",
+        "Frente en lámina",
+        "1 espacio de almacenamiento",
+        "Chapa de seguridad",
+        "Alto: 40 cm",
+        "Ancho: 90 cm",
+        "Fondo: 32 cm"
+      ],
+      "images": [
+        "/images/products/archivadores/archivador-aereo-metalico/main.png",
+        "/images/products/archivadores/archivador-aereo-metalico/costado.png",
+        "/images/products/archivadores/archivador-aereo-metalico/abierto.png"
+      ],
+      "featured": false,
+      "quantity": 1
+    },
+    {
       "id": "combo-mesa-sillas-eterna-wengue-rimax",
       "category": "linea-exterior",
       "subcategory": null,
@@ -1565,6 +1679,127 @@
       "images": [
         "/images/products/linea-exterior/combo-mesa-sillas-eterna-wengue/combo-eterna-1.webp",
         "/images/products/linea-exterior/combo-mesa-sillas-eterna-wengue/combo-eterna-2.webp"
+      ],
+      "featured": false,
+      "quantity": 1
+    },
+    {
+      "id": "silla-gamer-njoytech-kaos",
+      "category": "sillas",
+      "subcategory": "gamer",
+      "name": "Silla Gamer Njoytech by Halten Ergonómica con Cojín Cervical",
+      "description": "La Silla Gamer Kaos cuenta con un diseño ergonómico, pensado para brindarte la máxima comodidad durante largas jornadas de juego. Cuenta con cojín de lumbar y cervical para cuidar tu postura y evitar posibles molestias. Su asiento de espuma gruesa de alta densidad no se deforma con el tiempo. La base de esta silla tiene forma de estrella y posee 5 ruedas giratorias 360º que te permitirán moverte fácilmente sin dañar la superficie de tus pisos. Además, cuenta con altura y reclinación ajustables, capaz de adaptarse a tus preferencias y necesidades.",
+      "shortDescription": "Silla gamer ergonómica con cojines lumbar y cervical, reclinable hasta 150°",
+      "features": [
+        "Ref.: 1004360000229",
+        "Diseño ergonómico",
+        "Con cojín lumbar y cervical",
+        "Silla reclinable, con un ángulo de inclinación de 90° a 150°",
+        "Función de rotación de 360°",
+        "Elaborada con materiales de alta calidad y resistencia: Cuero PVC, marco de metal, goma espuma y nylon",
+        "Peso máximo soportado: 135 kg",
+        "Peso de la silla: 14.5 kg",
+        "Altura total ajustable: 116-126 cm",
+        "Altura del asiento al suelo: 46-56 cm",
+        "Profundidad del asiento: 54 cm",
+        "Medidas del respaldo: 54 x 78 cm",
+        "Diámetro de la base: 64 cm"
+      ],
+      "images": [
+        "/images/products/sillas/gamer/silla-gamer-njoytech-kaos/main.jpeg"
+      ],
+      "featured": false,
+      "quantity": 1
+    },
+    {
+      "id": "silla-gamer-overkill",
+      "category": "sillas",
+      "subcategory": "gamer",
+      "name": "Silla Gamer Overkill",
+      "description": "Diseñada especialmente para quienes pasan largas horas frente al ordenador, la Silla Gamer Overkill ofrece un asiento y respaldo que se adaptan a tus diferentes posiciones durante el juego. Su respaldo reclinable permite ajustar varios puntos de inclinación o balancearse en pausas y descansos. Esta silla está tapizada en cuero sintético PUV de alta resistencia en color negro con detalles en camuflado, con espuma de alta densidad que cuida tus zonas lumbares, dorsales y cervicales. El asiento firme aumenta la comodidad, mientras sus brazos regulables en altura y base reforzada con ruedas de nylon facilitan la movilidad. Incluye doble palanca para altura y respaldo, además de brazos en polipropileno regulables. La Silla Gamer Overkill es sinónimo de resistencia, confort y diseño ergonómico para mejorar tu experiencia de juego. Ideal para gamers en Colombia que buscan calidad y durabilidad en su espacio de juego.",
+      "shortDescription": "Silla gamer con cuero sintético negro/camuflado, espuma de alta densidad",
+      "features": [
+        "Material: Cuero sintético PUV de alta resistencia",
+        "Color: Negro con detalles en camuflado",
+        "Relleno: Espuma de alta densidad",
+        "Altura ajustable: Pistón hidráulico clase 3",
+        "Inclinación: Hasta 135°",
+        "Base metálica reforzada",
+        "Ruedas de nylon",
+        "Capacidad: 120 kg",
+        "Cojín lumbar y cervical incluidos",
+        "Brazos regulables en altura",
+        "Doble palanca para altura y respaldo"
+      ],
+      "images": [
+        "/images/products/sillas/gamer/silla-gamer-overkill/main.webp",
+        "/images/products/sillas/gamer/silla-gamer-overkill/atras.webp",
+        "/images/products/sillas/gamer/silla-gamer-overkill/costado.webp",
+        "/images/products/sillas/gamer/silla-gamer-overkill/caracteristicas.png",
+        "/images/products/sillas/gamer/silla-gamer-overkill/dimensiones.png"
+      ],
+      "featured": false,
+      "quantity": 1
+    },
+    {
+      "id": "silla-gamer-cupra",
+      "category": "sillas",
+      "subcategory": "gamer",
+      "name": "Silla Gamer Cupra",
+      "description": "Silla Gamer Cupra: comodidad y estilo para tus sesiones de juego. La Silla Gamer Cupra está diseñada para brindarte una experiencia de juego ergonómica y moderna. Tapizada en cuero sintético negro con elegantes detalles en rojo, aporta un toque de agresividad y sofisticación a tu espacio. Cuenta con soporte cervical y lumbar ajustable, ideal para mantener una postura saludable durante largas horas de juego o trabajo. Su espaldar reclinable se adapta a la inclinación que prefieras, garantizando comodidad personalizada. Además, su estructura resistente y diseño pensado para el confort hacen de esta silla una opción perfecta para gamers y profesionales que buscan calidad y estilo en un solo producto. Renueva tu espacio y mejora tu rendimiento con la Silla Gamer Cupra, la combinación ideal de funcionalidad y diseño en Colombia.",
+      "shortDescription": "Silla gamer negra con detalles rojos, soporte lumbar/cervical ajustable",
+      "features": [
+        "Material: Cuero sintético premium",
+        "Color: Negro con detalles en rojo",
+        "Relleno: Espuma de alta densidad",
+        "Altura ajustable: Pistón hidráulico clase 3",
+        "Inclinación: Hasta 135°",
+        "Base metálica reforzada",
+        "Capacidad: 120 kg",
+        "Cojín lumbar y cervical incluidos",
+        "Soporte cervical y lumbar ajustable",
+        "Espaldar reclinable"
+      ],
+      "images": [
+        "/images/products/sillas/gamer/silla-gamer-cupra/main.webp",
+        "/images/products/sillas/gamer/silla-gamer-cupra/atras.webp",
+        "/images/products/sillas/gamer/silla-gamer-cupra/costado.webp",
+        "/images/products/sillas/gamer/silla-gamer-cupra/frente.webp",
+        "/images/products/sillas/gamer/silla-gamer-cupra/reclinada.webp",
+        "/images/products/sillas/gamer/silla-gamer-cupra/caracteristicas.png",
+        "/images/products/sillas/gamer/silla-gamer-cupra/dimensiones.png"
+      ],
+      "featured": true,
+      "quantity": 1
+    },
+    {
+      "id": "silla-gamer-kitty",
+      "category": "sillas",
+      "subcategory": "gamer",
+      "name": "Silla Gamer Kitty",
+      "description": "Silla Gamer Kitty - Comodidad y Estilo en Cada Movimiento. Descubre la Silla Gamer Kitty, diseñada especialmente para quienes buscan confort y funcionalidad en un solo producto. Esta silla tapizada en cuero sintético rosado con detalles en blanco no solo aporta un toque moderno y sofisticado a tu espacio, sino que además garantiza una experiencia ergonómica superior. Soporte cervical y lumbar integrado, ideal para cuidar tu postura durante largas sesiones de juego o trabajo. Sistema de reclinación en el respaldo que permite ajustar el ángulo para mayor comodidad. Brazos 2D ajustables en varias direcciones, adaptándose a tus necesidades y estilo. Base resistente de polipropileno, que asegura durabilidad y estabilidad. Ruedas de silicona que facilitan un deslizamiento suave y silencioso en cualquier superficie. Sistema basculante dinámico para un ajuste ergonómico que acompaña tus movimientos naturales. Además, su diseño pensado para el usuario colombiano combina funcionalidad con un estilo único, perfecto para espacios modernos y juveniles.",
+      "shortDescription": "Silla gamer rosa pastel con blanco, brazos 2D, ruedas de silicona",
+      "features": [
+        "Material: Cuero sintético premium",
+        "Color: Rosa pastel con blanco",
+        "Relleno: Espuma de alta densidad",
+        "Altura ajustable: Pistón hidráulico clase 3",
+        "Inclinación: Hasta 135°",
+        "Base de polipropileno resistente",
+        "Capacidad: 120 kg",
+        "Cojín lumbar y cervical incluidos",
+        "Soporte cervical y lumbar integrado",
+        "Brazos 2D ajustables",
+        "Ruedas de silicona",
+        "Sistema basculante dinámico"
+      ],
+      "images": [
+        "/images/products/sillas/gamer/silla-gamer-kitty/main.webp",
+        "/images/products/sillas/gamer/silla-gamer-kitty/atras.webp",
+        "/images/products/sillas/gamer/silla-gamer-kitty/costado.webp",
+        "/images/products/sillas/gamer/silla-gamer-kitty/reclinada.webp",
+        "/images/products/sillas/gamer/silla-gamer-kitty/caracteristicas.png",
+        "/images/products/sillas/gamer/silla-gamer-kitty/dimensiones.png"
       ],
       "featured": false,
       "quantity": 1

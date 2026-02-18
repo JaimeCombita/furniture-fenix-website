@@ -59,7 +59,7 @@ export const CATEGORIES: CategoryInfo[] = [
     name: 'Archivadores',
     description: 'Almacenamiento eficiente',
     icon: 'archive',
-    active: false
+    active: true
   },
   {
     id: 'mobiliario-escolar',

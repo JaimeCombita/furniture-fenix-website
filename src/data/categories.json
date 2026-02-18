@@ -48,7 +48,7 @@
       "name": "Archivadores",
       "icon": "archive",
       "description": "Soluciones de almacenamiento",
-      "active": false
+      "active": true
     },
     {
       "id": "recepciones",

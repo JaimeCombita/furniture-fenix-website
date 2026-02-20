@@ -4,6 +4,7 @@
       "id": "sillas",
       "name": "Sillas",
       "icon": "chair",
+      "image": "silla-catalogo.jpeg",
       "description": "Sillas ergonómicas y de oficina",
       "active": true,
       "subcategories": [
@@ -33,6 +34,7 @@
       "id": "mesas",
       "name": "Escritorios y Salas de Juntas",
       "icon": "table",
+      "image": "escritorio-catalogo.jpeg",
       "description": "Escritorios y salas de juntas",
       "active": true
     },
@@ -40,6 +42,7 @@
       "id": "lockers",
       "name": "Lockers",
       "icon": "lock",
+      "image": "locker-catalogo.jpeg",
       "description": "Lockers metálicos para almacenamiento seguro",
       "active": true
     },
@@ -47,20 +50,15 @@
       "id": "archivadores",
       "name": "Archivadores",
       "icon": "archive",
+      "image": "archivador-catalogo.jpeg",
       "description": "Soluciones de almacenamiento",
       "active": true
-    },
-    {
-      "id": "recepciones",
-      "name": "Recepciones",
-      "icon": "users",
-      "description": "Muebles para recepción",
-      "active": false
     },
     {
       "id": "carpas",
       "name": "Carpas",
       "icon": "tent",
+      "image": "carpa-catalogo.jpeg",
       "description": "Carpas para ferias, eventos y usos múltiples",
       "active": true,
       "subcategories": [
@@ -80,6 +78,7 @@
       "id": "linea-exterior",
       "name": "Línea Exterior",
       "icon": "tree",
+      "image": "exterior-catalogo.jpeg",
       "description": "Productos para exteriores y espacios abiertos",
       "active": true
     }

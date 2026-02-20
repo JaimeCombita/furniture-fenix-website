@@ -2,7 +2,8 @@ import React, { useMemo, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Hero, CategoryCard } from '../components/features';
 import { Alert, Button, Card, Spinner } from '../components/ui';
-import { CATEGORIES, SERVICES } from '../utils/constants';
+import { SERVICES } from '../utils/constants';
+import { getCategories } from '../data';
 import { useProductsQuery } from '../hooks';
 import { useMetaTags } from '../hooks/useMetaTags';
 import './Home.css';
@@ -62,7 +63,7 @@ export const HomePage: React.FC = () => {
       'accesorios'
     ]);
 
-    return CATEGORIES
+    return getCategories()
       .filter((category) => !hiddenCategoryIds.has(category.id))
       .sort((a, b) => {
         if (a.active === b.active) return 0;

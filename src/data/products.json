@@ -139,7 +139,7 @@
       "id": "mesa-juntas-mj0635",
       "category": "mesas",
       "subcategory": null,
-      "name": "Mesa de Juntas Mj0635 74x180x80 cm Arena",
+      "name": "Mesa de Juntas MJ0635 Arena",
       "description": "Completa los muebles de tu oficina o lugar de trabajo con nuestra MESA DE JUNTAS INVAL, ideal para tus reuniones y para mejorar la productividad de tu equipo de trabajo, gracias a su diseño moderno y elegante se puede adaptar a cualquier espacio. Producto 100% Colombiano.",
       "shortDescription": "Mesa de juntas ovalada color arena, ideal para reuniones de 6 personas",
       "features": [
@@ -191,7 +191,10 @@
         "Garantía: 3 años"
       ],
       "images": [
-        "/images/products/mesas/mesa-juntas-hank/main.jpg"
+        "/images/products/mesas/mesa-juntas-hank/main.webp",
+        "/images/products/mesas/mesa-juntas-hank/uso-1.webp",
+        "/images/products/mesas/mesa-juntas-hank/uso-2.webp",
+        "/images/products/mesas/mesa-juntas-hank/uso-3.webp"
       ],
       "featured": false,
       "quantity": 1
@@ -219,7 +222,10 @@
         "Fácil limpieza: Sí"
       ],
       "images": [
-        "/images/products/mesas/mesa-juntas-tipo-c-10-puestos/main.jpg"
+        "/images/products/mesas/mesa-juntas-tipo-c-10-puestos/main.png",
+        "/images/products/mesas/mesa-juntas-tipo-c-10-puestos/uso.png",
+        "/images/products/mesas/mesa-juntas-tipo-c-10-puestos/colores.png",
+        "/images/products/mesas/mesa-juntas-tipo-c-10-puestos/dimensiones.png"
       ],
       "featured": false,
       "quantity": 1

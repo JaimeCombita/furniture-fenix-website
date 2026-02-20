@@ -157,7 +157,11 @@
         "País de Origen: Colombia"
       ],
       "images": [
-        "/images/products/mesas/mesa-juntas-mj0635/main.jpg"
+        "/images/products/mesas/mesa-juntas-mj0635/main.webp",
+        "/images/products/mesas/mesa-juntas-mj0635/frente.webp",
+        "/images/products/mesas/mesa-juntas-mj0635/costado.webp",
+        "/images/products/mesas/mesa-juntas-mj0635/uso.webp",
+        "/images/products/mesas/mesa-juntas-mj0635/dimensiones.webp"
       ],
       "featured": false,
       "quantity": 2

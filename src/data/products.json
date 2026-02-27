@@ -136,6 +136,101 @@
       "quantity": 5
     },
     {
+      "id": "mesa-juntas-mj0635",
+      "category": "mesas",
+      "subcategory": null,
+      "name": "Mesa de Juntas MJ0635 Arena",
+      "description": "Completa los muebles de tu oficina o lugar de trabajo con nuestra MESA DE JUNTAS INVAL, ideal para tus reuniones y para mejorar la productividad de tu equipo de trabajo, gracias a su diseño moderno y elegante se puede adaptar a cualquier espacio. Producto 100% Colombiano.",
+      "shortDescription": "Mesa de juntas ovalada color arena, ideal para reuniones de 6 personas",
+      "features": [
+        "Alto: 74 cm",
+        "Ancho: 180 cm",
+        "Largo: 80 cm",
+        "Forma: Ovalada",
+        "Color: Arena",
+        "Acabado: Semibrillante, Texturado",
+        "Material de la cubierta: Lámina en aglomerado MDP con recubrimiento en melamina",
+        "Material de la estructura: Madera, MDP, Melamina",
+        "Número de personas: 6",
+        "Mesa extensible: No",
+        "Dificultad de armado: Media",
+        "País de Origen: Colombia"
+      ],
+      "images": [
+        "/images/products/mesas/mesa-juntas-mj0635/main.webp",
+        "/images/products/mesas/mesa-juntas-mj0635/frente.webp",
+        "/images/products/mesas/mesa-juntas-mj0635/costado.webp",
+        "/images/products/mesas/mesa-juntas-mj0635/uso.webp",
+        "/images/products/mesas/mesa-juntas-mj0635/dimensiones.webp"
+      ],
+      "featured": false,
+      "quantity": 2
+    },
+    {
+      "id": "mesa-juntas-hank",
+      "category": "mesas",
+      "subcategory": null,
+      "name": "Mesa de Juntas Hank 220x75x120 cm",
+      "description": "Mesa de Juntas HANK está fabricada con superficie en melamínico DURATEX importado de alta resistencia, laminado por ambas caras para ofrecer gran resistencia al desgaste, estabilidad y fácil mantenimiento. Su estructura metálica HANK, de diseño exclusivo con líneas rectangulares suaves, aporta solidez y una estética moderna y equilibrada. Incluye refuerzo inferior para mayor estabilidad y acabado en pintura electrostática horneada color blanco. Materiales de alta especificación calidad, perdurables en el tiempo dentro de un uso adecuado, garantía de tres años o más por defecto de fábrica.",
+      "shortDescription": "Mesa de juntas de lujo con estructura metálica, 220x75x120 cm, colores a elegir",
+      "features": [
+        "Tipo: Escritorios",
+        "Modelo: 2024",
+        "Ancho: 220 cm",
+        "Dimensiones: 220 x 75 x 120 cm",
+        "Alto: 75 cm",
+        "Profundidad: 120 cm",
+        "Material de la cubierta: Melamina DURATEX importada",
+        "Material de la estructura: Acero, Acero esmaltado, Acero inoxidable, Aluminio",
+        "Tipo de escritorio o mesa de trabajo: De Junta",
+        "Forma: Rectangular",
+        "Cuenta con altura regulable: No",
+        "Plegable: No",
+        "Cantidad de cajones: 0",
+        "Color: A elegir",
+        "Garantía: 3 años"
+      ],
+      "images": [
+        "/images/products/mesas/mesa-juntas-hank/main.webp",
+        "/images/products/mesas/mesa-juntas-hank/uso-1.webp",
+        "/images/products/mesas/mesa-juntas-hank/uso-2.webp",
+        "/images/products/mesas/mesa-juntas-hank/uso-3.webp"
+      ],
+      "featured": false,
+      "quantity": 1
+    },
+    {
+      "id": "mesa-juntas-tipo-c-10-puestos",
+      "category": "mesas",
+      "subcategory": null,
+      "name": "Mesa De Juntas Tipo C 10 Puestos",
+      "description": "Nuestra Mesa De Juntas Tipo C 10 Puestos es una solución ideal para cualquier tipo de sala. Está diseñada para ofrecer comodidad en cada espacio, es de alta durabilidad y fácil limpieza. Superficie en aglomerado RH (Resistente a la humedad) de 25 mm. Cara superior enchapado en formica, (Resistencia al desgarre y alta durabilidad) acabado con textura. Estructura Tubo metálico cuadrado calibre 16 de 3×2″ con terminación en pintura electrostática.",
+      "shortDescription": "Mesa de juntas tipo C para 10 puestos, 280x120x73 cm, alta durabilidad",
+      "features": [
+        "Alto: 73 centímetros",
+        "Ancho: 280 centímetros",
+        "Fondo: 120 centímetros",
+        "Número de puestos: 10",
+        "Superficie: Aglomerado RH (Resistente a la humedad) de 25 mm",
+        "Cara superior: Enchapado en formica con textura",
+        "Cara inferior: Lámina de balance",
+        "Cantos: P.V.C. rígido termo sellado",
+        "Estructura: Tubo metálico cuadrado calibre 16 de 3×2\"",
+        "Acabado: Pintura electrostática",
+        "Pasacables: Se pueden fabricar con o sin pasacables",
+        "Accesorios: Grommet se vende por separado",
+        "Fácil limpieza: Sí"
+      ],
+      "images": [
+        "/images/products/mesas/mesa-juntas-tipo-c-10-puestos/main.png",
+        "/images/products/mesas/mesa-juntas-tipo-c-10-puestos/uso.png",
+        "/images/products/mesas/mesa-juntas-tipo-c-10-puestos/colores.png",
+        "/images/products/mesas/mesa-juntas-tipo-c-10-puestos/dimensiones.png"
+      ],
+      "featured": false,
+      "quantity": 1
+    },
+    {
       "id": "silla-gerencial-duty-2d",
       "category": "sillas",
       "subcategory": "gerenciales",

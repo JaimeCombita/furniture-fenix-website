@@ -151,7 +151,7 @@ const ProductDetailPage: React.FC = () => {
     description: product?.description || 'Descubre este producto de Fénix - Mobiliario institucional de calidad.',
     image: product?.images?.[0] 
       ? `https://furniture-fenix-website.vercel.app${resolveProductImage(product.images[0])}`
-      : 'https://furniture-fenix-website.vercel.app/logo.png',
+      : 'https://furniture-fenix-website.vercel.app/logo.jpeg',
     url: `https://furniture-fenix-website.vercel.app/producto/${id}`,
     type: 'product',
     keywords: product ? `${product.name}, ${product.category}, mobiliario` : 'mobiliario'

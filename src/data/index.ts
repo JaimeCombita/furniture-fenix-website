@@ -5,6 +5,7 @@
  */
 
 import categoriesData from './categories.json';
+import type { CategoryInfo } from '../types';
 
 let cachedCombinedData: any = null;
 
@@ -23,7 +24,7 @@ export const loadCombinedProductsData = async () => {
 
     // Combinar categorías y productos
     cachedCombinedData = {
-      categories: categoriesData.categories,
+      categories: categoriesData.categories as CategoryInfo[],
       products: products.products || products
     };
 
@@ -37,6 +38,6 @@ export const loadCombinedProductsData = async () => {
 /**
  * Obtiene solo las categorías
  */
-export const getCategories = () => {
-  return categoriesData.categories;
+export const getCategories = (): CategoryInfo[] => {
+  return categoriesData.categories as CategoryInfo[];
 };

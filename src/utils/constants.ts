@@ -1,4 +1,4 @@
-import type { CategoryInfo } from '../types';
+import { getCategories } from '../data';
 
 export const COMPANY_INFO = {
   name: 'Fénix',
@@ -18,71 +18,7 @@ export const COMPANY_INFO = {
   }
 } as const;
 
-export const CATEGORIES: CategoryInfo[] = [
-    {
-      id: 'carpas',
-      name: 'Carpas',
-      description: 'Carpas para ferias, eventos y usos múltiples',
-      icon: 'tent',
-      active: true
-    },
-    {
-      id: 'linea-exterior',
-      name: 'Línea Exterior',
-      description: 'Productos para exteriores y espacios abiertos',
-      icon: 'tree',
-      active: true
-    },
-  {
-    id: 'sillas',
-    name: 'Sillas',
-    description: 'Ergonómicas y duraderas',
-    icon: 'chair',
-    active: true
-  },
-  {
-    id: 'mesas',
-    name: 'Escritorios y Salas de Juntas',
-    description: 'Para oficina, conferencias y trabajo',
-    icon: 'table',
-    active: true
-  },
-  {
-    id: 'lockers',
-    name: 'Lockers',
-    description: 'Almacenamiento seguro y resistente',
-    icon: 'lock',
-    active: true
-  },
-  {
-    id: 'archivadores',
-    name: 'Archivadores',
-    description: 'Almacenamiento eficiente',
-    icon: 'archive',
-    active: true
-  },
-  {
-    id: 'mobiliario-escolar',
-    name: 'Mobiliario Escolar',
-    description: 'Para instituciones educativas',
-    icon: 'graduation-cap',
-    active: false
-  },
-  {
-    id: 'mobiliario-oficina',
-    name: 'Mobiliario Oficina',
-    description: 'Espacios de trabajo modernos',
-    icon: 'desktop',
-    active: false
-  },
-  {
-    id: 'accesorios',
-    name: 'Accesorios Institucionales',
-    description: 'Complementos institucionales',
-    icon: 'puzzle-piece',
-    active: false
-  }
-];
+const categories = getCategories();
 
 export const NAV_LINKS = [
   { path: '/', label: 'Inicio', icon: 'home' },
@@ -91,7 +27,7 @@ export const NAV_LINKS = [
     path: '/catalogo', 
     label: 'Catálogo', 
     icon: 'th',
-    children: CATEGORIES.map(cat => ({
+    children: categories.map(cat => ({
       path: `/catalogo#${cat.id}`,
       label: cat.name,
       active: cat.active

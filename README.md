@@ -55,14 +55,16 @@ npm install
 # Copiar archivo de entorno
 copy .env.example .env
 
-# Iniciar servidor de desarrollo
+# Iniciar frontend + API local con un solo comando
 npm run dev
 ```
 
 ## 📜 Scripts Disponibles
 
 ```bash
-npm run dev          # Iniciar servidor de desarrollo
+npm run dev          # Inicia web + API local (recomendado)
+npm run dev:web      # Solo frontend (Vite)
+npm run dev:api      # Solo API local de contacto
 npm run build        # Build para producción
 npm run preview      # Preview del build
 npm run lint         # Ejecutar ESLint
@@ -73,8 +75,30 @@ npm run lint         # Ejecutar ESLint
 Crear un archivo `.env` basado en `.env.example`:
 
 ```env
-VITE_API_URL=http://localhost:3000/api
+VITE_API_URL=/api
+VITE_API_PROXY_TARGET=http://127.0.0.1:3000
+RESEND_API_KEY=
+RESEND_FROM_EMAIL=Fenix Web <onboarding@resend.dev>
+CONTACT_TO_EMAIL=mobiliariofenix.07@gmail.com
 ```
+
+## 🧱 Capas (Contacto)
+
+- `src/components/features/ContactForm.tsx`: UI + validación del formulario.
+- `src/services/contact.service.ts`: capa de acceso HTTP del frontend.
+- `api/contact.ts`: controlador HTTP para Vercel (producción).
+- `server/contact/core.mjs`: dominio + infraestructura compartida (validación, template HTML, envío con Resend).
+- `scripts/local-api.mjs`: adaptador HTTP local para desarrollo.
+
+## ▲ Deploy en Vercel
+
+Configura estas variables en el proyecto de Vercel (Settings → Environment Variables):
+
+- `RESEND_API_KEY`
+- `RESEND_FROM_EMAIL`
+- `CONTACT_TO_EMAIL`
+
+No uses `.env.local` en producción; Vercel toma variables desde su panel.
 
 ## 🔌 Integración con API REST
 

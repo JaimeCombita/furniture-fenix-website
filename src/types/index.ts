@@ -52,6 +52,7 @@ export interface ContactForm {
   subject: string;
   message: string;
   company?: string;
+  productId?: string;
 }
 
 export interface QuoteRequest extends ContactForm {

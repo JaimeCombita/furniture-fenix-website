@@ -26,7 +26,18 @@ class ApiService {
       const response = await fetch(url, config);
       
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        let serverMessage = `HTTP error! status: ${response.status}`;
+
+        try {
+          const errorPayload = await response.json();
+          if (errorPayload?.message) {
+            serverMessage = errorPayload.message;
+          }
+        } catch {
+          // No-op: fallback message already set
+        }
+
+        throw new Error(serverMessage);
       }
       
       const data = await response.json();

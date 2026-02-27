@@ -5,7 +5,18 @@ import { Alert, Button, Card, Spinner } from '../components/ui';
 import { CATEGORIES, SERVICES } from '../utils/constants';
 import { useProductsQuery } from '../hooks';
 import { useMetaTags } from '../hooks/useMetaTags';
+import nuestroTrabajoVideo from '../assets/nuestro-trabajo.mp4';
+import trabajoImagen1 from '../assets/images/landing/img-5.jpeg';
+import trabajoImagen2 from '../assets/images/landing/img-6.jpeg';
+import trabajoImagen3 from '../assets/images/landing/img-8.jpeg';
 import './Home.css';
+
+type WorkMediaItem = {
+  id: string;
+  type: 'video' | 'image';
+  src: string;
+  alt: string;
+};
 
 export const HomePage: React.FC = () => {
   // Meta tags para SEO
@@ -26,6 +37,7 @@ export const HomePage: React.FC = () => {
   } = useProductsQuery();
 
   const [alertDismissed, setAlertDismissed] = useState(false);
+  const [currentWorkMediaIndex, setCurrentWorkMediaIndex] = useState(0);
 
   useEffect(() => {
     if (isError) {
@@ -43,6 +55,54 @@ export const HomePage: React.FC = () => {
     'Personal profesional certificado',
     'Confiabilidad y respaldo'
   ];
+
+  const workMediaItems = useMemo<WorkMediaItem[]>(
+    () => [
+      {
+        id: 'nuestro-trabajo-video',
+        type: 'video',
+        src: nuestroTrabajoVideo,
+        alt: 'Video de trabajos realizados por Fénix'
+      },
+      {
+        id: 'nuestro-trabajo-imagen-1',
+        type: 'image',
+        src: trabajoImagen1,
+        alt: 'Proyecto realizado por Fénix - imagen 1'
+      },
+      {
+        id: 'nuestro-trabajo-imagen-2',
+        type: 'image',
+        src: trabajoImagen2,
+        alt: 'Proyecto realizado por Fénix - imagen 2'
+      },
+      {
+        id: 'nuestro-trabajo-imagen-3',
+        type: 'image',
+        src: trabajoImagen3,
+        alt: 'Proyecto realizado por Fénix - imagen 3'
+      }
+    ],
+    []
+  );
+
+  const handleNextWorkMedia = () => {
+    setCurrentWorkMediaIndex((currentIndex) => (currentIndex + 1) % workMediaItems.length);
+  };
+
+  const handlePrevWorkMedia = () => {
+    setCurrentWorkMediaIndex((currentIndex) => (currentIndex - 1 + workMediaItems.length) % workMediaItems.length);
+  };
+
+  const getWorkMediaPositionClass = (index: number) => {
+    const previousIndex = (currentWorkMediaIndex - 1 + workMediaItems.length) % workMediaItems.length;
+    const nextIndex = (currentWorkMediaIndex + 1) % workMediaItems.length;
+
+    if (index === currentWorkMediaIndex) return 'is-active';
+    if (index === previousIndex) return 'is-prev';
+    if (index === nextIndex) return 'is-next';
+    return 'is-hidden';
+  };
 
   // Contar productos por categoría
   const productCountByCategory = useMemo(() => {
@@ -125,9 +185,59 @@ export const HomePage: React.FC = () => {
               </ul>
             </div>
             <div className="about-image">
-              <div className="placeholder-image">
-                <i className="fas fa-industry"></i>
-                <p>Imagen de la empresa</p>
+              <div className="about-media-carousel" aria-label="Galería de trabajos de Fénix">
+                <div className="about-media-track">
+                  {workMediaItems.map((media, index) => (
+                    <div key={media.id} className={`about-media-slide ${getWorkMediaPositionClass(index)}`}>
+                      {media.type === 'video' ? (
+                        <video
+                          className="about-media-item"
+                          controls={index === currentWorkMediaIndex}
+                          preload="metadata"
+                          poster={trabajoImagen1}
+                        >
+                          <source src={media.src} type="video/mp4" />
+                          Tu navegador no soporta reproducción de video.
+                        </video>
+                      ) : (
+                        <img className="about-media-item" src={media.src} alt={media.alt} loading="lazy" />
+                      )}
+                    </div>
+                  ))}
+                </div>
+
+                {workMediaItems.length > 1 && (
+                  <>
+                    <button
+                      type="button"
+                      className="about-media-nav about-media-nav-prev"
+                      onClick={handlePrevWorkMedia}
+                      aria-label="Elemento anterior"
+                    >
+                      <i className="fas fa-chevron-left"></i>
+                    </button>
+                    <button
+                      type="button"
+                      className="about-media-nav about-media-nav-next"
+                      onClick={handleNextWorkMedia}
+                      aria-label="Elemento siguiente"
+                    >
+                      <i className="fas fa-chevron-right"></i>
+                    </button>
+
+                    <div className="about-media-dots" role="tablist" aria-label="Seleccionar multimedia">
+                      {workMediaItems.map((media, index) => (
+                        <button
+                          key={media.id}
+                          type="button"
+                          className={`about-media-dot ${index === currentWorkMediaIndex ? 'active' : ''}`}
+                          onClick={() => setCurrentWorkMediaIndex(index)}
+                          aria-label={`Ir al elemento ${index + 1}`}
+                        />
+                      ))}
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>

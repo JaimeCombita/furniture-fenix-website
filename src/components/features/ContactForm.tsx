@@ -1,13 +1,48 @@
 import React, { useState } from 'react';
 import { Button } from '../ui';
+import { contactService } from '../../services';
 import './ContactForm.css';
 
 interface ContactFormProps {
   productId?: string;
 }
 
+type FormFields = {
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  subject: string;
+  message: string;
+  productId: string;
+};
+
+type ValidatedField = 'name' | 'email' | 'phone' | 'subject' | 'message';
+
+type FieldErrors = Record<ValidatedField, string>;
+
+type FieldTouched = Record<ValidatedField, boolean>;
+
+const initialErrors: FieldErrors = {
+  name: '',
+  email: '',
+  phone: '',
+  subject: '',
+  message: ''
+};
+
+const initialTouched: FieldTouched = {
+  name: false,
+  email: false,
+  phone: false,
+  subject: false,
+  message: false
+};
+
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
 export const ContactForm: React.FC<ContactFormProps> = ({ productId }) => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormFields>({
     name: '',
     email: '',
     phone: '',
@@ -18,26 +53,116 @@ export const ContactForm: React.FC<ContactFormProps> = ({ productId }) => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<FieldErrors>(initialErrors);
+  const [touched, setTouched] = useState<FieldTouched>(initialTouched);
   const [submitMessage, setSubmitMessage] = useState('');
+
+  const validateField = (field: ValidatedField, value: string): string => {
+    const normalizedValue = value.trim();
+
+    if (field === 'name') {
+      if (!normalizedValue) return 'El nombre es obligatorio.';
+      if (normalizedValue.length < 10) return 'El nombre debe tener mínimo 10 caracteres.';
+      if (normalizedValue.length > 100) return 'El nombre debe tener máximo 100 caracteres.';
+      return '';
+    }
+
+    if (field === 'email') {
+      if (!normalizedValue) return 'El correo electrónico es obligatorio.';
+      if (!emailPattern.test(normalizedValue)) return 'Ingresa un correo electrónico válido.';
+      return '';
+    }
+
+    if (field === 'phone') {
+      if (!normalizedValue) return 'El teléfono es obligatorio.';
+      if (!/^\d+$/.test(normalizedValue)) return 'El teléfono debe contener solo números.';
+      if (normalizedValue.length < 7) return 'El teléfono debe tener mínimo 7 caracteres.';
+      return '';
+    }
+
+    if (field === 'subject') {
+      if (!normalizedValue) return 'Debes seleccionar un asunto.';
+      return '';
+    }
+
+    if (!normalizedValue) return 'El mensaje es obligatorio.';
+    if (normalizedValue.length < 10) return 'El mensaje debe tener mínimo 10 caracteres.';
+    return '';
+  };
+
+  const validateAllFields = (data: FormFields): FieldErrors => ({
+    name: validateField('name', data.name),
+    email: validateField('email', data.email),
+    phone: validateField('phone', data.phone),
+    subject: validateField('subject', data.subject),
+    message: validateField('message', data.message)
+  });
+
+  const hasValidationErrors = (fieldErrors: FieldErrors): boolean =>
+    Object.values(fieldErrors).some((errorMessage) => Boolean(errorMessage));
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+
+    setFormData((prev) => {
+      const updatedData = {
+        ...prev,
+        [name]: value
+      };
+
+      if (name in touched && touched[name as ValidatedField]) {
+        const validatedField = name as ValidatedField;
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          [validatedField]: validateField(validatedField, value)
+        }));
+      }
+
+      return updatedData;
+    });
+  };
+
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    if (!(name in touched)) return;
+
+    const validatedField = name as ValidatedField;
+    setTouched((prev) => ({
       ...prev,
-      [name]: value
+      [validatedField]: true
+    }));
+
+    setErrors((prev) => ({
+      ...prev,
+      [validatedField]: validateField(validatedField, value)
     }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const fieldErrors = validateAllFields(formData);
+    const isValid = !hasValidationErrors(fieldErrors);
+
+    setTouched({
+      name: true,
+      email: true,
+      phone: true,
+      subject: true,
+      message: true
+    });
+    setErrors(fieldErrors);
+
+    if (!isValid) {
+      setSubmitMessage('Corrige los campos marcados antes de enviar.');
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitMessage('');
 
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      console.log('Formulario enviado:', formData);
-      setSubmitMessage('¡Gracias por contactarnos! Te responderemos pronto.');
+      const response = await contactService.sendMessage(formData);
+      setSubmitMessage(response.message || '¡Gracias por contactarnos! Te responderemos pronto.');
       
       setFormData({
         name: '',
@@ -48,8 +173,14 @@ export const ContactForm: React.FC<ContactFormProps> = ({ productId }) => {
         message: '',
         productId: productId || ''
       });
-    } catch {
-      setSubmitMessage('Hubo un error al enviar el formulario. Por favor intenta de nuevo.');
+      setErrors(initialErrors);
+      setTouched(initialTouched);
+    } catch (error) {
+      const errorMessage = error instanceof Error
+        ? error.message
+        : 'Hubo un error al enviar el formulario. Por favor intenta de nuevo.';
+
+      setSubmitMessage(errorMessage);
     } finally {
       setIsSubmitting(false);
     }
@@ -66,9 +197,14 @@ export const ContactForm: React.FC<ContactFormProps> = ({ productId }) => {
             name="name"
             value={formData.name}
             onChange={handleChange}
+            onBlur={handleBlur}
             required
             placeholder="Tu nombre"
+            disabled={isSubmitting}
+            aria-invalid={Boolean(errors.name)}
+            className={errors.name ? 'input-error' : ''}
           />
+          {touched.name && errors.name && <span className="field-error">{errors.name}</span>}
         </div>
 
         <div className="form-group">
@@ -79,9 +215,14 @@ export const ContactForm: React.FC<ContactFormProps> = ({ productId }) => {
             name="email"
             value={formData.email}
             onChange={handleChange}
+            onBlur={handleBlur}
             required
             placeholder="tu@email.com"
+            disabled={isSubmitting}
+            aria-invalid={Boolean(errors.email)}
+            className={errors.email ? 'input-error' : ''}
           />
+          {touched.email && errors.email && <span className="field-error">{errors.email}</span>}
         </div>
 
         <div className="form-group">
@@ -92,9 +233,15 @@ export const ContactForm: React.FC<ContactFormProps> = ({ productId }) => {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
+            onBlur={handleBlur}
             required
             placeholder="+57 300 123 4567"
+            inputMode="numeric"
+            disabled={isSubmitting}
+            aria-invalid={Boolean(errors.phone)}
+            className={errors.phone ? 'input-error' : ''}
           />
+          {touched.phone && errors.phone && <span className="field-error">{errors.phone}</span>}
         </div>
 
         <div className="form-group">
@@ -106,6 +253,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ productId }) => {
             value={formData.company}
             onChange={handleChange}
             placeholder="Nombre de tu empresa"
+            disabled={isSubmitting}
           />
         </div>
       </div>
@@ -117,7 +265,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({ productId }) => {
           name="subject"
           value={formData.subject}
           onChange={handleChange}
+          onBlur={handleBlur}
           required
+          disabled={isSubmitting}
+          aria-invalid={Boolean(errors.subject)}
+          className={errors.subject ? 'input-error' : ''}
         >
           <option value="">Selecciona un asunto</option>
           <option value="cotizacion">Solicitar cotización</option>
@@ -126,6 +278,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ productId }) => {
           <option value="servicio">Servicio post-venta</option>
           <option value="otro">Otro</option>
         </select>
+        {touched.subject && errors.subject && <span className="field-error">{errors.subject}</span>}
       </div>
 
       <div className="form-group">
@@ -135,10 +288,15 @@ export const ContactForm: React.FC<ContactFormProps> = ({ productId }) => {
           name="message"
           value={formData.message}
           onChange={handleChange}
+          onBlur={handleBlur}
           required
           rows={6}
           placeholder="Escribe tu mensaje aquí..."
+          disabled={isSubmitting}
+          aria-invalid={Boolean(errors.message)}
+          className={errors.message ? 'input-error' : ''}
         />
+        {touched.message && errors.message && <span className="field-error">{errors.message}</span>}
       </div>
 
       {submitMessage && (
@@ -152,7 +310,12 @@ export const ContactForm: React.FC<ContactFormProps> = ({ productId }) => {
         variant="primary" 
         disabled={isSubmitting}
       >
-        {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
+        {isSubmitting ? (
+          <span className="submit-loading" aria-live="polite">
+            <i className="fas fa-spinner fa-spin" aria-hidden="true"></i>
+            <span>Enviando...</span>
+          </span>
+        ) : 'Enviar mensaje'}
       </Button>
     </form>
   );

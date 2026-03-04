@@ -1,12 +1,12 @@
-import React, { useMemo, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Hero, CategoryCard } from '../components/features';
 import { Alert, Button, Card, Spinner } from '../components/ui';
 import { SERVICES } from '../utils/constants';
 import { getCategories } from '../data';
 import { useProductsQuery } from '../hooks';
+import type { Product } from '../types';
 import { useMetaTags } from '../hooks/useMetaTags';
-import nuestroTrabajoVideo from '../assets/nuestro-trabajo.mp4';
 import trabajoImagen1 from '../assets/images/landing/img-5.jpeg';
 import trabajoImagen2 from '../assets/images/landing/img-6.jpeg';
 import trabajoImagen3 from '../assets/images/landing/img-8.jpeg';
@@ -15,7 +15,7 @@ import './Home.css';
 type WorkMediaItem = {
   id: string;
   type: 'video' | 'image';
-  src: string;
+  src?: string;
   alt: string;
 };
 
@@ -39,12 +39,15 @@ export const HomePage: React.FC = () => {
 
   const [alertDismissed, setAlertDismissed] = useState(false);
   const [currentWorkMediaIndex, setCurrentWorkMediaIndex] = useState(0);
+  const [workVideoSrc, setWorkVideoSrc] = useState<string | null>(null);
+  const aboutCarouselRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    if (isError) {
-      setAlertDismissed(false);
-    }
-  }, [isError]);
+  const loadWorkVideo = useCallback(async () => {
+    if (workVideoSrc) return;
+
+    const workVideoModule = await import('../assets/nuestro-trabajo.mp4');
+    setWorkVideoSrc(workVideoModule.default);
+  }, [workVideoSrc]);
 
   const aboutChecklistItems = [
     'Somos punto de fábrica',
@@ -62,7 +65,6 @@ export const HomePage: React.FC = () => {
       {
         id: 'nuestro-trabajo-video',
         type: 'video',
-        src: nuestroTrabajoVideo,
         alt: 'Video de trabajos realizados por Fénix'
       },
       {
@@ -87,6 +89,39 @@ export const HomePage: React.FC = () => {
     []
   );
 
+  useEffect(() => {
+    const carouselElement = aboutCarouselRef.current;
+
+    if (!carouselElement || workVideoSrc) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+
+        if (!entry?.isIntersecting) return;
+
+        void loadWorkVideo();
+        observer.disconnect();
+      },
+      { threshold: 0.35 }
+    );
+
+    observer.observe(carouselElement);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [loadWorkVideo, workVideoSrc]);
+
+  useEffect(() => {
+    if (workVideoSrc) return;
+
+    const currentItem = workMediaItems[currentWorkMediaIndex];
+    if (currentItem?.type !== 'video') return;
+
+    void loadWorkVideo();
+  }, [currentWorkMediaIndex, loadWorkVideo, workMediaItems, workVideoSrc]);
+
   const handleNextWorkMedia = () => {
     setCurrentWorkMediaIndex((currentIndex) => (currentIndex + 1) % workMediaItems.length);
   };
@@ -109,7 +144,7 @@ export const HomePage: React.FC = () => {
   const productCountByCategory = useMemo(() => {
     if (!productsData) return {};
     const counts: Record<string, number> = {};
-    productsData.products.forEach((product: any) => {
+    productsData.products.forEach((product: Product) => {
       counts[product.category] = (counts[product.category] || 0) + 1;
     });
     return counts;
@@ -149,7 +184,10 @@ export const HomePage: React.FC = () => {
               title="No pudimos cargar los productos"
               message="Verifica tu conexion y vuelve a intentar."
               actionLabel="Reintentar"
-              onAction={() => refetch()}
+              onAction={() => {
+                setAlertDismissed(false);
+                refetch();
+              }}
               onClose={() => setAlertDismissed(true)}
             />
           ) : (
@@ -186,20 +224,42 @@ export const HomePage: React.FC = () => {
               </ul>
             </div>
             <div className="about-image">
-              <div className="about-media-carousel" aria-label="Galería de trabajos de Fénix">
+              <div ref={aboutCarouselRef} className="about-media-carousel" aria-label="Galería de trabajos de Fénix">
                 <div className="about-media-track">
                   {workMediaItems.map((media, index) => (
                     <div key={media.id} className={`about-media-slide ${getWorkMediaPositionClass(index)}`}>
                       {media.type === 'video' ? (
-                        <video
-                          className="about-media-item"
-                          controls={index === currentWorkMediaIndex}
-                          preload="metadata"
-                          poster={trabajoImagen1}
-                        >
-                          <source src={media.src} type="video/mp4" />
-                          Tu navegador no soporta reproducción de video.
-                        </video>
+                        workVideoSrc ? (
+                          <video
+                            className="about-media-item"
+                            controls={index === currentWorkMediaIndex}
+                            preload="metadata"
+                            poster={trabajoImagen1}
+                          >
+                            <source src={workVideoSrc} type="video/mp4" />
+                            Tu navegador no soporta reproducción de video.
+                          </video>
+                        ) : (
+                          <div className="about-video-placeholder">
+                            <img
+                              className="about-media-item"
+                              src={trabajoImagen1}
+                              alt={media.alt}
+                              loading="lazy"
+                            />
+                            <button
+                              type="button"
+                              className="about-video-load-button"
+                              onClick={() => {
+                                void loadWorkVideo();
+                              }}
+                              aria-label="Cargar video de trabajos realizados"
+                            >
+                              <i className="fas fa-play"></i>
+                              Cargar video
+                            </button>
+                          </div>
+                        )
                       ) : (
                         <img className="about-media-item" src={media.src} alt={media.alt} loading="lazy" />
                       )}

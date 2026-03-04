@@ -35,4 +35,25 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    chunkSizeWarningLimit: 400,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react-router-dom')) return 'router';
+            if (id.includes('@tanstack/react-query')) return 'query';
+            if (id.includes('react') || id.includes('scheduler')) return 'react-vendor';
+            return 'vendor';
+          }
+
+          if (id.includes('/src/data/')) {
+            return 'products-data';
+          }
+
+          return undefined;
+        },
+      },
+    },
+  },
 })

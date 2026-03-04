@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useProductsQuery } from '../../hooks';
+import type { CategoryInfo, Subcategory } from '../../types';
 import './Navigation.css';
 
 interface NavigationProps {
@@ -89,7 +90,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
           </button>
           {expandedMenu === '/catalogo' && (
             <ul className="nav-submenu">
-              {productsData.categories.filter((cat: any) => cat.active).map((category: any) => (
+              {productsData.categories.filter((cat: CategoryInfo) => cat.active).map((category: CategoryInfo) => (
                 <li key={category.id}>
                   {category.subcategories && category.subcategories.length > 0 ? (
                     <>
@@ -102,7 +103,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isOpen, onClose }) => {
                       </button>
                       {expandedSubmenu === category.id && (
                         <ul className="nav-subsubmenu">
-                          {category.subcategories.map((subcat: any) => (
+                          {category.subcategories.map((subcat: Subcategory) => (
                             <li key={subcat.id}>
                               <Link
                                 to={`/catalogo?categoria=${category.id}&subcategoria=${subcat.id}`}

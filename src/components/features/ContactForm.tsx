@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import { Button } from '../ui';
-import { contactService } from '../../services';
+import { contactService } from '../../domains/contact';
+import {
+  hasContactValidationErrors,
+  initialContactErrors,
+  validateContactField,
+  validateContactForm,
+  type ContactFieldErrors,
+  type ContactValidatedField,
+} from '../../domains/contact';
 import './ContactForm.css';
 
 interface ContactFormProps {
@@ -17,19 +25,7 @@ type FormFields = {
   productId: string;
 };
 
-type ValidatedField = 'name' | 'email' | 'phone' | 'subject' | 'message';
-
-type FieldErrors = Record<ValidatedField, string>;
-
-type FieldTouched = Record<ValidatedField, boolean>;
-
-const initialErrors: FieldErrors = {
-  name: '',
-  email: '',
-  phone: '',
-  subject: '',
-  message: ''
-};
+type FieldTouched = Record<ContactValidatedField, boolean>;
 
 const initialTouched: FieldTouched = {
   name: false,
@@ -38,8 +34,6 @@ const initialTouched: FieldTouched = {
   subject: false,
   message: false
 };
-
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 export const ContactForm: React.FC<ContactFormProps> = ({ productId }) => {
   const [formData, setFormData] = useState<FormFields>({
@@ -53,53 +47,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({ productId }) => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errors, setErrors] = useState<FieldErrors>(initialErrors);
+  const [errors, setErrors] = useState<ContactFieldErrors>(initialContactErrors);
   const [touched, setTouched] = useState<FieldTouched>(initialTouched);
   const [submitMessage, setSubmitMessage] = useState('');
-
-  const validateField = (field: ValidatedField, value: string): string => {
-    const normalizedValue = value.trim();
-
-    if (field === 'name') {
-      if (!normalizedValue) return 'El nombre es obligatorio.';
-      if (normalizedValue.length < 10) return 'El nombre debe tener mínimo 10 caracteres.';
-      if (normalizedValue.length > 100) return 'El nombre debe tener máximo 100 caracteres.';
-      return '';
-    }
-
-    if (field === 'email') {
-      if (!normalizedValue) return 'El correo electrónico es obligatorio.';
-      if (!emailPattern.test(normalizedValue)) return 'Ingresa un correo electrónico válido.';
-      return '';
-    }
-
-    if (field === 'phone') {
-      if (!normalizedValue) return 'El teléfono es obligatorio.';
-      if (!/^\d+$/.test(normalizedValue)) return 'El teléfono debe contener solo números.';
-      if (normalizedValue.length < 7) return 'El teléfono debe tener mínimo 7 caracteres.';
-      return '';
-    }
-
-    if (field === 'subject') {
-      if (!normalizedValue) return 'Debes seleccionar un asunto.';
-      return '';
-    }
-
-    if (!normalizedValue) return 'El mensaje es obligatorio.';
-    if (normalizedValue.length < 10) return 'El mensaje debe tener mínimo 10 caracteres.';
-    return '';
-  };
-
-  const validateAllFields = (data: FormFields): FieldErrors => ({
-    name: validateField('name', data.name),
-    email: validateField('email', data.email),
-    phone: validateField('phone', data.phone),
-    subject: validateField('subject', data.subject),
-    message: validateField('message', data.message)
-  });
-
-  const hasValidationErrors = (fieldErrors: FieldErrors): boolean =>
-    Object.values(fieldErrors).some((errorMessage) => Boolean(errorMessage));
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -110,11 +60,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({ productId }) => {
         [name]: value
       };
 
-      if (name in touched && touched[name as ValidatedField]) {
-        const validatedField = name as ValidatedField;
+      if (name in touched && touched[name as ContactValidatedField]) {
+        const validatedField = name as ContactValidatedField;
         setErrors((prevErrors) => ({
           ...prevErrors,
-          [validatedField]: validateField(validatedField, value)
+          [validatedField]: validateContactField(validatedField, value)
         }));
       }
 
@@ -126,7 +76,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ productId }) => {
     const { name, value } = e.target;
     if (!(name in touched)) return;
 
-    const validatedField = name as ValidatedField;
+    const validatedField = name as ContactValidatedField;
     setTouched((prev) => ({
       ...prev,
       [validatedField]: true
@@ -134,14 +84,14 @@ export const ContactForm: React.FC<ContactFormProps> = ({ productId }) => {
 
     setErrors((prev) => ({
       ...prev,
-      [validatedField]: validateField(validatedField, value)
+      [validatedField]: validateContactField(validatedField, value)
     }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const fieldErrors = validateAllFields(formData);
-    const isValid = !hasValidationErrors(fieldErrors);
+    const fieldErrors = validateContactForm(formData);
+    const isValid = !hasContactValidationErrors(fieldErrors);
 
     setTouched({
       name: true,
@@ -173,7 +123,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ productId }) => {
         message: '',
         productId: productId || ''
       });
-      setErrors(initialErrors);
+      setErrors(initialContactErrors);
       setTouched(initialTouched);
     } catch (error) {
       const errorMessage = error instanceof Error

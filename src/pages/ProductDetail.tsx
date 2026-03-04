@@ -157,12 +157,6 @@ const ProductDetailPage: React.FC = () => {
     keywords: product ? `${product.name}, ${product.category}, mobiliario` : 'mobiliario'
   });
 
-  useEffect(() => {
-    if (isError) {
-      setAlertDismissed(false);
-    }
-  }, [isError]);
-
   const notFoundProduct: Product = {
     id: id || 'unknown',
     code: 'UNK0000000',
@@ -193,7 +187,10 @@ const ProductDetailPage: React.FC = () => {
                 title="No pudimos cargar el producto"
                 message="Verifica tu conexion y vuelve a intentar."
                 actionLabel="Reintentar"
-                onAction={() => refetch()}
+                onAction={() => {
+                  setAlertDismissed(false);
+                  refetch();
+                }}
                 onClose={() => setAlertDismissed(true)}
               />
             ) : null}

@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 import type { Product, ProductCategory } from '../types';
-import { useProductsQuery } from './useProductsQuery';
 
 interface UseFilterProductsOptions {
+  products?: Product[];
   category?: ProductCategory | 'all';
   subcategory?: string | null;
   searchQuery?: string;
@@ -16,16 +16,15 @@ interface UseFilterProductsOptions {
  * @returns Array of filtered products
  */
 export const useFilterProducts = ({
+  products = [],
   category = 'all',
   subcategory = null,
   searchQuery = '',
 }: UseFilterProductsOptions = {}): Product[] => {
-  const { data: productsData } = useProductsQuery();
-
   const filteredProducts = useMemo(() => {
-    if (!productsData || !productsData.products) return [];
+    if (!products.length) return [];
 
-    return productsData.products.filter((product: Product) => {
+    return products.filter((product: Product) => {
       // Filter by category
       if (category !== 'all' && product.category !== category) {
         return false;
@@ -53,7 +52,7 @@ export const useFilterProducts = ({
 
       return true;
     });
-  }, [productsData, category, subcategory, searchQuery]);
+  }, [products, category, subcategory, searchQuery]);
 
   return filteredProducts;
 };

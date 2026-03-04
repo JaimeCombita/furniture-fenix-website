@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 
 interface UseLoadMoreResult<T> {
   visibleItems: T[];
@@ -11,10 +11,6 @@ interface UseLoadMoreResult<T> {
 
 export const useLoadMore = <T,>(items: T[], itemsPerPage: number = 12): UseLoadMoreResult<T> => {
   const [visibleCount, setVisibleCount] = useState(itemsPerPage);
-
-  useEffect(() => {
-    setVisibleCount(itemsPerPage);
-  }, [items, itemsPerPage]);
 
   const visibleItems = useMemo(() => {
     return items.slice(0, visibleCount);

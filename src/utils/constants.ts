@@ -96,6 +96,5 @@ export const API_ENDPOINTS = {
   categories: '/categories',
   services: '/services',
   contact: '/contact',
-  quote: '/quote',
   users: '/users'
 } as const;

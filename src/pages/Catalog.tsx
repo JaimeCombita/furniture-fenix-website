@@ -1,7 +1,7 @@
 import React, { useMemo, useEffect, useState } from 'react';
 import { ProductCard } from '../components/features';
 import { Alert, Spinner } from '../components/ui';
-import type { ProductCategory } from '../types';
+import type { CategoryInfo, ProductCategory, Subcategory } from '../types';
 import { useFilterProducts, useLoadMore, useProductsQuery } from '../hooks';
 import { useMetaTags } from '../hooks/useMetaTags';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -26,14 +26,7 @@ const CatalogPage: React.FC = () => {
     isError,
     refetch,
   } = useProductsQuery();
-
   const [alertDismissed, setAlertDismissed] = useState(false);
-
-  useEffect(() => {
-    if (isError) {
-      setAlertDismissed(false);
-    }
-  }, [isError]);
 
   const { selectedCategory, selectedSubcategory } = useMemo(() => {
     if (!productsData) return { selectedCategory: 'all' as const, selectedSubcategory: null };
@@ -42,11 +35,11 @@ const CatalogPage: React.FC = () => {
     const categoryParam = params.get('categoria');
     const subcategoryParam = params.get('subcategoria');
     const categoryMatch = categoryParam
-      ? productsData.categories.find((cat: any) => cat.id === categoryParam)
+      ? productsData.categories.find((cat: CategoryInfo) => cat.id === categoryParam)
       : null;
 
     if (categoryMatch) {
-      const hasSubcategory = subcategoryParam && categoryMatch.subcategories?.some((sub: any) => sub.id === subcategoryParam);
+      const hasSubcategory = subcategoryParam && categoryMatch.subcategories?.some((sub: Subcategory) => sub.id === subcategoryParam);
       return {
         selectedCategory: categoryMatch.id as ProductCategory,
         selectedSubcategory: hasSubcategory ? subcategoryParam : null
@@ -61,6 +54,7 @@ const CatalogPage: React.FC = () => {
 
   // Use the useFilterProducts hook instead of filtering manually
   const products = useFilterProducts({
+    products: productsData?.products || [],
     category: selectedCategory,
     subcategory: selectedSubcategory,
   });
@@ -101,7 +95,7 @@ const CatalogPage: React.FC = () => {
   }, [selectedCategory, selectedSubcategory, reset]);
 
   const currentCategoryData = selectedCategory !== 'all' && productsData
-    ? productsData.categories.find((c: any) => c.id === selectedCategory)
+    ? productsData.categories.find((c: CategoryInfo) => c.id === selectedCategory)
     : null;
 
   if (isLoading || isError || !productsData) {
@@ -122,7 +116,10 @@ const CatalogPage: React.FC = () => {
                 title="No pudimos cargar el catalogo"
                 message="Verifica tu conexion y vuelve a intentar."
                 actionLabel="Reintentar"
-                onAction={() => refetch()}
+                onAction={() => {
+                  setAlertDismissed(false);
+                  refetch();
+                }}
                 onClose={() => setAlertDismissed(true)}
               />
             ) : null}
@@ -154,7 +151,7 @@ const CatalogPage: React.FC = () => {
                   Todos los productos
                 </button>
               </li>
-              {productsData.categories.filter((cat: any) => cat.active).map((cat: any) => (
+              {productsData.categories.filter((cat: CategoryInfo) => cat.active).map((cat: CategoryInfo) => (
                 <li key={cat.id}>
                   <button
                     className={selectedCategory === cat.id ? 'active' : ''}
@@ -165,7 +162,7 @@ const CatalogPage: React.FC = () => {
                   </button>
                   {selectedCategory === cat.id && cat.subcategories && cat.subcategories.length > 0 && (
                     <ul className="subcategory-filter">
-                      {cat.subcategories.map((subcat: any) => (
+                      {cat.subcategories.map((subcat: Subcategory) => (
                         <li key={subcat.id}>
                           <button
                             className={selectedSubcategory === subcat.id ? 'active' : ''}
@@ -189,7 +186,7 @@ const CatalogPage: React.FC = () => {
                   ? 'Todos los productos' 
                   : currentCategoryData?.name}
                 {selectedSubcategory && currentCategoryData?.subcategories && (
-                  <> - {currentCategoryData.subcategories.find((s: any) => s.id === selectedSubcategory)?.name}</>
+                  <> - {currentCategoryData.subcategories.find((s: Subcategory) => s.id === selectedSubcategory)?.name}</>
                 )}
               </h2>
               <p className="products-count">{totalItems} producto(s)</p>

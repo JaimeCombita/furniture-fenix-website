@@ -3,24 +3,11 @@
  * Carga los datos de productos de forma dinámica sin incluirlos en el bundle inicial
  */
 
-import { loadCombinedProductsData } from '../data';
+import { productsRepository } from '../domains/catalog';
+import type { ProductsData } from '../domains/catalog';
 
-let cachedProductData: any = null;
-
-export const loadProductsData = async () => {
-  // Si ya están cacheados, devolver del cache
-  if (cachedProductData) {
-    return cachedProductData;
-  }
-
-  try {
-    // Cargar datos combinados
-    cachedProductData = await loadCombinedProductsData();
-    return cachedProductData;
-  } catch (error) {
-    console.error('Error loading products data:', error);
-    throw error;
-  }
+export const loadProductsData = async (): Promise<ProductsData> => {
+  return productsRepository.getProductsData();
 };
 
 // Hook para usar en componentes

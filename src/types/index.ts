@@ -1,11 +1,13 @@
 export interface Subcategory {
   id: string;
+  code: string;
   name: string;
   description: string;
 }
 
 export interface Product {
   id: string;
+  code: string;
   name: string;
   description: string;
   shortDescription?: string;
@@ -30,6 +32,7 @@ export type ProductCategory =
 
 export interface CategoryInfo {
   id: ProductCategory;
+  code: string;
   name: string;
   description: string;
   icon: string;

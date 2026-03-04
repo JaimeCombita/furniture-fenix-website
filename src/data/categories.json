@@ -11,24 +11,29 @@
         {
           "id": "gerenciales",
           "name": "Sillas Gerenciales",
-          "description": "Sillas de alta gama para gerencia"
+          "description": "Sillas de alta gama para gerencia",
+          "code": "GER"
         },
         {
           "id": "ejecutivas",
           "name": "Sillas Ejecutivas",
-          "description": "Sillas ejecutivas para oficina"
+          "description": "Sillas ejecutivas para oficina",
+          "code": "EJE"
         },
         {
           "id": "gamer",
           "name": "Sillas Gamer",
-          "description": "Sillas gamer de alto rendimiento"
+          "description": "Sillas gamer de alto rendimiento",
+          "code": "GAM"
         },
         {
           "id": "otras",
           "name": "Otras",
-          "description": "Sillas de diferentes lineas y estilos"
+          "description": "Sillas de diferentes lineas y estilos",
+          "code": "OTR"
         }
-      ]
+      ],
+      "code": "SIL"
     },
     {
       "id": "mesas",
@@ -36,7 +41,8 @@
       "icon": "table",
       "image": "escritorio-catalogo.jpeg",
       "description": "Escritorios y salas de juntas",
-      "active": true
+      "active": true,
+      "code": "MES"
     },
     {
       "id": "lockers",
@@ -44,7 +50,8 @@
       "icon": "lock",
       "image": "locker-catalogo.jpeg",
       "description": "Lockers metálicos para almacenamiento seguro",
-      "active": true
+      "active": true,
+      "code": "LOC"
     },
     {
       "id": "archivadores",
@@ -52,7 +59,8 @@
       "icon": "archive",
       "image": "archivador-catalogo.jpeg",
       "description": "Soluciones de almacenamiento",
-      "active": true
+      "active": true,
+      "code": "ARC"
     },
     {
       "id": "carpas",
@@ -65,14 +73,17 @@
         {
           "id": "kioscos",
           "name": "Kioscos",
-          "description": "Kioscos tradicionales y plegables para eventos y ferias"
+          "description": "Kioscos tradicionales y plegables para eventos y ferias",
+          "code": "KIO"
         },
         {
           "id": "hangares",
           "name": "Hangares",
-          "description": "Hangares para cubrir grandes espacios, eventos y bodegas"
+          "description": "Hangares para cubrir grandes espacios, eventos y bodegas",
+          "code": "HAN"
         }
-      ]
+      ],
+      "code": "CAR"
     },
     {
       "id": "linea-exterior",
@@ -80,7 +91,8 @@
       "icon": "tree",
       "image": "exterior-catalogo.jpeg",
       "description": "Productos para exteriores y espacios abiertos",
-      "active": true
+      "active": true,
+      "code": "LEX"
     }
   ]
 }

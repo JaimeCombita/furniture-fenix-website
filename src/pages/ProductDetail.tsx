@@ -165,6 +165,7 @@ const ProductDetailPage: React.FC = () => {
 
   const notFoundProduct: Product = {
     id: id || 'unknown',
+    code: 'UNK0000000',
     name: 'Producto no encontrado',
     description: 'El producto que buscas no está disponible en este momento.',
     category: 'mesas',

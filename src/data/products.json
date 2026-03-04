@@ -1,89 +1,4 @@
 {
-  "categories": [
-    {
-      "id": "sillas",
-      "name": "Sillas",
-      "icon": "chair",
-      "description": "Sillas ergonómicas y de oficina",
-      "active": true,
-      "subcategories": [
-        {
-          "id": "gerenciales",
-          "name": "Sillas Gerenciales",
-          "description": "Sillas de alta gama para gerencia"
-        },
-        {
-          "id": "ejecutivas",
-          "name": "Sillas Ejecutivas",
-          "description": "Sillas ejecutivas para oficina"
-        },
-        {
-          "id": "gamer",
-          "name": "Sillas Gamer",
-          "description": "Sillas gamer de alto rendimiento"
-        },
-        {
-          "id": "otras",
-          "name": "Otras",
-          "description": "Sillas de diferentes lineas y estilos"
-        }
-      ]
-    },
-    {
-      "id": "mesas",
-      "name": "Escritorios y Salas de Juntas",
-      "icon": "table",
-      "description": "Escritorios y salas de juntas",
-      "active": true
-    },
-    {
-      "id": "lockers",
-      "name": "Lockers",
-      "icon": "lock",
-      "description": "Lockers metálicos para almacenamiento seguro",
-      "active": true
-    },
-    {
-      "id": "archivadores",
-      "name": "Archivadores",
-      "icon": "archive",
-      "description": "Soluciones de almacenamiento",
-      "active": true
-    },
-    {
-      "id": "recepciones",
-      "name": "Recepciones",
-      "icon": "users",
-      "description": "Muebles para recepción",
-      "active": false
-    },
-    {
-      "id": "carpas",
-      "name": "Carpas",
-      "icon": "tent",
-      "description": "Carpas para ferias, eventos y usos múltiples",
-      "active": true,
-      "subcategories": [
-        {
-          "id": "kioscos",
-          "name": "Kioscos",
-          "description": "Kioscos tradicionales y plegables para eventos y ferias"
-        },
-        {
-          "id": "hangares",
-          "name": "Hangares",
-          "description": "Hangares para cubrir grandes espacios, eventos y bodegas"
-        }
-      ]
-    },
-    {
-      "id": "linea-exterior",
-      "name": "Línea Exterior",
-      "icon": "tree",
-      "description": "Productos para exteriores y espacios abiertos",
-      "active": true
-    }
-  ],
   "products": [
     {
       "id": "escritorio-l-70x150x150",
@@ -109,7 +24,8 @@
         "/images/products/mesas/escritorio-l-70x150x150/main.jpg"
       ],
       "featured": true,
-      "quantity": 3
+      "quantity": 3,
+      "code": "MES0000001"
     },
     {
       "id": "puesto-trabajo-recto-120",
@@ -133,7 +49,8 @@
         "/images/products/mesas/puesto-trabajo-recto-120/main.png"
       ],
       "featured": true,
-      "quantity": 5
+      "quantity": 5,
+      "code": "MES0000002"
     },
     {
       "id": "mesa-juntas-mj0635",
@@ -164,7 +81,8 @@
         "/images/products/mesas/mesa-juntas-mj0635/dimensiones.webp"
       ],
       "featured": false,
-      "quantity": 2
+      "quantity": 2,
+      "code": "MES0000003"
     },
     {
       "id": "mesa-juntas-hank",
@@ -197,7 +115,8 @@
         "/images/products/mesas/mesa-juntas-hank/uso-3.webp"
       ],
       "featured": false,
-      "quantity": 1
+      "quantity": 1,
+      "code": "MES0000004"
     },
     {
       "id": "mesa-juntas-tipo-c-10-puestos",
@@ -228,7 +147,8 @@
         "/images/products/mesas/mesa-juntas-tipo-c-10-puestos/dimensiones.png"
       ],
       "featured": false,
-      "quantity": 1
+      "quantity": 1,
+      "code": "MES0000005"
     },
     {
       "id": "silla-gerencial-duty-2d",
@@ -253,7 +173,8 @@
         "/images/products/sillas/gerenciales/silla-gerencial-duty-2d/atras.png",
         "/images/products/sillas/gerenciales/silla-gerencial-duty-2d/lumbar.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "SILGER0001"
     },
     {
       "id": "silla-gerencial-horizonte-2d",
@@ -278,7 +199,8 @@
         "/images/products/sillas/gerenciales/silla-gerencial-horizonte-2d/frente.png",
         "/images/products/sillas/gerenciales/silla-gerencial-horizonte-2d/lumbar.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "SILGER0002"
     },
     {
       "id": "silla-ejecutiva-lumpi",
@@ -304,7 +226,8 @@
         "/images/products/sillas/ejecutivas/silla-ejecutiva-lumpi/uso.webp",
         "/images/products/sillas/ejecutivas/silla-ejecutiva-lumpi/especificaciones.webp"
       ],
-      "featured": true
+      "featured": true,
+      "code": "SILGER0003"
     },
     {
       "id": "silla-ejecutiva-kao",
@@ -333,7 +256,8 @@
         "/images/products/sillas/ejecutivas/silla-ejecutiva-kao/uso.webp",
         "/images/products/sillas/ejecutivas/silla-ejecutiva-kao/especificaciones.webp"
       ],
-      "featured": false
+      "featured": false,
+      "code": "SILGER0004"
     },
     {
       "id": "silla-ejecutiva-venezia",
@@ -360,7 +284,8 @@
         "/images/products/sillas/ejecutivas/silla-ejecutiva-venezia/uso.webp",
         "/images/products/sillas/ejecutivas/silla-ejecutiva-venezia/especificaciones.webp"
       ],
-      "featured": false
+      "featured": false,
+      "code": "SILGER0005"
     },
     {
       "id": "silla-ejecutiva-bahia",
@@ -387,7 +312,8 @@
         "/images/products/sillas/ejecutivas/silla-ejecutiva-bahia/uso.webp",
         "/images/products/sillas/ejecutivas/silla-ejecutiva-bahia/especificaciones.webp"
       ],
-      "featured": false
+      "featured": false,
+      "code": "SILGER0006"
     },
     {
       "id": "silla-ejecutiva-nova",
@@ -414,7 +340,8 @@
         "/images/products/sillas/ejecutivas/silla-ejecutiva-nova/uso.webp",
         "/images/products/sillas/ejecutivas/silla-ejecutiva-nova/especificaciones.webp"
       ],
-      "featured": true
+      "featured": true,
+      "code": "SILGER0007"
     },
     {
       "id": "silla-ejecutiva-garden",
@@ -440,7 +367,8 @@
         "/images/products/sillas/ejecutivas/silla-ejecutiva-garden/mecanismo.webp",
         "/images/products/sillas/ejecutivas/silla-ejecutiva-garden/especificaciones.webp"
       ],
-      "featured": false
+      "featured": false,
+      "code": "SILGER0008"
     },
     {
       "id": "silla-ejecutiva-ergoplus",
@@ -467,7 +395,8 @@
         "/images/products/sillas/ejecutivas/silla-ejecutiva-ergoplus/descansapies.webp",
         "/images/products/sillas/ejecutivas/silla-ejecutiva-ergoplus/especificaciones.webp"
       ],
-      "featured": true
+      "featured": true,
+      "code": "SILGER0009"
     },
     {
       "id": "silla-ejecutiva-delphi-2",
@@ -491,7 +420,8 @@
         "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-2/dimensiones.webp",
         "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-2/lumbar.webp"
       ],
-      "featured": false
+      "featured": false,
+      "code": "SILEJE0001"
     },
     {
       "id": "silla-ejecutiva-niza",
@@ -518,7 +448,8 @@
         "/images/products/sillas/ejecutivas/silla-ejecutiva-niza/uso.webp",
         "/images/products/sillas/ejecutivas/silla-ejecutiva-niza/lumbar.webp"
       ],
-      "featured": false
+      "featured": false,
+      "code": "SILEJE0002"
     },
     {
       "id": "silla-ejecutiva-praga",
@@ -542,7 +473,8 @@
         "/images/products/sillas/ejecutivas/silla-ejecutiva-praga/frente.webp",
         "/images/products/sillas/ejecutivas/silla-ejecutiva-praga/dimensiones.webp"
       ],
-      "featured": false
+      "featured": false,
+      "code": "SILEJE0003"
     },
     {
       "id": "silla-ejecutiva-delphi-1",
@@ -568,7 +500,8 @@
         "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-1/lumbar.webp",
         "/images/products/sillas/ejecutivas/silla-ejecutiva-delphi-1/uso.webp"
       ],
-      "featured": false
+      "featured": false,
+      "code": "SILEJE0004"
     },
     {
       "id": "silla-ejecutiva-praga-premium",
@@ -594,7 +527,8 @@
         "/images/products/sillas/ejecutivas/silla-ejecutiva-praga-premium/dimensiones.webp",
         "/images/products/sillas/ejecutivas/silla-ejecutiva-praga-premium/uso.webp"
       ],
-      "featured": true
+      "featured": true,
+      "code": "SILEJE0005"
     },
     {
       "id": "silla-ejecutiva-nairobi",
@@ -618,7 +552,8 @@
         "/images/products/sillas/ejecutivas/silla-ejecutiva-nairobi/costado.webp",
         "/images/products/sillas/ejecutivas/silla-ejecutiva-nairobi/dimensiones.webp"
       ],
-      "featured": false
+      "featured": false,
+      "code": "SILEJE0006"
     },
     {
       "id": "locker-metalico-1-puesto",
@@ -644,7 +579,8 @@
         "/images/products/lockers/locker-metalico-1-puesto/abierto.png",
         "/images/products/lockers/locker-metalico-1-puesto/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000001"
     },
     {
       "id": "locker-metalico-2-puestos",
@@ -671,7 +607,8 @@
         "/images/products/lockers/locker-metalico-2-puestos/abierto.jpg",
         "/images/products/lockers/locker-metalico-2-puestos/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000002"
     },
     {
       "id": "locker-metalico-3-puestos",
@@ -697,7 +634,8 @@
         "/images/products/lockers/locker-metalico-3-puestos/frente.png",
         "/images/products/lockers/locker-metalico-3-puestos/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000003"
     },
     {
       "id": "locker-metalico-4-puestos",
@@ -725,7 +663,8 @@
         "/images/products/lockers/locker-metalico-4-puestos/frente-abierto.png",
         "/images/products/lockers/locker-metalico-4-puestos/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000004"
     },
     {
       "id": "locker-metalico-6-puestos-vertical",
@@ -753,7 +692,8 @@
         "/images/products/lockers/locker-metalico-6-puestos-vertical/costado-abierto.png",
         "/images/products/lockers/locker-metalico-6-puestos-vertical/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000005"
     },
     {
       "id": "locker-metalico-6-puestos-vertical-200",
@@ -781,7 +721,8 @@
         "/images/products/lockers/locker-metalico-6-puestos-vertical-200/costado-abierto.png",
         "/images/products/lockers/locker-metalico-6-puestos-vertical-200/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000006"
     },
     {
       "id": "locker-metalico-6-puestos-horizontal",
@@ -808,7 +749,8 @@
         "/images/products/lockers/locker-metalico-6-puestos-horizontal/costado.png",
         "/images/products/lockers/locker-metalico-6-puestos-horizontal/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000007"
     },
     {
       "id": "locker-metalico-8-puestos-200",
@@ -832,7 +774,8 @@
       "images": [
         "/images/products/lockers/locker-metalico-8-puestos-200/main.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000008"
     },
     {
       "id": "locker-metalico-9-puestos-180",
@@ -859,7 +802,8 @@
         "/images/products/lockers/locker-metalico-9-puestos-180/abierto.png",
         "/images/products/lockers/locker-metalico-9-puestos-180/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000009"
     },
     {
       "id": "locker-metalico-9-puestos-200",
@@ -886,7 +830,8 @@
         "/images/products/lockers/locker-metalico-9-puestos-200/abierto.png",
         "/images/products/lockers/locker-metalico-9-puestos-200/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000010"
     },
     {
       "id": "locker-metalico-12-puestos",
@@ -913,7 +858,8 @@
         "/images/products/lockers/locker-metalico-12-puestos/abierto.png",
         "/images/products/lockers/locker-metalico-12-puestos/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000011"
     },
     {
       "id": "locker-metalico-16-puestos",
@@ -937,7 +883,8 @@
         "/images/products/lockers/locker-metalico-16-puestos/abierto.png",
         "/images/products/lockers/locker-metalico-16-puestos/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000012"
     },
     {
       "id": "locker-celulares-20-compartimientos",
@@ -957,7 +904,8 @@
       "images": [
         "/images/products/lockers/locker-celulares-20-compartimientos/main.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000013"
     },
     {
       "id": "locker-metalico-4-puestos-malla",
@@ -979,7 +927,8 @@
       "images": [
         "/images/products/lockers/locker-metalico-4-puestos-malla/main.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000014"
     },
     {
       "id": "locker-metalico-neo-1-puesto",
@@ -1003,7 +952,8 @@
         "/images/products/lockers/locker-metalico-neo-1-puesto/main.png",
         "/images/products/lockers/locker-metalico-neo-1-puesto/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000015"
     },
     {
       "id": "locker-metalico-neo-2-puestos",
@@ -1027,7 +977,8 @@
         "/images/products/lockers/locker-metalico-neo-2-puestos/main.png",
         "/images/products/lockers/locker-metalico-neo-2-puestos/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000016"
     },
     {
       "id": "locker-metalico-neo-3-puestos",
@@ -1051,7 +1002,8 @@
         "/images/products/lockers/locker-metalico-neo-3-puestos/main.png",
         "/images/products/lockers/locker-metalico-neo-3-puestos/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000017"
     },
     {
       "id": "locker-metalico-neo-4-puestos",
@@ -1075,7 +1027,8 @@
         "/images/products/lockers/locker-metalico-neo-4-puestos/main.png",
         "/images/products/lockers/locker-metalico-neo-4-puestos/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000018"
     },
     {
       "id": "locker-metalico-neo-6-puestos-vertical",
@@ -1099,7 +1052,8 @@
         "/images/products/lockers/locker-metalico-neo-6-puestos-vertical/main.png",
         "/images/products/lockers/locker-metalico-neo-6-puestos-vertical/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000019"
     },
     {
       "id": "locker-metalico-neo-6-puestos-horizontal",
@@ -1123,7 +1077,8 @@
         "/images/products/lockers/locker-metalico-neo-6-puestos-horizontal/main.png",
         "/images/products/lockers/locker-metalico-neo-6-puestos-horizontal/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000020"
     },
     {
       "id": "locker-metalico-neo-9-puestos-180",
@@ -1147,7 +1102,8 @@
         "/images/products/lockers/locker-metalico-neo-9-puestos-180/main.png",
         "/images/products/lockers/locker-metalico-neo-9-puestos-180/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000021"
     },
     {
       "id": "locker-metalico-neo-9-puestos-200",
@@ -1172,7 +1128,8 @@
         "/images/products/lockers/locker-metalico-neo-9-puestos-200/main.png",
         "/images/products/lockers/locker-metalico-neo-9-puestos-200/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000022"
     },
     {
       "id": "locker-metalico-neo-12-puestos",
@@ -1196,7 +1153,8 @@
         "/images/products/lockers/locker-metalico-neo-12-puestos/main.png",
         "/images/products/lockers/locker-metalico-neo-12-puestos/dimensiones.png"
       ],
-      "featured": true
+      "featured": true,
+      "code": "LOC0000023"
     },
     {
       "id": "locker-metalico-neo-16-puestos",
@@ -1220,9 +1178,9 @@
         "/images/products/lockers/locker-metalico-neo-16-puestos/main.png",
         "/images/products/lockers/locker-metalico-neo-16-puestos/dimensiones.png"
       ],
-      "featured": true
-    }
-    ,
+      "featured": true,
+      "code": "LOC0000024"
+    },
     {
       "id": "kiosco-tradicional",
       "category": "carpas",
@@ -1243,7 +1201,8 @@
         "/images/products/carpas/kiosco-tradicional/tradicional-3.webp"
       ],
       "featured": true,
-      "quantity": 2
+      "quantity": 2,
+      "code": "CARKIO0001"
     },
     {
       "id": "kiosco-plegable",
@@ -1264,7 +1223,8 @@
         "/images/products/carpas/kiosco-plegable/plegable-2.webp"
       ],
       "featured": true,
-      "quantity": 2
+      "quantity": 2,
+      "code": "CARKIO0002"
     },
     {
       "id": "hangar",
@@ -1286,7 +1246,8 @@
         "/images/products/carpas/hangar/hangares-3.webp"
       ],
       "featured": true,
-      "quantity": 1
+      "quantity": 1,
+      "code": "CARHAN0001"
     },
     {
       "id": "sombrilla-su2005-25mts",
@@ -1310,7 +1271,8 @@
         "/images/products/linea-exterior/sombrilla-su2005/su2005-2.JPG"
       ],
       "featured": true,
-      "quantity": 1
+      "quantity": 1,
+      "code": "LEX0000001"
     },
     {
       "id": "sombrilla-su1003-mini-roma",
@@ -1337,7 +1299,8 @@
         "/images/products/linea-exterior/sombrilla-su1003/su1003-2.jpeg"
       ],
       "featured": true,
-      "quantity": 1
+      "quantity": 1,
+      "code": "LEX0000002"
     },
     {
       "id": "sombrilla-su2005-3mts",
@@ -1363,7 +1326,8 @@
         "/images/products/linea-exterior/sombrilla-su2005-3mts/su20053-2.jpeg"
       ],
       "featured": true,
-      "quantity": 1
+      "quantity": 1,
+      "code": "LEX0000003"
     },
     {
       "id": "mesa-plegable-wx-f180",
@@ -1390,7 +1354,8 @@
         "/images/products/linea-exterior/mesa-plegable-wx-f180/wx-f180-2.jpeg"
       ],
       "featured": true,
-      "quantity": 1
+      "quantity": 1,
+      "code": "LEX0000004"
     },
     {
       "id": "silla-cf-304",
@@ -1416,7 +1381,8 @@
         "/images/products/sillas/otras/silla-cf-304/cf-304-2.jpeg"
       ],
       "featured": true,
-      "quantity": 1
+      "quantity": 1,
+      "code": "SILOTR0001"
     },
     {
       "id": "silla-tandem-gy-f02",
@@ -1444,7 +1410,8 @@
         "/images/products/sillas/otras/silla-tandem-gy-f02/tandemx2-2.jpeg"
       ],
       "featured": true,
-      "quantity": 1
+      "quantity": 1,
+      "code": "SILOTR0002"
     },
     {
       "id": "silla-tandem-gy-f03",
@@ -1472,7 +1439,8 @@
         "/images/products/sillas/otras/silla-tandem-gy-f03/tandemx3-2.jpeg"
       ],
       "featured": true,
-      "quantity": 1
+      "quantity": 1,
+      "code": "SILOTR0003"
     },
     {
       "id": "silla-tandem-gy-f04",
@@ -1500,7 +1468,8 @@
         "/images/products/sillas/otras/silla-tandem-gy-f04/tandemx4-2.jpeg"
       ],
       "featured": true,
-      "quantity": 1
+      "quantity": 1,
+      "code": "SILOTR0004"
     },
     {
       "id": "silla-plastica-eterna-wengue-rimax",
@@ -1528,7 +1497,8 @@
         "/images/products/sillas/otras/silla-plastica-eterna-wengue-rimax/eterna-wengue-1.webp"
       ],
       "featured": false,
-      "quantity": 1
+      "quantity": 1,
+      "code": "SILOTR0005"
     },
     {
       "id": "silla-sin-brazos-samba-blanco-rimax",
@@ -1558,7 +1528,8 @@
         "/images/products/sillas/otras/silla-sin-brazos-samba-blanco-rimax/samba-blanco-4.webp"
       ],
       "featured": false,
-      "quantity": 1
+      "quantity": 1,
+      "code": "SILOTR0006"
     },
     {
       "id": "pupitre-escolar-azul-40x40x80",
@@ -1590,7 +1561,8 @@
         "/images/products/sillas/otras/pupitre-escolar-azul-40x40x80/pupitre-azul-4.webp"
       ],
       "featured": false,
-      "quantity": 1
+      "quantity": 1,
+      "code": "SILOTR0007"
     },
     {
       "id": "pupitre-infantil-azul-electrico-60x40x61",
@@ -1619,7 +1591,8 @@
         "/images/products/sillas/otras/pupitre-infantil-azul-electrico-60x40x61/pupitre-infantil-3.webp"
       ],
       "featured": false,
-      "quantity": 1
+      "quantity": 1,
+      "code": "SILOTR0008"
     },
     {
       "id": "archivador-69x37x50-negro",
@@ -1654,7 +1627,8 @@
         "/images/products/archivadores/archivador-69x37x50-cm-negro/dimensiones.webp"
       ],
       "featured": false,
-      "quantity": 1
+      "quantity": 1,
+      "code": "ARC0000001"
     },
     {
       "id": "archivador-metalico-4-gavetas",
@@ -1681,7 +1655,8 @@
         "/images/products/archivadores/archivador-metalico-4-gavetas/dimensiones.png"
       ],
       "featured": false,
-      "quantity": 1
+      "quantity": 1,
+      "code": "ARC0000002"
     },
     {
       "id": "archivador-metalico-2-gavetas",
@@ -1708,7 +1683,8 @@
         "/images/products/archivadores/archivador-metalico-2-gavetas/dimensiones.png"
       ],
       "featured": false,
-      "quantity": 1
+      "quantity": 1,
+      "code": "ARC0000003"
     },
     {
       "id": "archivador-aereo-metalico",
@@ -1733,7 +1709,8 @@
         "/images/products/archivadores/archivador-aereo-metalico/abierto.png"
       ],
       "featured": false,
-      "quantity": 1
+      "quantity": 1,
+      "code": "ARC0000004"
     },
     {
       "id": "combo-mesa-sillas-eterna-wengue-rimax",
@@ -1776,7 +1753,8 @@
         "/images/products/linea-exterior/combo-mesa-sillas-eterna-wengue/combo-eterna-2.webp"
       ],
       "featured": false,
-      "quantity": 1
+      "quantity": 1,
+      "code": "LEX0000005"
     },
     {
       "id": "silla-gamer-njoytech-kaos",
@@ -1804,7 +1782,8 @@
         "/images/products/sillas/gamer/silla-gamer-njoytech-kaos/main.jpeg"
       ],
       "featured": false,
-      "quantity": 1
+      "quantity": 1,
+      "code": "SILGAM0001"
     },
     {
       "id": "silla-gamer-overkill",
@@ -1834,7 +1813,8 @@
         "/images/products/sillas/gamer/silla-gamer-overkill/dimensiones.png"
       ],
       "featured": false,
-      "quantity": 1
+      "quantity": 1,
+      "code": "SILGAM0002"
     },
     {
       "id": "silla-gamer-cupra",
@@ -1865,7 +1845,8 @@
         "/images/products/sillas/gamer/silla-gamer-cupra/dimensiones.png"
       ],
       "featured": true,
-      "quantity": 1
+      "quantity": 1,
+      "code": "SILGAM0003"
     },
     {
       "id": "silla-gamer-kitty",
@@ -1897,7 +1878,8 @@
         "/images/products/sillas/gamer/silla-gamer-kitty/dimensiones.png"
       ],
       "featured": false,
-      "quantity": 1
+      "quantity": 1,
+      "code": "SILGAM0004"
     }
   ]
 }

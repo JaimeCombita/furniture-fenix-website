@@ -7,7 +7,6 @@
 ![Vitest](https://img.shields.io/badge/Test-Vitest-6E9F18?logo=vitest)
 ![GitHub last commit](https://img.shields.io/github/last-commit/JaimeCombita/furniture-fenix-website)
 [![Vercel Production](https://img.shields.io/website?url=https%3A%2F%2Ffurniture-fenix-website.vercel.app%2F&up_message=online&down_message=down&label=Vercel%20Production&logo=vercel)](https://furniture-fenix-website.vercel.app/)
-
 ![Vercel](https://img.shields.io/badge/Vercel-Ready-black?logo=vercel)
 
 ---

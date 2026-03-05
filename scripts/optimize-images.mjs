@@ -7,6 +7,7 @@ const ROOT_DIR = process.cwd()
 const DRY_RUN = process.argv.includes('--dry-run')
 const TARGET_DIRS = [
   path.join(ROOT_DIR, 'dist', 'assets'),
+  path.join(ROOT_DIR, 'dist', 'images'),
 ]
 
 const IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.svg'])

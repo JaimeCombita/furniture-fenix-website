@@ -3,6 +3,7 @@ import { resolve } from 'node:path';
 import { Resend } from 'resend';
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const DEFAULT_SITE_URL = 'https://furniture-fenix-website.vercel.app';
 
 export const subjectLabels = {
   cotizacion: 'Solicitar cotización',
@@ -48,6 +49,20 @@ const sanitize = (value) =>
     .replace(/\"/g, '&quot;')
     .replace(/'/g, '&#039;');
 
+const resolvePublicSiteUrl = () => {
+  const rawUrl =
+    process.env.PUBLIC_SITE_URL ||
+    process.env.VERCEL_PROJECT_PRODUCTION_URL ||
+    process.env.VERCEL_URL ||
+    DEFAULT_SITE_URL;
+
+  const normalized = String(rawUrl || '').trim();
+  if (!normalized) return DEFAULT_SITE_URL;
+
+  const withProtocol = /^https?:\/\//i.test(normalized) ? normalized : `https://${normalized}`;
+  return withProtocol.replace(/\/$/, '');
+};
+
 export const validateContactPayload = (payload) => {
   const name = (payload.name || '').trim();
   const email = (payload.email || '').trim();
@@ -80,12 +95,14 @@ export const validateContactPayload = (payload) => {
 
 export const buildContactEmailHtml = (payload) => {
   const selectedSubject = subjectLabels[payload.subject] || payload.subject;
+  const logoUrl = `${resolvePublicSiteUrl()}/images/branding/logo.jpeg`;
 
   return `
   <div style="margin:0;padding:24px;background-color:#F4F7F9;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;color:#2F3542;">
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="max-width:680px;margin:0 auto;background:#FFFFFF;border:1px solid #CED6E0;border-radius:12px;overflow:hidden;">
       <tr>
         <td style="background:#154578;padding:20px 24px;">
+          <img src="${logoUrl}" alt="Fenix Mobiliario" width="150" style="display:block;max-width:150px;height:auto;margin:0 0 12px 0;" />
           <h1 style="margin:0;color:#FFFFFF;font-size:22px;line-height:1.2;">Nuevo mensaje de contacto</h1>
           <p style="margin:8px 0 0 0;color:#DDE8F3;font-size:14px;">Fénix Mobiliario Institucional</p>
         </td>

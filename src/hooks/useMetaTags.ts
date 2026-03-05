@@ -16,7 +16,7 @@ interface MetaTagsConfig {
 export const useMetaTags = ({
   title,
   description,
-  image = 'https://furniture-fenix-website.vercel.app/logo.png',
+  image = 'https://furniture-fenix-website.vercel.app/images/branding/logo.png',
   url = typeof window !== 'undefined' ? window.location.href : '',
   type = 'website',
   keywords

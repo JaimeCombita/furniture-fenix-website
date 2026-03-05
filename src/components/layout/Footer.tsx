@@ -1,5 +1,6 @@
 import React from 'react';
 import { COMPANY_INFO } from '../../utils/constants';
+import logoPng from '../../assets/images/branding/logo.png';
 import './Footer.css';
 
 export const Footer: React.FC = () => {
@@ -8,7 +9,7 @@ export const Footer: React.FC = () => {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-col">
-            <img src="/logo.png" alt="Logo Fénix" className="footer-logo-img" />
+            <img src={logoPng} alt="Logo Fénix" className="footer-logo-img" />
             <h3>{COMPANY_INFO.name}</h3>
             <p className="footer-tagline">{COMPANY_INFO.tagline}</p>
             <p className="footer-description">

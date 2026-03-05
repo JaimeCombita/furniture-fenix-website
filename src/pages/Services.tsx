@@ -10,7 +10,7 @@ const ServicesPage: React.FC = () => {
   useMetaTags({
     title: 'Nuestros Servicios',
     description: 'Descubre los servicios integrales de Fénix para tus proyectos de mobiliario institucional: consultoría, diseño, fabricación e instalación.',
-    image: 'https://furniture-fenix-website.vercel.app/logo.jpeg',
+    image: 'https://furniture-fenix-website.vercel.app/images/branding/logo.jpeg',
     url: 'https://furniture-fenix-website.vercel.app/servicios',
     type: 'website',
     keywords: 'servicios, consultoría, diseño, fabricación, instalación'

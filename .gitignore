@@ -24,3 +24,9 @@ dist-ssr
 *.sw?
 
 .vercel
+
+# Generated static public files
+public/
+
+# Generated export artifacts
+exports/

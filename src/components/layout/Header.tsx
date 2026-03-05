@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { COMPANY_INFO } from '../../utils/constants';
+import logoJpeg from '../../assets/images/branding/logo.jpeg';
 import './Header.css';
 
 interface HeaderProps {
@@ -13,7 +14,7 @@ export const Header: React.FC<HeaderProps> = ({ onMenuToggle }) => {
       <div className="container">
         <div className="header-content">
           <Link to="/" className="logo">
-            <img src="/logo.jpeg" alt="Logo Fénix" className="logo-img" />
+            <img src={logoJpeg} alt="Logo Fénix" className="logo-img" />
             <div className="logo-text">
               <h1>{COMPANY_INFO.name}</h1>
               <p className="tagline">{COMPANY_INFO.tagline}</p>

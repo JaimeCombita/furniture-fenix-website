@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Hero, CategoryCard } from '../components/features';
 import { Alert, Button, Card, Spinner } from '../components/ui';
-import { SERVICES } from '../utils/constants';
+import { SERVICES, SITE_URL } from '../utils/constants';
 import { getCategories } from '../data';
 import { useProductsQuery } from '../hooks';
 import type { Product } from '../types';
@@ -24,8 +24,8 @@ export const HomePage: React.FC = () => {
   useMetaTags({
     title: 'Inicio',
     description: 'Fénix - Mobiliario institucional de calidad para licitaciones gubernamentales. Mesas, sillas, lockers, carpas y sombrillas de excelente calidad.',
-    image: 'https://furniture-fenix-website.vercel.app/images/landing/hero-image.jpg',
-    url: 'https://furniture-fenix-website.vercel.app/',
+    image: `${SITE_URL}/images/landing/hero-image.jpg`,
+    url: `${SITE_URL}/`,
     type: 'website',
     keywords: 'mobiliario institucional, mesas, sillas, lockers, carpas, sombrillas, licitaciones'
   });

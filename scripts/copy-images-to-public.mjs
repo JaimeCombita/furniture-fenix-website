@@ -33,7 +33,7 @@ const main = async () => {
     });
 
     console.log('✅ Images published successfully');
-    console.log('Public URL base: https://furniture-fenix-website.vercel.app/images/...');
+    console.log('Public URL base: https://fenixmobiliario.com/images/...');
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     console.error('❌ Error publishing images:', message);

@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { SITE_URL } from '../utils/constants';
 
 interface MetaTagsConfig {
   title: string;
@@ -16,7 +17,7 @@ interface MetaTagsConfig {
 export const useMetaTags = ({
   title,
   description,
-  image = 'https://furniture-fenix-website.vercel.app/images/branding/logo.jpeg',
+  image = `${SITE_URL}/images/branding/logo.jpeg`,
   url = typeof window !== 'undefined' ? window.location.href : '',
   type = 'website',
   keywords

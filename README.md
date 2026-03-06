@@ -6,7 +6,7 @@
 ![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite)
 ![Vitest](https://img.shields.io/badge/Test-Vitest-6E9F18?logo=vitest)
 ![GitHub last commit](https://img.shields.io/github/last-commit/JaimeCombita/furniture-fenix-website)
-[![Vercel Production](https://img.shields.io/website?url=https%3A%2F%2Ffurniture-fenix-website.vercel.app%2F&up_message=online&down_message=down&label=Vercel%20Production&logo=vercel)](https://furniture-fenix-website.vercel.app/)
+[![Vercel Production](https://img.shields.io/website?url=https%3A%2F%2Ffenixmobiliario.com%2F&up_message=online&down_message=down&label=Vercel%20Production&logo=vercel)](https://fenixmobiliario.com/)
 ![Vercel](https://img.shields.io/badge/Vercel-Ready-black?logo=vercel)
 
 ---
@@ -121,6 +121,7 @@ Sitio corporativo y catálogo de productos para Fénix Mobiliario Institucional.
 ```env
 VITE_API_URL=/api
 VITE_API_PROXY_TARGET=http://127.0.0.1:3000
+VITE_PUBLIC_SITE_URL=https://fenixmobiliario.com
 
 RESEND_API_KEY=
 RESEND_FROM_EMAIL=Fenix Web <onboarding@resend.dev>
@@ -173,6 +174,7 @@ npm run test:coverage
 npm run images:optimize
 npm run images:optimize:dry-run
 npm run migrate:codes
+npm run sitemap:generate
 ```
 
 ### Build y optimización de imágenes
@@ -180,8 +182,10 @@ npm run migrate:codes
 El build ejecuta:
 
 1. Compilación TypeScript.
-2. Bundle de Vite en `dist/`.
-3. Optimización de imágenes en `dist/assets` (no toca `src/assets`).
+2. Copia de imágenes estáticas a `public/images`.
+3. Generación de `public/sitemap.xml`.
+4. Bundle de Vite en `dist/`.
+5. Optimización de imágenes en `dist/assets` (no toca `src/assets`).
 
 Scripts de imágenes:
 
@@ -295,6 +299,7 @@ Corporate website and product catalog for Fénix Mobiliario Institucional.
 ```env
 VITE_API_URL=/api
 VITE_API_PROXY_TARGET=http://127.0.0.1:3000
+VITE_PUBLIC_SITE_URL=https://fenixmobiliario.com
 RESEND_API_KEY=
 RESEND_FROM_EMAIL=Fenix Web <onboarding@resend.dev>
 CONTACT_TO_EMAIL=mobiliariofenix.07@gmail.com
@@ -316,6 +321,7 @@ npm run lint
 npm run test:run
 npm run images:optimize
 npm run images:optimize:dry-run
+npm run sitemap:generate
 ```
 
 ### Build and image optimization
@@ -323,8 +329,10 @@ npm run images:optimize:dry-run
 Build runs in this order:
 
 1. TypeScript compilation.
-2. Vite bundle to `dist/`.
-3. Image optimization in `dist/assets` (does not modify `src/assets`).
+2. Static image copy to `public/images`.
+3. `public/sitemap.xml` generation.
+4. Vite bundle to `dist/`.
+5. Image optimization in `dist/assets` (does not modify `src/assets`).
 
 Supported extensions: `.jpg`, `.jpeg`, `.png`, `.webp`, `.svg`.
 

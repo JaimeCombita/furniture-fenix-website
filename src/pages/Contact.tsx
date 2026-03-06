@@ -2,7 +2,7 @@ import React from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { ContactForm } from '../components/features';
 import { useMetaTags } from '../hooks/useMetaTags';
-import { COMPANY_INFO } from '../utils/constants';
+import { COMPANY_INFO, SITE_URL } from '../utils/constants';
 import './Contact.css';
 
 const ContactPage: React.FC = () => {
@@ -10,8 +10,8 @@ const ContactPage: React.FC = () => {
   useMetaTags({
     title: 'Contáctanos',
     description: 'Contacta con Fénix - Mobiliario institucional. Solicita cotizaciones, consultas y más información sobre nuestros productos.',
-    image: 'https://furniture-fenix-website.vercel.app/images/branding/logo.jpeg',
-    url: 'https://furniture-fenix-website.vercel.app/contacto',
+    image: `${SITE_URL}/images/branding/logo.jpeg`,
+    url: `${SITE_URL}/contacto`,
     type: 'website',
     keywords: 'contacto, cotización, información, consultas'
   });

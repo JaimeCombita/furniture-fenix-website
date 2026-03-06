@@ -91,6 +91,8 @@ export const SERVICES = [
 
 export const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
+export const SITE_URL = (import.meta.env.VITE_PUBLIC_SITE_URL || 'https://fenixmobiliario.com').replace(/\/$/, '');
+
 export const API_ENDPOINTS = {
   products: '/products',
   categories: '/categories',

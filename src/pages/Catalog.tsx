@@ -5,6 +5,7 @@ import type { CategoryInfo, ProductCategory, Subcategory } from '../types';
 import { useFilterProducts, useLoadMore, useProductsQuery } from '../hooks';
 import { useMetaTags } from '../hooks/useMetaTags';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { SITE_URL } from '../utils/constants';
 import './Catalog.css';
 
 const CatalogPage: React.FC = () => {
@@ -12,8 +13,8 @@ const CatalogPage: React.FC = () => {
   useMetaTags({
     title: 'Catálogo de Productos',
     description: 'Explora nuestro completo catálogo de mobiliario institucional. Mesas, sillas, lockers, carpas y sombrillas de calidad para licitaciones.',
-    image: 'https://furniture-fenix-website.vercel.app/images/catalog-preview.jpg',
-    url: 'https://furniture-fenix-website.vercel.app/catalogo',
+    image: `${SITE_URL}/images/catalog-preview.jpg`,
+    url: `${SITE_URL}/catalogo`,
     type: 'website',
     keywords: 'catálogo de productos, mesas, sillas, lockers, carpas, sombrillas'
   });

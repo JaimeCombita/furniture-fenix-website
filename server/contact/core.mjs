@@ -3,7 +3,7 @@ import { resolve } from 'node:path';
 import { Resend } from 'resend';
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-const DEFAULT_SITE_URL = 'https://furniture-fenix-website.vercel.app';
+const DEFAULT_SITE_URL = 'https://fenixmobiliario.com';
 
 export const subjectLabels = {
   cotizacion: 'Solicitar cotización',

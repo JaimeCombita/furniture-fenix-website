@@ -4,6 +4,7 @@ import { Alert, Button, Spinner } from '../components/ui';
 import { useProductsQuery } from '../hooks';
 import { useMetaTags } from '../hooks/useMetaTags';
 import type { Product } from '../types';
+import { SITE_URL } from '../utils/constants';
 import { resolveProductImage } from '../utils/resolveProductImage';
 import './ProductDetail.css';
 
@@ -150,9 +151,9 @@ const ProductDetailPage: React.FC = () => {
     title: product?.name || 'Producto',
     description: product?.description || 'Descubre este producto de Fénix - Mobiliario institucional de calidad.',
     image: product?.images?.[0] 
-      ? `https://furniture-fenix-website.vercel.app${resolveProductImage(product.images[0])}`
-      : 'https://furniture-fenix-website.vercel.app/images/branding/logo.jpeg',
-    url: `https://furniture-fenix-website.vercel.app/producto/${id}`,
+      ? `${SITE_URL}${resolveProductImage(product.images[0])}`
+      : `${SITE_URL}/images/branding/logo.jpeg`,
+    url: `${SITE_URL}/producto/${id}`,
     type: 'product',
     keywords: product ? `${product.name}, ${product.category}, mobiliario` : 'mobiliario'
   });

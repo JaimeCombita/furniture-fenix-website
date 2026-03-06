@@ -8,6 +8,7 @@
     "dev:web": "vite",
     "dev:api": "node scripts/local-api.mjs",
     "sitemap:generate": "node scripts/generate-sitemap.mjs",
+    "export:products:excel": "node scripts/export-products-to-excel.mjs",
     "migrate:codes": "node scripts/migrate-product-codes.mjs",
     "images:copy-to-public": "node scripts/copy-images-to-public.mjs --public",
     "images:optimize": "node scripts/optimize-images.mjs",
@@ -51,7 +52,8 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "npm:rolldown-vite@7.2.5",
-    "vitest": "^3.2.4"
+    "vitest": "^3.2.4",
+    "xlsx": "^0.18.5"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,mjs,cjs}": [
